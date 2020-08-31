@@ -1,4 +1,3 @@
-To start the project 
 1. git clone https://github.com/agilatakishiyev/n21.az.git
 2. run npm install
 3. run npm start to start locally
