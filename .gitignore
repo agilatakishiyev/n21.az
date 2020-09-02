@@ -1,2 +1,7 @@
-node_modules
+.vscode/
+node_modules/
+build/
+tmp/
+temp/
+**/.DS_Store
 assets/css/*.css

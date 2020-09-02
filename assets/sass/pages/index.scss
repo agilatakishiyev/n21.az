@@ -1,0 +1,101 @@
+.header {
+    background-color: $color-blue-dark;
+    padding-top: 11px;
+    font-size: $font-size-13;
+
+    a {
+        color: $color-gray-3;
+    }
+
+    &__upper-navigation {
+        &__list-item {
+            &__link {
+                padding-right: 30px;
+            }
+        }
+
+        &--right {
+            a:first-child {
+                padding-right: 41px;
+            }
+        }
+    }
+
+    &__center-part {
+        padding: 40px 30px;
+
+        & > img {
+            margin-right: 60px;
+            width: 16%;
+        }
+
+        &__input {
+            width: 41%;
+            font-size: $font-size-12;
+            padding: 13px 15px;
+            border: none;
+            border-radius: $border-radius-base;
+
+            &::placeholder {
+                color: $color-black-1;
+            }
+        }
+    }
+
+    &__center-part__customer-navigation {
+        width: 40%;
+        margin-left: 30px;
+
+        &__list-item {
+            &__icon-holder {
+                position: relative;
+                padding: 0 30px;
+                height: 24px;
+
+                &:first-child {
+                    font-size: $font-size-10;
+                    color: $color-gray-3;
+
+                    & > span {
+                        font-size: 24px;
+                    }
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 1px;
+                    height: 24px;
+                    background-color: rgba(255, 255, 255, 0.15);
+                }
+
+                &--last {
+                    padding: 0 30px;
+                    height: 24px;
+                }
+            }
+        }
+    }
+
+    &__bottom-part {
+        &__navigation-list {
+            padding: 17px 0;
+
+            &__item {
+                padding-right: 30px;
+                font-size: $font-size-14;
+
+                & > a {
+                    color: $color-white;
+                }
+            }
+        }
+
+        & > p {
+            color: $color-white;
+            font-size: $font-size-14;
+        }
+    }
+}

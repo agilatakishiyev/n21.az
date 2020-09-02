@@ -1,7 +1,25 @@
+@font-face {
+    font-family: "SFProText-SemiBold";
+    src: url("/assets/fonts/SFProText-Semibold.ttf");
+}
+
+@font-face {
+    font-family: "SFProText-Bold";
+    src: url("/assets/fonts/SFProText-Bold.ttf");
+}
+
+@font-face {
+    font-family: "SFProText-Regular";
+    src: url("/assets/fonts/SFProText-Regular.ttf");
+}
+
+@font-face {
+    font-family: "SFProText-Medium";
+    src: url("/assets/fonts/SFProText-Medium.ttf");
+}
+
 body {
-    font-family: "Nunito", sans-serif;
-    font-weight: 400;
+    font-family: "SFProText-Regular";
+    font-weight: 500;
     font-size: 1rem;
-    line-height: 1.7;
-    color: $color-grey-dark;
 }
