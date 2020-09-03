@@ -45,6 +45,14 @@ body {
     display: flex;
 }
 
+.d-block {
+    display: block;
+}
+
+.flex-direction-col {
+    flex-direction: column;
+}
+
 .justify-between {
     justify-content: space-between;
 }
@@ -61,6 +69,10 @@ body {
     justify-content: center;
 }
 
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
 ul {
     list-style-type: none;
 }
@@ -75,4 +87,16 @@ a {
 
 input {
     outline: none;
+}
+
+.mt-10 {
+    margin-top: 10px !important;
+}
+
+.mb-20 {
+    margin-bottom: 20px !important;
+}
+
+.mb-30 {
+    margin-bottom: 30px !important;
 }
