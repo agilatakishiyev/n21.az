@@ -3,4 +3,12 @@
 @import "_typography";
 @import "_base";
 
+@import "helpers/spacings";
+@import "helpers/tag_default_resets";
+@import "helpers/utils";
+
+@import "components/input";
+@import "components/button";
+
 @import "pages/index";
+@import "pages/checkout";

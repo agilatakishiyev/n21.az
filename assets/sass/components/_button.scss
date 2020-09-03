@@ -1,0 +1,16 @@
+.button {
+    padding: 17px 50px;
+    outline: none;
+    border: none;
+    font-size: $font-size-14;
+    color: $color-white;
+    border-radius: $border-radius-base;
+
+    &.blue {
+        background-color: $color-blue-3;
+    }
+
+    @media only screen and (max-width: 82.5rem) {
+        font-size: 14px;
+    }
+}

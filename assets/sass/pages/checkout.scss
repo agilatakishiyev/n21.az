@@ -1,0 +1,237 @@
+.checkout {
+    &__page {
+        margin-top: 30px;
+        & > div:first-child {
+            width: 72%;
+            @media only screen and (max-width: 82.5rem) {
+                width: 100%;
+            }
+        }
+
+        &--left {
+            border: 1px solid $color-gray-4;
+
+            &-forms {
+                border-bottom: 1px solid $color-gray-4;
+                padding: 50px;
+                @media only screen and (max-width: 82.5rem) {
+                    padding: 16px;
+                }
+
+                &--inner {
+                    padding-top: 50px;
+                    padding-left: 50px;
+
+                    &.--no-padding {
+                        padding-left: 0;
+                    }
+
+                    @media only screen and (max-width: 82.5rem) {
+                        padding-top: 30px;
+                        padding-left: 0;
+                    }
+
+                    &__form-wrapper {
+                        & > div {
+                            @media only screen and (max-width: 82.5rem) {
+                                flex-direction: column;
+                                align-items: flex-start;
+                            }
+                        }
+
+                        &__label {
+                            width: 10%;
+                            text-align: right;
+                            @media only screen and (max-width: 82.5rem) {
+                                width: 12%;
+                                text-align: left;
+                            }
+                        }
+
+                        &__radios {
+                            &__item {
+                                width: 23%;
+                                padding: 10px;
+                                border-radius: $border-radius-base;
+                                border: solid 1px #d9d9d9;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+                                cursor: pointer;
+                                &__heading {
+                                    font-size: $font-size-14;
+                                }
+                                &__text {
+                                    color: $color-gray;
+                                    font-size: $font-size-12;
+                                    padding-top: 10px;
+                                    @media only screen and (max-width: 82.5rem) {
+                                        font-size: 13px;
+                                    }
+                                }
+                                &__wrapper {
+                                    text-align: center;
+                                    &__image {
+                                        width: 50px;
+                                        height: 50px;
+                                        margin: 15px auto;
+                                        background-color: $color-gray-2;
+                                        img {
+                                            width: 100%;
+                                        }
+                                    }
+                                    label {
+                                        cursor: pointer;
+                                        display: inline-block;
+                                        margin: 0 auto;
+                                        line-height: 2.5;
+                                        font-size: 1.5em;
+                                    }
+                                    &__radio + span {
+                                        display: block;
+                                    }
+                                    &__radio {
+                                        border: 0;
+                                        clip: rect(0 0 0 0);
+                                        height: 1px;
+                                        margin: -1px;
+                                        overflow: hidden;
+                                        padding: 0;
+                                        position: absolute;
+                                        width: 1px;
+                                    }
+                                    &__radio + span:before {
+                                        content: "";
+                                        display: inline-block;
+                                        width: 1em;
+                                        height: 1em;
+                                        vertical-align: -0.25em;
+                                        border-radius: 1em;
+                                        border: solid 5px #ebebeb;
+                                        transition: 0.3s linear;
+                                    }
+                                    &__radio:checked + span:before {
+                                        border: solid 8px $color-primary;
+                                        @media only screen and (max-width: 82.5rem) {
+                                            border-width: 5px;
+                                        }
+                                    }
+                                }
+                                &.checked {
+                                    border-color: $color-primary;
+                                }
+                                @media only screen and (max-width: 82.5rem) {
+                                    width: 100%;
+                                    margin-bottom: 30px;
+                                }
+                            }
+                        }
+                    }
+
+                    &__form-wrapper__input-holder {
+                        width: 80%;
+
+                        @media only screen and (max-width: 82.5rem) {
+                            width: 100%;
+                        }
+
+                        &__phone-number {
+                            width: 65%;
+                            cursor: pointer;
+                            color: $color-gray;
+                            font-size: $font-size-14;
+                            text-align: right;
+                            @media only screen and (max-width: 82.5rem) {
+                                text-align: left;
+                                margin-top: 25px;
+                            }
+                        }
+                    }
+
+                    &__form-wrapper__input {
+                        width: 60%;
+                        @media only screen and (max-width: 82.5rem) {
+                            margin-left: 0 !important;
+                        }
+                    }
+                }
+
+                @media only screen and (max-width: 82.5rem) {
+                    h3 {
+                        font-size: 18px !important;
+                    }
+                }
+            }
+        }
+
+        &--right {
+            width: 25%;
+            padding: 30px 20px;
+            align-self: flex-start;
+            border: 1px solid $color-gray-4;
+
+            & > h4 {
+                @media only screen and (max-width: 82.5rem) {
+                    font-size: 18px;
+                }
+            }
+
+            &__item {
+                & > div {
+                    &:first-child {
+                        width: 15%;
+                        & > img {
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    width: 80%;
+                    font-size: $font-size-14;
+                }
+
+                &:not(:first-child) {
+                    margin-top: 30px;
+                }
+            }
+
+            &__pricing {
+                font-size: 1.125rem;
+                font-weight: normal;
+                @media only screen and (max-width: 82.5rem) {
+                    font-size: 18px;
+                }
+            }
+
+            &__final-pricing {
+                font-weight: 600;
+                @media only screen and (max-width: 82.5rem) {
+                    font-size: 18px;
+                }
+            }
+
+            @media only screen and (max-width: 82.5rem) {
+                width: 100%;
+                margin-top: 30px;
+            }
+        }
+
+        & > div {
+            border-radius: $border-radius-base;
+        }
+
+        @media only screen and (max-width: 82.5rem) {
+            flex-direction: column;
+        }
+    }
+    &__page__button-wrapper {
+        &__button {
+            margin-left: calc(72% / 2) !important;
+            transform: translateX(-50%);
+            @media only screen and (max-width: 82.5rem) {
+                display: block;
+                margin: 0 auto !important;
+                transform: none;
+            }
+        }
+    }
+}

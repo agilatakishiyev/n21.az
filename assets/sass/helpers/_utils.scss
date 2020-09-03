@@ -1,0 +1,52 @@
+.d-flex {
+    display: flex !important;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-i-block {
+    display: inline-block;
+}
+
+.flex-direction-col {
+    flex-direction: column;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-baseline {
+    align-items: baseline;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.container {
+    width: 82.5 * 1rem;
+    margin: 0 auto;
+
+    @media only screen and (max-width: 82.5rem) {
+        width: 95%;
+    }
+}

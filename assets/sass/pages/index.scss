@@ -60,38 +60,48 @@
     }
 
     &__center-part__customer-navigation {
-        width: 40%;
-        margin-left: 30px;
+        width: 49%;
 
         &__list-item {
             &__icon-holder {
                 position: relative;
+                display: flex;
+                align-items: center;
                 padding: 0 30px;
                 height: 24px;
-
-                &:first-child {
-                    font-size: $font-size-10;
-                    color: $color-gray-3;
-
-                    & > span {
-                        font-size: 24px;
-                    }
-                }
-
-                &::after {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    width: 1px;
-                    height: 24px;
-                    background-color: rgba(255, 255, 255, 0.15);
-                }
 
                 &--last {
                     padding: 0 30px;
                     height: 24px;
                 }
+
+                &.--phone {
+                    display: inline-block;
+                    width: 100%;
+                }
+
+                &--positioned {
+                    position: relative;
+                }
+            }
+
+            &:first-child > a {
+                font-size: $font-size-10;
+                color: $color-gray-3;
+
+                & > span {
+                    font-size: 24px;
+                }
+            }
+
+            &--badge {
+                position: absolute;
+                left: 8px;
+                top: -8px;
+                padding: 0.125rem 0.25rem;
+                line-height: 1;
+                border-radius: $border-radius-base;
+                background-color: $color-primary;
             }
         }
     }

@@ -9,20 +9,6 @@
 html {
     // This defines what 1rem is
     font-size: 100%; //1 rem = 10px; 10px/16px = 62.5%
-
-    @include respond(tab-land) {
-        // width < 1200?
-        font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
-    }
-
-    @include respond(tab-port) {
-        // width < 900?
-        font-size: 50%; //1 rem = 8px, 8/16 = 50%
-    }
-
-    @include respond(big-desktop) {
-        font-size: 75%; //1rem = 12, 12/16
-    }
 }
 
 body {
@@ -31,72 +17,16 @@ body {
     }
 }
 
-::selection {
-    background-color: $color-primary;
-    color: $color-white;
-}
-
-.container {
-    width: 82.5 * 1rem;
-    margin: 0 auto;
-}
-
-.d-flex {
-    display: flex;
-}
-
-.d-block {
-    display: block;
-}
-
-.flex-direction-col {
-    flex-direction: column;
-}
-
-.justify-between {
-    justify-content: space-between;
-}
-
-.align-center {
-    align-items: center;
-}
-
-.justify-around {
-    justify-content: space-around;
-}
-
-.justify-center {
-    justify-content: center;
-}
-
-.justify-evenly {
-    justify-content: space-evenly;
-}
-
-ul {
-    list-style-type: none;
-}
-
-li {
-    list-style: none;
-}
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
 a {
-    text-decoration: none;
-}
-
-input {
-    outline: none;
-}
-
-.mt-10 {
-    margin-top: 10px !important;
-}
-
-.mb-20 {
-    margin-bottom: 20px !important;
-}
-
-.mb-30 {
-    margin-bottom: 30px !important;
+    &::selection {
+        background-color: $color-primary;
+        color: $color-white;
+    }
 }
