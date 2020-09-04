@@ -5,38 +5,79 @@
         border: 1px solid $color-gray-4;
 
         &__table {
+            width: 100%;
             &__head {
                 tr {
                     th {
                         padding: 15px 30px;
                         text-align: left;
                         border-bottom: 1px solid $color-gray-2;
+                        &:last-child {
+                            text-align: right;
+                        }
+                    }
+                    @media only screen and (max-width: 82.5rem) {
+                        display: none;
                     }
                 }
             }
             &__body {
                 tr {
                     td {
-                        padding-top: 20px;
-                        padding-bottom: 20px;
-                        padding-right: 20px;
+                        padding: 15px;
+                        @media only screen and (max-width: 82.5rem) {
+                            &.mobile-hidden {
+                                display: none !important;
+                                width: 0;
+                            }
+                        }
                     }
 
                     td:first-child {
                         padding-left: 20px;
-                        padding-right: 0;
+                        padding-right: 10px;
                     }
                     td:not(:first-child) {
-                        padding-top: 20px;
-                        padding-bottom: 20px;
-                        padding-right: 20px;
+                        padding: 15px;
                     }
                     &:not(:last-child) {
                         border-bottom: 1px solid $color-gray-2;
                     }
+
+                    &:first-child td:first-child {
+                        @media only screen and (max-width: 82.5rem) {
+                        }
+                    }
+                }
+
+                &__td-pricing {
+                    &--line-trough {
+                        position: relative;
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            border-top: 1px solid $color-primary;
+                            width: 100%;
+                            transform: rotate(166deg);
+                            transform-origin: 0% 0%;
+                        }
+                    }
+
+                    &--actual-price {
+                        color: $color-primary;
+                    }
                 }
 
                 &--product-details {
+                    h2 {
+                        font-size: 14px;
+                    }
+                    & span {
+                        font-size: 13px;
+                    }
+                    & a {
+                        font-size: 13px;
+                    }
                     & > div > span {
                         margin-left: 20px;
                         margin-right: 20px;
@@ -46,6 +87,22 @@
                         &:last-of-type {
                             margin-bottom: 20px;
                         }
+                    }
+                }
+
+                &__pricing-mobile {
+                    @media only screen and (min-width: 82.5rem) {
+                        display: none !important;
+                    }
+
+                    & .total-price {
+                        text-align: right;
+                        color: $color-primary !important;
+                    }
+
+                    &__total-label {
+                        text-align: right;
+                        color: $color-gray;
                     }
                 }
             }
@@ -58,6 +115,15 @@
 
         @media only screen and (max-width: 82.5rem) {
             margin-top: 20px;
+        }
+    }
+    &__header {
+        display: none;
+        @media only screen and (max-width: 82.5rem) {
+            display: block;
+            font-size: 18px;
+            padding-left: 30px;
+            padding-top: 30px;
         }
     }
     .button:nth-child(2) {
