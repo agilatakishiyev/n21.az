@@ -191,9 +191,9 @@
                                                     class="basket--left__table__body--product-details__code d-block mt-10">Ölçü:
                                                     32-34</span>
                                                 <div class="d-flex">
-                                                    <a href="#" class="blue-link">Daha sonra al</a>
+                                                    <a href="#" class="blue-link buy-later">Daha sonra al</a>
                                                     <span class="vr"></span>
-                                                    <a href="#" class="blue-link">Sil</a>
+                                                    <a href="#" class="blue-link delete-product">Sil</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -217,7 +217,8 @@
                                             <div class="basket--left__table__body__pricing-mobile">
                                                 <span
                                                     class="d-block basket--left__table__body__pricing-mobile__total-label">Cəm</span>
-                                                <span class="total-price">44000 <span class="azn">AZN</span></span>
+                                                <span class="total-price">44000</span>
+                                                <span class="azn">AZN</span>
                                             </div>
                                         </div>
                                     </td>
@@ -239,7 +240,8 @@
                                         </div>
                                     </td>
                                     <td class="mobile-hidden">
-                                        <span class="total-price">44000 <span class="azn">AZN</span></span>
+                                        <span class="total-price">44000 </span>
+                                        <span class="azn">AZN</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -259,9 +261,9 @@
                                                     class="basket--left__table__body--product-details__code d-block mt-10">Ölçü:
                                                     32-34</span>
                                                 <div class="d-flex">
-                                                    <a href="#" class="blue-link">Daha sonra al</a>
+                                                    <a href="#" class="blue-link buy-later">Daha sonra al</a>
                                                     <span class="vr"></span>
-                                                    <a href="#" class="blue-link">Sil</a>
+                                                    <a href="#" class="blue-link delete-product">Sil</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -285,7 +287,8 @@
                                             <div class="basket--left__table__body__pricing-mobile">
                                                 <span
                                                     class="d-block basket--left__table__body__pricing-mobile__total-label">Cəm</span>
-                                                <span class="total-price">44000 <span class="azn">AZN</span></span>
+                                                <span class="total-price">44000</span>
+                                                <span class="azn">AZN</span>
                                             </div>
                                         </div>
                                     </td>
@@ -307,7 +310,8 @@
                                         </div>
                                     </td>
                                     <td class="mobile-hidden">
-                                        <span class="total-price">44000 <span class="azn">AZN</span></span>
+                                        <span class="total-price">44000 </span>
+                                        <span class="azn">AZN</span>
                                     </td>
                                 </tr>
                             </tbody>
@@ -503,15 +507,29 @@
                 const totalProductPriceHolder = counter.parentElement?.nextElementSibling?.querySelector('.total-price') || counter.parentElement.querySelector('.total-price');
                 let count = Number(countPlaceholder.innerText);
                 decrementButton.onclick = () => {
-                    if (count === 0) { return }
+                    if (count === 1) { return }
                     countPlaceholder.innerHTML = --count;
-                    totalProductPriceHolder.innerHTML = productPrice * count;
+                    totalProductPriceHolder.innerText = productPrice * count;
                 }
                 incrementButton.onclick = () => {
                     countPlaceholder.innerHTML = ++count;
-                    totalProductPriceHolder.innerHTML = productPrice * count;
+                    totalProductPriceHolder.innerText = productPrice * count;
                 }
             });
+            document.querySelectorAll('.delete-product').forEach(deleteButton => {
+                deleteButton.onclick = function (e) {
+                    e.preventDefault();
+                    const tRow = e.composedPath().find(element => element.tagName === 'TR');
+                    tRow.remove();
+                }
+            });
+            document.querySelectorAll('.buy-later').forEach(deleteButton => {
+                deleteButton.onclick = function (e) {
+                    e.preventDefault();
+                    const tRow = e.composedPath().find(element => element.tagName === 'TR');
+                    tRow.remove();
+                }
+            })
         }())
     </script>
 </body>
