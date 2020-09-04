@@ -1,0 +1,68 @@
+.basket {
+    &--left {
+        width: 100%;
+        border-radius: $border-radius-base;
+        border: 1px solid $color-gray-4;
+
+        &__table {
+            &__head {
+                tr {
+                    th {
+                        padding: 15px 30px;
+                        text-align: left;
+                        border-bottom: 1px solid $color-gray-2;
+                    }
+                }
+            }
+            &__body {
+                tr {
+                    td {
+                        padding-top: 20px;
+                        padding-bottom: 20px;
+                        padding-right: 20px;
+                    }
+
+                    td:first-child {
+                        padding-left: 20px;
+                        padding-right: 0;
+                    }
+                    td:not(:first-child) {
+                        padding-top: 20px;
+                        padding-bottom: 20px;
+                        padding-right: 20px;
+                    }
+                    &:not(:last-child) {
+                        border-bottom: 1px solid $color-gray-2;
+                    }
+                }
+
+                &--product-details {
+                    & > div > span {
+                        margin-left: 20px;
+                        margin-right: 20px;
+                    }
+                    &__code {
+                        color: $color-gray;
+                        &:last-of-type {
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &--right {
+        padding: 24px 30px 20px;
+        background-color: #f5f6fa;
+        border-radius: $border-radius-base;
+
+        @media only screen and (max-width: 82.5rem) {
+            margin-top: 20px;
+        }
+    }
+    .button:nth-child(2) {
+        @media only screen and (max-width: 82.5rem) {
+            margin-top: 20px;
+        }
+    }
+}

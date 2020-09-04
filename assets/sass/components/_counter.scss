@@ -1,0 +1,22 @@
+.counter {
+    background-color: rgba(11, 31, 53, 0.07);
+    padding: 7px;
+    display: flex;
+    border-radius: $border-radius-base;
+    & > span {
+        display: inline-block;
+        cursor: pointer;
+        &:nth-child(2) {
+            cursor: default;
+        }
+    }
+    &__decrement {
+        margin-right: 6px;
+    }
+    // &__count {
+    //     width: 25%;
+    // }
+    &__increment {
+        margin-left: 6px;
+    }
+}

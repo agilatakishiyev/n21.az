@@ -50,3 +50,51 @@
         width: 95%;
     }
 }
+
+.row {
+    @media only screen and (max-width: 82.5rem) {
+        flex-wrap: wrap;
+    }
+}
+
+.col-9 {
+    width: 72%;
+    @media only screen and (max-width: 82.5rem) {
+        width: 100%;
+    }
+}
+
+.col-6 {
+    width: 52%;
+    @media only screen and (max-width: 82.5rem) {
+        width: 100%;
+    }
+}
+
+.col-5 {
+    width: 42%;
+    @media only screen and (max-width: 82.5rem) {
+        width: 100%;
+    }
+}
+
+.col-3 {
+    width: 25%;
+    @media only screen and (max-width: 82.5rem) {
+        width: 100%;
+    }
+}
+
+.azn {
+    font-size: 12px;
+}
+
+a.blue-link {
+    color: $color-blue-1;
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+        color: $color-blue-1;
+    }
+}

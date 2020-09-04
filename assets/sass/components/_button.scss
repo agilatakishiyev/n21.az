@@ -10,6 +10,24 @@
         background-color: $color-blue-3;
     }
 
+    &.primary {
+        background-color: $color-primary;
+    }
+
+    &.secondary {
+        border: 1px solid $color-primary;
+        background-color: $color-white;
+        color: $color-primary;
+    }
+
+    &--md {
+        padding: 12px 20px;
+    }
+
+    &--sm {
+        padding: 12px 30px;
+    }
+
     @media only screen and (max-width: 82.5rem) {
         font-size: 14px;
     }

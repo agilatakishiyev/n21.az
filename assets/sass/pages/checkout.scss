@@ -1,12 +1,6 @@
 .checkout {
     &__page {
         margin-top: 30px;
-        & > div:first-child {
-            width: 72%;
-            @media only screen and (max-width: 82.5rem) {
-                width: 100%;
-            }
-        }
 
         &--left {
             border: 1px solid $color-gray-4;
@@ -165,7 +159,6 @@
         }
 
         &--right {
-            width: 25%;
             padding: 30px 20px;
             align-self: flex-start;
             border: 1px solid $color-gray-4;
@@ -210,7 +203,6 @@
             }
 
             @media only screen and (max-width: 82.5rem) {
-                width: 100%;
                 margin-top: 30px;
             }
         }
