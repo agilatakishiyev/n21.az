@@ -52,6 +52,11 @@
                 }
             }
         }
+        & + .error {
+            color: $color-primary;
+            display: block;
+            margin-bottom: 15px;
+        }
     }
 
     &::placeholder {

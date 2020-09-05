@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap-grid.min.css">
+    <!-- <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script> -->
     <title>n21.az - Login page</title>
 </head>
 
@@ -162,16 +164,28 @@
         <form class="login-page__form login-form">
             <h1 class="t-center">Daxil ol və ya qeydiyyat</h1>
             <div class="form-control">
-                <label for="phoneNumber" class="d-block mb-10">Mobil nömrənizi daxil edin <span
+                <label for="phoneNumber" class="d-block">Mobil nömrənizi daxil edin <span
                         style="color: #cc1a38;">*</span></label>
-                <input type="text" placeholder="+994 XX XXX XX XX" class="form-input mb-10" id="phoneNumber">
+                <input autocomplete="off" type="text" placeholder="994 XX XXX XX XX" class="form-input" id="phoneNumber"
+                    value="" maxlength="12">
+                <span class="error d-none">Bu xana boş buraxıla bilməz</span>
+                <span class="not-valid d-none" style="display:block; margin-bottom: 15px; color: #cc1a38;">Format
+                    yanlışdır</span>
                 <button class="login-button button primary">SMS kodu əldə et</button>
             </div>
         </form>
-        <form class="login-page__enter-code-form">
+        <form class="login-page__enter-code-form d-none">
             <h1 class="t-center mb-30">Kodu daxil edin</h1>
             <p class="t-center">Mobil nömrənizə kod göndərildi. Zəhmət olmasa daxil edin</p>
+            <div class="login-page__enter-code-form__inputs-wrapper d-flex align-center justify-between">
+                <input type="text" maxlength="1" class="login-page__enter-code-form__inputs-wrapper__input">
+                <input type="text" maxlength="1" class="login-page__enter-code-form__inputs-wrapper__input">
+                <input type="text" maxlength="1" class="login-page__enter-code-form__inputs-wrapper__input">
+                <input type="text" maxlength="1" class="login-page__enter-code-form__inputs-wrapper__input">
+            </div>
             <span class="timer d-flex justify-center mt-10" style="color: #6c757d;">02 : 00</span>
+            <div class="t-center mt-10"><span>Kodu almadınız? <a href="#k" class="blue-link">Yenidən istə</a></span>
+            </div>
         </form>
     </main>
     <footer class="footer">
@@ -339,34 +353,108 @@
     <script>
         (function () {
             document.addEventListener("DOMContentLoaded", () => {
-                let seconds = 120;
-                const timer = document.querySelector('.timer');
-                const makeLoginButtonDisable = () => {
-                    document.querySelector('.login-button').disabled = true;
-                }
-                const interval = setInterval(() => {
-                    timerFunction(makeLoginButtonDisable)
-                }, 1000);
-                function timerFunction(cb) {
-                    seconds = --seconds;
-                    if (seconds > 60) {
-                        if ((seconds - 60) < 10) {
-                            timer.innerHTML = `01 : 0${seconds - 60}`;
+                const NUMBER_REGEX = /^[0-9]*$/
+                const PHONE_MATCH_REGEX = /^(994)(51|50|55|70|77|99)[\./0-9]*$/;
+                const codeInputsWrapper = document.querySelector('.login-page__enter-code-form__inputs-wrapper');
+                const loginForm = document.querySelector('.login-form');
+                const notValidError = loginForm.querySelector('.not-valid');
+                const phoneNumberInput = document.getElementById('phoneNumber');
+                function validatePhoneNumberInput(value, event) {
+                    if (event && !NUMBER_REGEX.test(event?.key) || value.length > 12) {
+                        return false;
+                    }
+                    if (value) {
+                        phoneNumberInput.nextElementSibling.classList.add('d-none');
+                        if (!PHONE_MATCH_REGEX.test(value)) {
+                            notValidError.classList.remove('d-none');
+                            return;
                         } else {
-                            timer.innerHTML = `01 : ${seconds - 60}`;
+                            notValidError.classList.add('d-none');
+                            phoneNumberInput.classList.remove('error');
+                            return;
                         }
-                    } else if (seconds === -1) {
-                        timer.innerHTML - '00 : 00';
-                        if (cb) {
-                            cb();
-                        }
-                        clearInterval(interval);
-                    } else if (seconds < 10) {
-                        timer.innerHTML = `00 : 0${seconds}`;
                     } else {
-                        timer.innerHTML = `00 : ${seconds}`;
+                        phoneNumberInput.classList.add('error')
+                        phoneNumberInput.nextElementSibling.classList.remove('d-none');
+                        notValidError.classList.add('d-none');
                     }
                 }
+                function isValidPhoneNumber(phoneNumber) {
+                    return PHONE_MATCH_REGEX.test(phoneNumber) && phoneNumber.length === 12;
+                }
+                phoneNumberInput.onkeypress = function (e) {
+                    console.log(phoneNumberInput.value + e.key);
+                    return validatePhoneNumberInput((phoneNumberInput.value + e.key), e)
+                }
+                loginForm.onsubmit = function (e) {
+                    e.preventDefault();
+                    validatePhoneNumberInput(phoneNumberInput.value);
+                    console.log(isValidPhoneNumber(phoneNumberInput.value))
+                    if (isValidPhoneNumber(phoneNumberInput.value)) {
+                        activateTimer();
+                        // call to backend to send the number
+                        makeLoginButtonDisable();
+                    }
+                }
+                function makeLoginButtonDisable() {
+                    document.querySelector('.login-button').disabled = true;
+                }
+                function activateTimer() {
+                    document.querySelector('.login-page__enter-code-form').classList.remove('d-none');
+                    let seconds = 120;
+                    const timer = document.querySelector('.timer');
+                    const interval = setInterval(function () {
+                        timerFunction()
+                    }, 1000);
+                    function timerFunction(cb) {
+                        seconds = --seconds;
+                        if (seconds > 60) {
+                            if ((seconds - 60) < 10) {
+                                timer.innerHTML = `01 : 0${seconds - 60}`;
+                            } else {
+                                timer.innerHTML = `01 : ${seconds - 60}`;
+                            }
+                        } else if (seconds === -1) {
+                            timer.innerHTML - '00 : 00';
+                            if (cb) {
+                                cb();
+                            }
+                            clearInterval(interval);
+                        } else if (seconds < 10) {
+                            timer.innerHTML = `00 : 0${seconds}`;
+                        } else {
+                            timer.innerHTML = `00 : ${seconds}`;
+                        }
+                    }
+                }
+                codeInputsWrapper.querySelectorAll('input').forEach(input => {
+                    input.onkeydown = function (e) {
+                        e.preventDefault();
+                        if (e.keyCode == '8') {
+                            console.log(input.value)
+                            if (input.value) {
+                                input.value = '';
+                                return;
+                            } else if (input.previousElementSibling) {
+                                input.previousElementSibling.focus();
+                                return;
+                            }
+                        }
+                        if (NUMBER_REGEX.test(e.key)) {
+                            if (input.value) {
+                                return;
+                            }
+                            input.value = e.key;
+                            if (Boolean(input.nextElementSibling)) {
+                                input.nextElementSibling.focus();
+                            } else {
+                                // call endpoint for sending code
+                            }
+                        } else {
+                            return false;
+                        }
+                    }
+                })
             });
         }())
     </script>
