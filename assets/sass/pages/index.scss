@@ -386,6 +386,9 @@ main {
             &--first {
                 img {
                     width: 30%;
+                    @media only screen and (max-width: 82.5rem) {
+                        width: 15%;
+                    }
                 }
                 li:nth-child(2) {
                     a {
