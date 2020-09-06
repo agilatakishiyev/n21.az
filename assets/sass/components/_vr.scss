@@ -2,4 +2,7 @@
     width: 1px;
     height: 20px;
     background-color: #aaaaaa;
+    @media only screen and (max-width: 82.5rem) {
+        display: none;
+    }
 }
