@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="shortcut icon" href="./assets/icons/N21Logo.ico" type="image/x-icon">
-    <title>n21.az - checkout page</title>
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>n21.az - Dress product</title>
 </head>
 
 <body>
@@ -311,214 +311,16 @@
         </div>
         <!-- Responsive menu ends -->
     </header>
-    <section class="checkout">
+
+    <main class="dress-product-details">
         <div class="custom-container">
-            <div class="checkout__page d-flex justify-between">
-                <div class="col-9">
-                    <div class="checkout__page--left">
-                        <div class="checkout__page--left-forms">
-                            <h3>Əlaqə məlumatları</h3>
-                            <div class="checkout__page--left-forms--inner">
-                                <div class="checkout__page--left-forms--inner__form-wrapper">
-                                    <div class="d-flex align-center mb-30">
-                                        <label class="checkout__page--left-forms--inner__form-wrapper__label form-label"
-                                            for="firstname">Ad <span style="color: #cc1a38;">*</span></label>
-                                        <div class="checkout__page--left-forms--inner__form-wrapper__input-holder">
-                                            <input id="firstname"
-                                                class="checkout__page--left-forms--inner__form-wrapper__input ml-30 form-input error"
-                                                placeholder="Adınız" type="text">
-                                            <span class="error-tooltip-wrapper">
-                                                <span class="error-tooltip">Bu xana boş qoyula bilməz</span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-center mb-30">
-                                        <label class="checkout__page--left-forms--inner__form-wrapper__label form-label"
-                                            for="lastname">Soyad <span style="color: #cc1a38;">*</span></label>
-                                        <div class="checkout__page--left-forms--inner__form-wrapper__input-holder">
-                                            <input id="lastname"
-                                                class="checkout__page--left-forms--inner__form-wrapper__input ml-30 form-input"
-                                                placeholder="Soyadınız" type="text">
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-baseline mb-30">
-                                        <label class="checkout__page--left-forms--inner__form-wrapper__label form-label"
-                                            for="phoneNumber">Telefon <span style="color: #cc1a38;">*</span></label>
-                                        <div class="checkout__page--left-forms--inner__form-wrapper__input-holder">
-                                            <input id="phoneNumber"
-                                                class="checkout__page--left-forms--inner__form-wrapper__input ml-30 form-input error"
-                                                placeholder="+994 XX XXX XX XX" type="text">
-                                            <span class="error-tooltip-wrapper">
-                                                <span class="error-tooltip">Bu xana boş qoyula bilməz</span>
-                                            </span>
-                                            <div
-                                                class="checkout__page--left-forms--inner__form-wrapper__input-holder__phone-number pt-10">
-                                                + Daha bir mobil nömrə əlavə et</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="checkout__page--left-forms">
-                            <h3>Çatdırılma ünvanı</h3>
-                            <div class="checkout__page--left-forms--inner">
-                                <div class="checkout__page--left-forms--inner__form-wrapper">
-                                    <div class="d-flex align-baseline mb-30">
-                                        <label class="checkout__page--left-forms--inner__form-wrapper__label form-label"
-                                            for="city">Şəhər <span style="color: #cc1a38;">*</span></label>
-                                        <div class="checkout__page--left-forms--inner__form-wrapper__input-holder">
-                                            <input id="city"
-                                                class="checkout__page--left-forms--inner__form-wrapper__input ml-30 form-input error"
-                                                placeholder="Şəhəriniz" type="text">
-                                            <span class="error-tooltip-wrapper">
-                                                <span class="error-tooltip">Bu xana boş qoyula bilməz</span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-baseline mb-30">
-                                        <label class="checkout__page--left-forms--inner__form-wrapper__label form-label"
-                                            for="address">Ünvan <span style="color: #cc1a38;">*</span></label>
-                                        <div class="checkout__page--left-forms--inner__form-wrapper__input-holder">
-                                            <input id="address"
-                                                class="checkout__page--left-forms--inner__form-wrapper__input ml-30 form-input"
-                                                placeholder="Küçə, bina, mənzil" type="text">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="checkout__page--left-forms">
-                            <h3>Ödəmə üsulları</h3>
-                            <div class="checkout__page--left-forms--inner --no-padding">
-                                <div class="checkout__page--left-forms--inner__form-wrapper">
-                                    <div
-                                        class="checkout__page--left-forms--inner__form-wrapper__radios d-flex justify-between">
-                                        <div class="checkout__page--left-forms--inner__form-wrapper__radios__item">
-                                            <h5
-                                                class="checkout__page--left-forms--inner__form-wrapper__radios__item__heading">
-                                                Qapıda ödəniş</h5>
-                                            <p
-                                                class="checkout__page--left-forms--inner__form-wrapper__radios__item__text">
-                                                Qapıda nağd və ya bank kartı ilə ödəniş edəcəksiniz. Sizə Fiscal çek
-                                                təqdim olunacaq</p>
-                                            <div
-                                                class="checkout__page--left-forms--inner__form-wrapper__radios__item__wrapper">
-                                                <div
-                                                    class="checkout__page--left-forms--inner__form-wrapper__radios__item__wrapper__image">
-                                                    <!-- <img src="" alt=""> -->
-                                                </div>
-                                                <label for="payment-type-onthedoor">
-                                                    <input id="payment-type-onthedoor" name="payment-type" type="radio"
-                                                        value="onthedoor"
-                                                        class="checkout__page--left-forms--inner__form-wrapper__radios__item__wrapper__radio">
-                                                    <span></span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="checkout__page--left-forms--inner__form-wrapper__radios__item">
-                                            <h5
-                                                class="checkout__page--left-forms--inner__form-wrapper__radios__item__heading">
-                                                Saytda online ödə</h5>
-                                            <p
-                                                class="checkout__page--left-forms--inner__form-wrapper__radios__item__text">
-                                                Saytdan online ödəniş edəcəksiniz. Sizə Fiscal çek təqdim olunacaq</p>
-                                            <div
-                                                class="checkout__page--left-forms--inner__form-wrapper__radios__item__wrapper">
-                                                <div
-                                                    class="checkout__page--left-forms--inner__form-wrapper__radios__item__wrapper__image">
-                                                    <!-- <img src="" alt=""> -->
-                                                </div>
-                                                <label for="payment-type-online">
-                                                    <input id="payment-type-online" name="payment-type" type="radio"
-                                                        value="online"
-                                                        class="checkout__page--left-forms--inner__form-wrapper__radios__item__wrapper__radio">
-                                                    <span></span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="checkout__page--left-forms--inner__form-wrapper__radios__item">
-                                            <h5
-                                                class="checkout__page--left-forms--inner__form-wrapper__radios__item__heading">
-                                                Paypointlərdə</h5>
-                                            <p
-                                                class="checkout__page--left-forms--inner__form-wrapper__radios__item__text">
-                                                Milliön, Expresspay, E-manat terminallarında ödəniş edə bilərsiniz.</p>
-                                            <div
-                                                class="checkout__page--left-forms--inner__form-wrapper__radios__item__wrapper">
-                                                <div
-                                                    class="checkout__page--left-forms--inner__form-wrapper__radios__item__wrapper__image">
-                                                    <!-- <img src="" alt=""> -->
-                                                </div>
-                                                <label for="payment-type-paypoint">
-                                                    <input id="payment-type-paypoint" name="payment-type" type="radio"
-                                                        value="paypoint"
-                                                        class="checkout__page--left-forms--inner__form-wrapper__radios__item__wrapper__radio">
-                                                    <span></span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="checkout__page--left-forms--inner__form-wrapper__radios__item">
-                                            <h5
-                                                class="checkout__page--left-forms--inner__form-wrapper__radios__item__heading">
-                                                Taksit kartları ilə</h5>
-                                            <p
-                                                class="checkout__page--left-forms--inner__form-wrapper__radios__item__text">
-                                                BirKart, Bolkart, Tam kartla ödəniş edə bilərsiniz</p>
-                                            <div
-                                                class="checkout__page--left-forms--inner__form-wrapper__radios__item__wrapper">
-                                                <div
-                                                    class="checkout__page--left-forms--inner__form-wrapper__radios__item__wrapper__image">
-                                                    <!-- <img src="" alt=""> -->
-                                                </div>
-                                                <label for="payment-type-taksit">
-                                                    <input id="payment-type-taksit" name="payment-type" value="taksit"
-                                                        type="radio"
-                                                        class="checkout__page--left-forms--inner__form-wrapper__radios__item__wrapper__radio">
-                                                    <span></span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="checkout__page--right col-3">
-                    <h4 class="mb-30">Sifariş olunan mallar</h4>
-                    <div class="checkout__page--right__item d-flex align-center justify-between">
-                        <div><img src="./assets/images/washing-machine.png" alt="washing machine"></div>
-                        <div>
-                            <span class="mb-10 d-block">
-                                Smartfon Xiaomi Redmi Note 8 4GB/64GB Black
-                            </span>
-                            <span class="d-block">329 AZN - 2 ədəd</span>
-                        </div>
-                    </div>
-                    <div class="checkout__page--right__item d-flex align-center justify-between">
-                        <div><img src="./assets/images/tv.png" alt="tv"></div>
-                        <div>
-                            <span class="mb-10 d-block">
-                                Televizor Sony KDL-50WF665
-                            </span>
-                            <span class="d-block">100 AZN - 1 ədəd</span>
-                        </div>
-                    </div>
-                    <span class="checkout__page--right__pricing d-block mt-50">Cəmi: 758 <span
-                            class="azn">AZN</span></span>
-                    <span class="checkout__page--right__pricing d-block mt-20">Çatdırılma: 0 <span
-                            class="azn">AZN</span></span>
-                    <span class="hr"></span>
-                    <span class="checkout__page--right__final-pricing">Yekun məbləğ: 758 <span
-                            class="azn">AZN</span></span>
-                </div>
-            </div>
-            <div class="checkout__page__button-wrapper mt-50 mb-60">
-                <button class="checkout__page__button-wrapper__button button blue" type="submit">Sifarişi
-                    tamamla</button>
+            <div class="row">
+                <div class="col-8">salam</div>
+                <div class="col-4">salam</div>
             </div>
         </div>
-    </section>
+    </main>
+
     <footer class="footer">
         <div class="custom-container">
             <ul class="footer__navigation-list d-flex">
@@ -685,21 +487,6 @@
             </div>
         </div>
     </footer>
-    <script src="./assets/js/main.js"></script>
-    <script>
-        (function () {
-            const parentDivClassName = "checkout__page--left-forms--inner__form-wrapper__radios__item";
-            const parentRadioButtons = document.querySelectorAll(`.${parentDivClassName}`);
-            parentRadioButtons.forEach(rb => {
-                rb.addEventListener('click', (e) => {
-                    parentRadioButtons.forEach(prevSelectedDiv => prevSelectedDiv.classList.remove('checked'));
-                    e.currentTarget.className = parentDivClassName;
-                    e.currentTarget.classList.add('checked');
-                    e.currentTarget.querySelector('[name=payment-type]').checked = true;
-                });
-            });
-        }())
-    </script>
 </body>
 
 </html>

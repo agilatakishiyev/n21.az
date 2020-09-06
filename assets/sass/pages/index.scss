@@ -83,7 +83,7 @@
         }
 
         @media only screen and (max-width: 82.5rem) {
-            margin: 16px 0px;
+            margin: 0;
             align-items: center;
         }
     }
@@ -252,6 +252,77 @@
                 position: absolute;
                 top: 0;
                 right: 0;
+            }
+        }
+    }
+
+    &__mobile-navigation {
+        position: fixed;
+        background-color: #ffffff;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        z-index: 9999;
+        overflow-y: scroll;
+        &.open {
+            width: 100%;
+        }
+        &__upper-part {
+            background-color: $color-blue-dark;
+            width: 100%;
+            padding: 16px;
+            &--left-side {
+                &__logo-wrapper {
+                    margin-left: 20px;
+                    display: inline-block;
+                }
+            }
+            &--right-side {
+                &__lang-span {
+                    padding: 5px;
+                    border-radius: $border-radius-base;
+                    color: $color-white !important;
+                    &:nth-child(2) {
+                        margin-left: 20px;
+                    }
+
+                    &.active {
+                        background-color: rgba(204, 26, 56, 0.5);
+                    }
+                }
+            }
+        }
+        &__categories-list {
+            padding: 16px;
+            &__item {
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+
+                &--left-image {
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 10px;
+                    background-color: $color-primary-2;
+                    border-radius: $border-radius-base;
+                }
+
+                & > img {
+                    margin-left: auto;
+                    transform: rotate(180deg);
+                    width: 5px;
+                    height: 9px;
+                }
+            }
+        }
+        &__list {
+            padding-left: 16px;
+            li > a {
+                color: $color-black-1;
+                display: inline-block;
+                padding: 20px 0;
+                width: 100%;
             }
         }
     }

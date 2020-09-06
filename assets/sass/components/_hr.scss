@@ -5,4 +5,15 @@
     background-color: $color-gray-4;
     height: 1px;
     width: 100%;
+    &.without-margin {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    &.width-with-padding {
+        margin-left: -16px;
+        width: calc(100% + 16px);
+    }
+    &.height-2 {
+        height: 2px;
+    }
 }

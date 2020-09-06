@@ -44,8 +44,8 @@
             </div>
             <div class="d-flex justify-between header__center-part">
                 <div class="header__center-part__image-wrapper">
-                    <span href="#hamburger" class="header__center-part__image-wrapper__hamburger d-none">
-                        <img width="16" height="16" src="/assets/icons/menu.svg" alt="hamburger menu">
+                    <span class="header__center-part__image-wrapper__hamburger menu-icon d-none">
+                        <img width="16" height="16" src="/assets/icons/menu.svg" alt="menu icon">
                     </span>
                     <a href="/index.html">
                         <img src="./assets/icons/N21Logo.svg" alt="n21.az logo">
@@ -186,7 +186,129 @@
                 </p>
             </div>
         </div>
+        <!-- Responsive menu starts -->
+        <div class="header__mobile-navigation">
+            <!-- Close icon, logo, and languages section starts -->
+            <div class="header__mobile-navigation__upper-part d-flex justify-between">
+                <div class="header__mobile-navigation__upper-part--left-side d-flex align-center">
+                    <span class="close-icon"><img src="./assets/icons/close.svg" alt="close icon"></span>
+                    <span class="header__mobile-navigation__upper-part--left-side__logo-wrapper"><img
+                            src="./assets/icons/N21Logo.svg" alt="close icon"></span>
+                </div>
+                <div class="header__mobile-navigation__upper-part--right-side d-flex align-center">
+                    <a href="/lang-smth"
+                        class="header__mobile-navigation__upper-part--right-side__lang-span active">AZE</a>
+                    <a href="/lang-smth" class="header__mobile-navigation__upper-part--right-side__lang-span">RUS</a>
+                </div>
+            </div>
+            <!-- Close icon, logo, and languages section ends -->
 
+            <!-- Mobile menu Categories section starts-->
+            <ul class="header__mobile-navigation__categories-list">
+                <li class="header__mobile-navigation__categories-list__item d-flex align-center">
+                    <span class="header__mobile-navigation__categories-list__item--left-image"></span>
+                    <span>Televizor audio</span>
+                    <img src="./assets/icons/slider-arrows.svg" alt="">
+                </li>
+                <li class="header__mobile-navigation__categories-list__item d-flex align-center">
+                    <span class="header__mobile-navigation__categories-list__item--left-image"></span>
+                    <span>Televizor audio</span>
+                    <img src="./assets/icons/slider-arrows.svg" alt="">
+                </li>
+                <li class="header__mobile-navigation__categories-list__item d-flex align-center">
+                    <span class="header__mobile-navigation__categories-list__item--left-image"></span>
+                    <span>Televizor audio</span>
+                    <img src="./assets/icons/slider-arrows.svg" alt="">
+                </li>
+                <li class="header__mobile-navigation__categories-list__item d-flex align-center">
+                    <span class="header__mobile-navigation__categories-list__item--left-image"></span>
+                    <span>Televizor audio</span>
+                    <img src="./assets/icons/slider-arrows.svg" alt="">
+                </li>
+                <li class="header__mobile-navigation__categories-list__item d-flex align-center">
+                    <span class="header__mobile-navigation__categories-list__item--left-image"></span>
+                    <span>Televizor audio</span>
+                    <img src="./assets/icons/slider-arrows.svg" alt="">
+                </li>
+                <li class="header__mobile-navigation__categories-list__item d-flex align-center">
+                    <span class="header__mobile-navigation__categories-list__item--left-image"></span>
+                    <span>Televizor audio</span>
+                    <img src="./assets/icons/slider-arrows.svg" alt="">
+                </li>
+            </ul>
+            <!-- Mobile menu Categories section ends-->
+
+            <!-- Mobile menu navigation section starts -->
+            <ul class="header__mobile-navigation__list">
+                <li>
+                    <span class="hr width-with-padding without-margin height-2"></span>
+                    <a href="/campaigns.html">Kampaniyalar</a>
+                    <span class="hr width-with-padding without-margin height-2"></span>
+                </li>
+                <li>
+                    <a href="/login.html">Daxil ol / Qeydiyyat</a>
+                    <span class="hr width-with-padding without-margin height-2"></span>
+                </li>
+                <ul class="header__mobile-navigation__list--profile-related">
+                    <li>
+                        <a href="/choosen">Seçilmişlər</a>
+                    </li>
+                    <li>
+                        <a href="/compare.html">Müqayisə siyahısı</a>
+                    </li>
+                    <li>
+                        <a href="/viewed">Baxdıqlarınız</a>
+                    </li>
+                    <li>
+                        <a href="/basket.html">Səbət</a>
+                        <span class="hr width-with-padding without-margin height-2"></span>
+                    </li>
+                </ul>
+                <ul class="header__mobile-navigation__list--site-map">
+                    <li>
+                        <a href="/sitemap">Sayt haqqında</a>
+                    </li>
+                    <li>
+                        <a href="/delivery">Çatdırılma</a>
+                    </li>
+                    <li>
+                        <a href="/payment-types">Ödəmə növləri</a>
+                    </li>
+                    <li>
+                        <a href="/returning">Geri qaytarılma</a>
+                    </li>
+                    <li>
+                        <a href="/warranty">Zəmanət</a>
+                    </li>
+                    <li>
+                        <a href="/service">Servis</a>
+                    </li>
+                    <li>
+                        <a href="/loan">Nisyə alış şərtləri</a>
+                    </li>
+                    <li>
+                        <a href="/faq">Sual-cavab</a>
+                        <span class="hr width-with-padding without-margin height-2"></span>
+                    </li>
+                    <li class="d-flex align-center">
+                        <img class="mr-10" style="transform: rotate(180deg)" width="16" height="16"
+                            src="./assets/icons/logout.svg" alt="logout icon">
+                        <a href="/logout">Çıxış</a>
+                    </li>
+                    <span class="hr width-with-padding without-margin height-2"></span>
+                    <li class="d-flex align-center">
+                        Telefon: <a href="tel:*1031" style="width: 50%;">*1031</a>
+                        <a href="#"
+                            style="background-color: #57bb63; width: 60%; padding: 10px; margin-right: 16px; display: flex; color: white;">
+                            <img class="mr-10" src="./assets/icons/whatsapp.svg" alt="">
+                            Whatsapp dəstək
+                        </a>
+                    </li>
+                </ul>
+            </ul>
+            <!-- Mobile menu navigation section ends -->
+        </div>
+        <!-- Responsive menu ends -->
     </header>
     <main class="basket mb-30">
         <div class="custom-container">
@@ -521,7 +643,7 @@
             </ul>
         </div>
         <div class="footer__lower-part">
-            <div class="container d-flex">
+            <div class="custom-container d-flex">
                 <p>© 2020 <span>"N21” MMC.</span> Bütün hüquqlar qorunur. </p>
                 <span class="vr"></span>
                 <div>
@@ -531,7 +653,7 @@
             </div>
         </div>
     </footer>
-
+    <script src="./assets/js/main.js"></script>
     <script>
         (function () {
             const counters = document.querySelectorAll('.counter').forEach(counter => {
