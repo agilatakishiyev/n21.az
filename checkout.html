@@ -45,6 +45,9 @@
             </div>
             <div class="d-flex justify-between header__center-part">
                 <div class="header__center-part__image-wrapper">
+                    <span href="#hamburger" class="header__center-part__image-wrapper__hamburger d-none">
+                        <img width="16" height="16" src="/assets/icons/menu.svg" alt="hamburger menu">
+                    </span>
                     <a href="/index.html">
                         <img src="./assets/icons/N21Logo.svg" alt="n21.az logo">
                     </a>
@@ -61,14 +64,15 @@
                                 <img width="16" height="16" src="./assets/icons/phone.svg" alt="">
                                 *1021
                             </span>
-                            Biz Sizə zəng edək?
+                            <span class="header__center-part__customer-navigation__list-item__icon-holder__text">Biz
+                                Sizə zəng edək?</span>
                         </a>
                     </li>
                     <span style="display:inline-block; 
                     width: 1px;
                     height: 24px;
-                    background-color: rgba(255, 255, 255, 0.15);"></span>
-                    <li class="header__center-part__customer-navigation__list-item">
+                    background-color: rgba(255, 255, 255, 0.15);" class="mobile-hidden-vr"></span>
+                    <li class="header__center-part__customer-navigation__list-item --bar-chart">
                         <a href="#" class="header__center-part__customer-navigation__list-item__icon-holder">
                             <img width="16" height="16" src="./assets/icons/bar-chart.svg" alt="bar chart icon">
                         </a>
@@ -76,7 +80,7 @@
                     <span style="display:inline-block; 
                     width: 1px;
                     height: 24px;
-                    background-color: rgba(255, 255, 255, 0.15);"></span>
+                    background-color: rgba(255, 255, 255, 0.15);" class="mobile-hidden-vr"></span>
                     <li class="header__center-part__customer-navigation__list-item">
                         <a href="#" class="header__center-part__customer-navigation__list-item__icon-holder">
                             <div class="header__center-part__customer-navigation__list-item__icon-holder--positioned">
@@ -89,9 +93,9 @@
                     <span style="display:inline-block; 
                     width: 1px;
                     height: 24px;
-                    background-color: rgba(255, 255, 255, 0.15);"></span>
-                    <li class="header__center-part__customer-navigation__list-item">
-                        <a href="#"
+                    background-color: rgba(255, 255, 255, 0.15);" class="mobile-hidden-vr"></span>
+                    <li class="header__center-part__customer-navigation__list-item --login">
+                        <a href="/login.html"
                             class="header__center-part__customer-navigation__list-item__icon-holder d-flex justify-between align-center">
                             <img class="mr-10" src="./assets/icons/login.svg" alt="user icon">
                             <span>Daxil ol / Qeydiyyat</span>
@@ -100,22 +104,46 @@
                     <span style="display:inline-block; 
                     width: 1px;
                     height: 24px;
-                    background-color: rgba(255, 255, 255, 0.15);"></span>
+                    background-color: rgba(255, 255, 255, 0.15);" class="mobile-hidden-vr"></span>
                     <li class="header__center-part__customer-navigation__list-item">
                         <a href="/basket.html"
                             class="header__center-part__customer-navigation__list-item__icon-holder--last d-flex justify-between align-center">
-                            <div class="header__center-part__customer-navigation__list-item__icon-holder--positioned">
+                            <div
+                                class="header__center-part__customer-navigation__list-item__icon-holder--positioned d-flex">
                                 <img class="mr-10" src="./assets/icons/basket.svg" alt="basket icon">
                                 <span
                                     class="header__center-part__customer-navigation__list-item--badge t-center">1</span>
+                                <span>Səbət</span>
                             </div>
-                            Səbət
                         </a>
                     </li>
                 </ul>
             </div>
+            <div class="header__mobile-search d-none">
+                <div class="header__mobile-search__input-wrapper">
+                    <input type="text" placeholder="Axtardığınız kəliməni buraya yazın…"
+                        class="header__mobile-search__input-wrapper__input">
+                    <span class="header__mobile-search__input-wrapper__search-icon">
+                        <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="mobile-Index" transform="translate(-311.000000, -59.000000)" fill="#FFFFFF"
+                                    fill-rule="nonzero">
+                                    <g id="Group-5" transform="translate(16.000000, 52.000000)">
+                                        <g id="Group" transform="translate(295.000000, 7.000000)">
+                                            <path
+                                                d="M15.3263158,14.1473684 C15.3263158,14.1473684 15.1578947,14.5684211 14.9052632,14.8210526 C14.5684211,15.1578947 14.1473684,15.3263158 14.1473684,15.3263158 C14.1473684,15.3263158 13.3894737,15.9157895 11.7894737,13.9789474 C10.8631579,12.8 9.93684211,11.6210526 9.17894737,10.6947368 C8.33684211,11.3684211 7.15789474,11.7894737 5.89473684,11.7894737 C2.61052632,11.7894737 0,9.17894737 0,5.89473684 C0,2.61052632 2.61052632,0 5.89473684,0 C9.17894737,0 11.7894737,2.61052632 11.7894737,5.89473684 C11.7894737,7.15789474 11.3684211,8.33684211 10.6947368,9.26315789 C11.6210526,9.93684211 12.8,10.9473684 14.0631579,11.8736842 C16,13.3052632 15.3263158,14.1473684 15.3263158,14.1473684 Z M5.89473684,1.68421053 C3.53684211,1.68421053 1.68421053,3.53684211 1.68421053,5.89473684 C1.68421053,8.25263158 3.53684211,10.1052632 5.89473684,10.1052632 C8.25263158,10.1052632 10.1052632,8.25263158 10.1052632,5.89473684 C10.1052632,3.53684211 8.25263158,1.68421053 5.89473684,1.68421053 Z"
+                                                id="Shape"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+            </div>
             <div class="d-flex header__bottom-part justify-between align-center">
-                <ul class="d-flex header__bottom-part__navigation-list">
+                <ul class="d-flex header__bottom-part__navigation-list" style="overflow-x: scroll;">
                     <li class="header__bottom-part__navigation-list__item">
                         <a href="#">
                             Kampaniyalar
@@ -153,7 +181,9 @@
                     </li>
                 </ul>
                 <p class="d-flex">
-                    <img src="./assets/icons/star.svg" alt="star icon" class="mr-10"> Tələbə noutbuku Acer Swift
+                    <a href="#">
+                        <img src="./assets/icons/star.svg" alt="star icon" class="mr-10"> Tələbə noutbuku Acer Swift
+                    </a>
                 </p>
             </div>
         </div>
@@ -377,30 +407,33 @@
                                 <img src="./assets/icons/N21Logo.svg" class="" alt="">
                                 <span class="d-block mt-10">
                                     Online internet mağaza
+                                    <span
+                                        class="d-none footer__navigation-list__item--first--hidden-contact-info">Telefon:
+                                        <a href="tel:*1021">*1021</a></span>
                                 </span>
                             </span>
                         </li>
-                        <li>
+                        <li class="mobile-hidden">
                             Telefon: <a href="tel:*1021">*1021</a>
                         </li>
-                        <li>
+                        <li class="mobile-hidden">
                             <a href="#" class="suggestion-compilation-button">
                                 Şikayət və ya təklif göndərmək
                             </a>
                         </li>
-                        <li class="mb-20">
+                        <li class="mb-20 mobile-hidden">
                             <a href="#">Şirkət haqqında</a>
                         </li>
-                        <li class="mb-20">
+                        <li class="mb-20 mobile-hidden">
                             <a href="#">Vakansiyalar</a>
                         </li>
-                        <li class="mb-20">
+                        <li class="mb-20 mobile-hidden">
                             <a href="#">Press mərkəz</a>
                         </li>
-                        <li class="mb-20">
+                        <li class="mb-20 mobile-hidden">
                             <a href="#">Korporativ satış</a>
                         </li>
-                        <li class="mb-20">
+                        <li class="mb-20 mobile-hidden">
                             <a href="#">Əlaqə</a>
                         </li>
                     </ul>
@@ -523,8 +556,10 @@
             <div class="container d-flex">
                 <p>© 2020 <span>"N21” MMC.</span> Bütün hüquqlar qorunur. </p>
                 <span class="vr"></span>
-                <a href="#">Məxfilik siyasəti</a>
-                <a href="#">İstifadəçi şərtləri</a>
+                <div>
+                    <a href="#">Məxfilik siyasəti</a>
+                    <a href="#">İstifadəçi şərtləri</a>
+                </div>
             </div>
         </div>
     </footer>
