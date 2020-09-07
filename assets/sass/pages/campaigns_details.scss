@@ -1,6 +1,9 @@
 .campaigns-details {
     &__header {
         margin-bottom: 30px;
+        @media only screen and (max-width: 86.5rem) {
+            display: none;
+        }
     }
 
     &__image-wrapper {
@@ -46,7 +49,6 @@
         @media only screen and (max-width: 86.5rem) {
             width: 90%;
             padding: 12px 5px;
-            // margin: 30px auto 0;
         }
     }
 }
