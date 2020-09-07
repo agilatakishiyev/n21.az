@@ -1,0 +1,80 @@
+.campaigns-details {
+    &__header {
+        margin-bottom: 30px;
+    }
+
+    &__image-wrapper {
+        &__image {
+            width: 100%;
+        }
+    }
+    &__content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &__header {
+            margin-bottom: 30px;
+            font-weight: 500;
+            align-self: flex-start;
+            @media only screen and (max-width: 86.5rem) {
+                margin: 20px 0;
+            }
+        }
+        &__paragraph {
+            font-size: $font-size-14;
+            margin-bottom: 60px;
+            line-height: 1.71;
+            @media only screen and (max-width: 86.5rem) {
+                margin-bottom: 30px;
+            }
+        }
+        @media only screen and (max-width: 86.5rem) {
+            align-items: center;
+        }
+    }
+    &__timer {
+        color: $color-white;
+        background-color: #0b1f35;
+        border-radius: $border-radius-base;
+        width: 50%;
+        padding: 12px 15px;
+        margin-top: 30px;
+        @media only screen and (max-width: 86.5rem) {
+            width: 70%;
+            // margin: 30px auto 0;
+        }
+    }
+}
+
+.campaign-conditions-wrapper {
+    margin: 60px 0;
+    &__content {
+        background-color: #f5f7f9;
+        padding: 30px;
+
+        &__header {
+            @media only screen and (max-width: 86.5rem) {
+                text-align: left !important;
+            }
+        }
+
+        &__ordered-list {
+            padding-left: 20px;
+            & > li {
+                padding-top: 15px;
+                &:not(:last-child) {
+                    padding-bottom: 15px;
+                }
+                font-size: $font-size-14;
+            }
+        }
+
+        @media only screen and (max-width: 86.5rem) {
+            padding: 16px;
+        }
+    }
+    @media only screen and (max-width: 86.5rem) {
+        margin: 30px 0;
+    }
+}

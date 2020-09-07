@@ -335,57 +335,78 @@
         </div>
         <!-- Responsive menu ends -->
     </header>
-    <main class="campaigns-section">
+
+    <main class="campaigns-details">
         <div class="container">
-            <h1 class="campaigns-section__header">Kampaniyalar</h1>
+            <h1 class="campaigns-details__header">
+                Kampaniyalar
+            </h1>
             <div class="row">
-                <div class="col-xl-4 col-lg-12">
-                    <div class="campaigns-section__item">
-                        <img class="campaigns-section__item__image"
-                            src="./assets/images/eniko-kis-KsLPTsYaqIQ-unsplash.jpg" alt="campaign">
-                        <span class="campaigns-section__item__date">21 avqusta kimi</span>
-                        <p class="campaigns-section__item__text">
-                            Birkartla bütün məhsullar 18 ay Faizsiz taksitlə əldə edə biləcəksiniz
-                        </p>
-                        <a class="campaigns-section__item__link" href="#">Link</a>
+                <div class="col-xl-6 col-lg-12">
+                    <div class="campaigns-details__image-wrapper">
+                        <img class="campaigns-details__image-wrapper__image"
+                            src="./assets/images/mikkel-bech-yjAFnkLtKY0-unsplash.jpg" alt="">
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-12">
-                    <div class="campaigns-section__item">
-                        <img class="campaigns-section__item__image"
-                            src="./assets/images/eniko-kis-KsLPTsYaqIQ-unsplash.jpg" alt="campaign">
-                        <span class="campaigns-section__item__date">21 avqusta kimi</span>
-                        <p class="campaigns-section__item__text">
-                            Birkartla bütün məhsullar 18 ay Faizsiz taksitlə əldə edə biləcəksiniz
-                        </p>
-                        <a class="campaigns-section__item__link" href="#">Link</a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-12">
-                    <div class="campaigns-section__item">
-                        <img class="campaigns-section__item__image"
-                            src="./assets/images/eniko-kis-KsLPTsYaqIQ-unsplash.jpg" alt="campaign">
-                        <span class="campaigns-section__item__date">21 avqusta kimi</span>
-                        <p class="campaigns-section__item__text">
-                            Birkartla bütün məhsullar 18 ay Faizsiz taksitlə əldə edə biləcəksiniz
-                        </p>
-                        <a class="campaigns-section__item__link" href="#">Link</a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-12">
-                    <div class="campaigns-section__item">
-                        <img class="campaigns-section__item__image"
-                            src="./assets/images/eniko-kis-KsLPTsYaqIQ-unsplash.jpg" alt="campaign">
-                        <span class="campaigns-section__item__date">21 avqusta kimi</span>
-                        <p class="campaigns-section__item__text">
-                            Birkartla bütün məhsullar 18 ay Faizsiz taksitlə əldə edə biləcəksiniz
-                        </p>
-                        <a class="campaigns-section__item__link" href="#">Link</a>
+                <div class="col-xl-6 col-lg-12">
+                    <div class="campaigns-details__content">
+                        <h2 class="campaigns-details__content__header">Birkartla bütün məhsullar 18 ay Faizsiz taksitlə
+                            əldə edə biləcəksiniz</h2>
+                        <p class="campaigns-details__content__paragraph">İyunun 15-nə qədər Rahat market və Neptun
+                            supermarket şəbəkələrindən 30 AZN-dən yuxarı
+                            alış-veriş edən hər kəsə Canon endirim kuponu təqdim edilir. Həmin kuponla siz kontakt.az
+                            saytından alış-veriş edərkən Canon printerlərinə 20 AZN, Canon fotokameralarına isə 50 AZN
+                            endirim əldə edirsiniz. Məhsulu əldə etdiyiz zaman həmin kuponu təqdim etmək gərəkdir.</p>
+                        <span>21 avqusta kimi</span>
+                        <div class="campaigns-details__timer d-flex justify-between">
+                            <!-- INFO FOR BACKEND -->
+                            <!-- add end date in shown format inside bottom element, it is not shown in the UI -->
+                            <span class="end-date d-none">October 12, 2020 12:00:00</span>
+                            <div class="d-flex flex-direction-col align-center justify-between">
+                                <span class="timer-days">0</span>
+                                <span>Gün</span>
+                            </div>
+                            <span class="vr" style="height: auto;"></span>
+                            <div class="d-flex flex-direction-col align-center justify-between">
+                                <span class="timer-hours">0</span>
+                                <span>Saat</span>
+                            </div>
+                            <span class="vr" style="height: auto;"></span>
+                            <div class="d-flex flex-direction-col align-center justify-between">
+                                <span class="timer-minutes">0</span>
+                                <span>Dəqiqə</span>
+                            </div>
+                            <span class="vr" style="height: auto;"></span>
+                            <div class="d-flex flex-direction-col align-center justify-between">
+                                <span class="timer-seconds">0</span>
+                                <span>Saniyə</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+
+    <section class="campaign-conditions-wrapper">
+        <div class="custom-container">
+            <div class="campaign-conditions-wrapper__content">
+                <h3 class="campaign-conditions-wrapper__content__header t-center">Kampaniyanın şərtləri</h3>
+                <ol class="campaign-conditions-wrapper__content__ordered-list">
+                    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia eos nemo incidunt soluta rerum
+                        ipsum!</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum pariatur consequuntur sit eaque
+                        nemo repellat. Molestias sequi iusto earum incidunt itaque repellat eius, consequatur dolore
+                        modi asperiores maiores, architecto vero.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt fugit officiis aliquam
+                        perferendis iste minus fugiat! Tempora dolorum voluptatem in?</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="custom-container">
             <ul class="footer__navigation-list d-flex">
@@ -567,6 +588,36 @@
         <img src="./assets/icons/category-arrow.svg" alt="arrow up icon">
     </span>
     <script src="./assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const endDateElement = document.querySelector('.end-date');
+            const endDate = new Date(endDateElement.innerText).getTime();
+            const timerDays = document.querySelector('.timer-days');
+            const timerHours = document.querySelector('.timer-hours');
+            const timerMinutes = document.querySelector('.timer-minutes');
+            const timerSeconds = document.querySelector('.timer-seconds');
+
+            setInterval(
+                function () {
+                    const now = new Date().getTime();
+                    const t = endDate - now;
+
+                    if (t >= 0) {
+                        let days = Math.floor(t / (1000 * 60 * 60 * 24));
+                        let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        let mins = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+                        let secs = Math.floor((t % (1000 * 60)) / 1000);
+
+                        timerDays.innerHTML = days;
+                        timerHours.innerHTML = ("0" + hours).slice(-2);
+                        timerMinutes.innerHTML = ("0" + mins).slice(-2);
+                        timerSeconds.innerHTML = ("0" + secs).slice(-2);
+                    }
+                },
+                1000
+            );
+        });
+    </script>
     <script>
     </script>
 </body>

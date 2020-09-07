@@ -1,0 +1,29 @@
+.campaigns-section {
+    &__header {
+        margin-bottom: 60px;
+    }
+    &__item {
+        margin-bottom: 60px;
+        position: relative;
+        &__image {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        &__date {
+            color: $color-gray;
+            display: inline-block;
+            padding: 15px 0 15px;
+        }
+        &__text {
+            font-size: 18px;
+            line-height: 1.44;
+        }
+
+        &__link {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+    }
+}
