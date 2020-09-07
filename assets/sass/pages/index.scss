@@ -8,6 +8,7 @@
     }
 
     &__upper-navigation {
+        width: 70%;
         &__list-item {
             &__link {
                 padding-right: 30px;
@@ -15,6 +16,8 @@
         }
 
         &--right {
+            width: 30%;
+            justify-content: flex-end;
             a:first-child {
                 padding-right: 41px;
             }
@@ -455,10 +458,13 @@ main {
             }
 
             &--first {
-                img {
-                    width: 30%;
+                &__logo-wrapper {
+                    & > img {
+                        width: 106px;
+                    }
                     @media only screen and (max-width: 82.5rem) {
-                        width: 15%;
+                        width: 25%;
+                        text-align: left;
                     }
                 }
                 li:nth-child(2) {
@@ -551,6 +557,36 @@ main {
                         }
                     }
                 }
+                &__list-item {
+                    @media screen and (max-width: 82.5rem) {
+                        &--social-links {
+                            margin-top: 150px;
+                        }
+                        &--support {
+                            margin-top: -250px;
+                        }
+
+                        &--mobile-apps {
+                            margin-top: 175px;
+                        }
+                    }
+                }
+                &__apps {
+                    margin-top: -25px;
+                    & > li {
+                        & > a {
+                            display: inline-block;
+                            width: 100px;
+                            height: 50px;
+                            & > img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    @media only screen and (max-width: 82.5rem) {
+                        justify-content: space-around !important;
+                    }
+                }
                 @media only screen and (max-width: 82.5rem) {
                     text-align: center;
                 }
@@ -569,6 +605,10 @@ main {
         background-color: $color-blue-dark-light;
         padding: 17px 0px 17px;
         margin-top: 88px;
+
+        @media only screen and (max-width: 82.5rem) {
+            margin-top: 0;
+        }
 
         a {
             color: $color-gray-6;
@@ -607,5 +647,26 @@ main {
                 }
             }
         }
+    }
+}
+
+.scroll-to-top {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-primary;
+    position: fixed;
+    right: 20px;
+    bottom: 95px;
+    opacity: 0;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    & > img {
+        transform: rotate(270deg);
+    }
+    &.show {
+        opacity: 1;
     }
 }

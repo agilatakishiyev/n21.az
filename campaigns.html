@@ -36,15 +36,38 @@
                         <a class="header__upper-navigation__list-item__link" href="#">Sual-cavab</a>
                     </li>
                 </ul>
-                <div class="header__upper-navigation--right">
+                <div class="header__upper-navigation--right d-flex">
                     <a href="#">Aylıq ödəniş</a>
-                    <a href="#">Azerbaycan</a>
+                    <div class="header__upper-navigation--right--lang-wrapper">
+                        <div class="custom-select-wrapper">
+                            <div class="custom-select">
+                                <div class="custom-select__trigger">
+                                    <span>
+                                        <img width="15" height="10" src="./assets/icons/azerbaijan-flag-small.png"
+                                            alt="">
+                                        Azərbaycan
+                                    </span>
+                                    <img src="./assets/icons/category-arrow.svg" alt="">
+                                </div>
+                                <div class="custom-options">
+                                    <span class="custom-option selected" data-value="aze">
+                                        <img width="15" height="10" src="./assets/icons/azerbaijan-flag-small.png"
+                                            alt="azerbaijani flag">
+                                        Azərbaycan</span>
+                                    <span class="custom-option" data-value="rus">
+                                        <img width="15" height="10" src="./assets/icons/russia-flag-small.png"
+                                            alt="russia flag">
+                                        Rusiya</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="d-flex justify-between header__center-part">
                 <div class="header__center-part__image-wrapper">
-                    <span href="#hamburger" class="header__center-part__image-wrapper__hamburger d-none">
-                        <img width="16" height="16" src="/assets/icons/menu.svg" alt="hamburger menu">
+                    <span class="header__center-part__image-wrapper__hamburger menu-icon d-none">
+                        <img width="16" height="16" src="/assets/icons/menu.svg" alt="menu icon">
                     </span>
                     <a href="/index.html">
                         <img src="./assets/icons/N21Logo.svg" alt="n21.az logo">
@@ -185,7 +208,129 @@
                 </p>
             </div>
         </div>
+        <!-- Responsive menu starts -->
+        <div class="header__mobile-navigation">
+            <!-- Close icon, logo, and languages section starts -->
+            <div class="header__mobile-navigation__upper-part d-flex justify-between">
+                <div class="header__mobile-navigation__upper-part--left-side d-flex align-center">
+                    <span class="close-icon"><img src="./assets/icons/close.svg" alt="close icon"></span>
+                    <span class="header__mobile-navigation__upper-part--left-side__logo-wrapper"><img
+                            src="./assets/icons/N21Logo.svg" alt="close icon"></span>
+                </div>
+                <div class="header__mobile-navigation__upper-part--right-side d-flex align-center">
+                    <a href="/lang-smth"
+                        class="header__mobile-navigation__upper-part--right-side__lang-span active">AZE</a>
+                    <a href="/lang-smth" class="header__mobile-navigation__upper-part--right-side__lang-span">RUS</a>
+                </div>
+            </div>
+            <!-- Close icon, logo, and languages section ends -->
 
+            <!-- Mobile menu Categories section starts-->
+            <ul class="header__mobile-navigation__categories-list">
+                <li class="header__mobile-navigation__categories-list__item d-flex align-center">
+                    <span class="header__mobile-navigation__categories-list__item--left-image"></span>
+                    <span>Televizor audio</span>
+                    <img src="./assets/icons/slider-arrows.svg" alt="">
+                </li>
+                <li class="header__mobile-navigation__categories-list__item d-flex align-center">
+                    <span class="header__mobile-navigation__categories-list__item--left-image"></span>
+                    <span>Televizor audio</span>
+                    <img src="./assets/icons/slider-arrows.svg" alt="">
+                </li>
+                <li class="header__mobile-navigation__categories-list__item d-flex align-center">
+                    <span class="header__mobile-navigation__categories-list__item--left-image"></span>
+                    <span>Televizor audio</span>
+                    <img src="./assets/icons/slider-arrows.svg" alt="">
+                </li>
+                <li class="header__mobile-navigation__categories-list__item d-flex align-center">
+                    <span class="header__mobile-navigation__categories-list__item--left-image"></span>
+                    <span>Televizor audio</span>
+                    <img src="./assets/icons/slider-arrows.svg" alt="">
+                </li>
+                <li class="header__mobile-navigation__categories-list__item d-flex align-center">
+                    <span class="header__mobile-navigation__categories-list__item--left-image"></span>
+                    <span>Televizor audio</span>
+                    <img src="./assets/icons/slider-arrows.svg" alt="">
+                </li>
+                <li class="header__mobile-navigation__categories-list__item d-flex align-center">
+                    <span class="header__mobile-navigation__categories-list__item--left-image"></span>
+                    <span>Televizor audio</span>
+                    <img src="./assets/icons/slider-arrows.svg" alt="">
+                </li>
+            </ul>
+            <!-- Mobile menu Categories section ends-->
+
+            <!-- Mobile menu navigation section starts -->
+            <ul class="header__mobile-navigation__list">
+                <li>
+                    <span class="hr width-with-padding without-margin height-2"></span>
+                    <a href="/campaigns.html">Kampaniyalar</a>
+                    <span class="hr width-with-padding without-margin height-2"></span>
+                </li>
+                <li>
+                    <a href="/login.html">Daxil ol / Qeydiyyat</a>
+                    <span class="hr width-with-padding without-margin height-2"></span>
+                </li>
+                <ul class="header__mobile-navigation__list--profile-related">
+                    <li>
+                        <a href="/choosen">Seçilmişlər</a>
+                    </li>
+                    <li>
+                        <a href="/compare.html">Müqayisə siyahısı</a>
+                    </li>
+                    <li>
+                        <a href="/viewed">Baxdıqlarınız</a>
+                    </li>
+                    <li>
+                        <a href="/basket.html">Səbət</a>
+                        <span class="hr width-with-padding without-margin height-2"></span>
+                    </li>
+                </ul>
+                <ul class="header__mobile-navigation__list--site-map">
+                    <li>
+                        <a href="/sitemap">Sayt haqqında</a>
+                    </li>
+                    <li>
+                        <a href="/delivery">Çatdırılma</a>
+                    </li>
+                    <li>
+                        <a href="/payment-types">Ödəmə növləri</a>
+                    </li>
+                    <li>
+                        <a href="/returning">Geri qaytarılma</a>
+                    </li>
+                    <li>
+                        <a href="/warranty">Zəmanət</a>
+                    </li>
+                    <li>
+                        <a href="/service">Servis</a>
+                    </li>
+                    <li>
+                        <a href="/loan">Nisyə alış şərtləri</a>
+                    </li>
+                    <li>
+                        <a href="/faq">Sual-cavab</a>
+                        <span class="hr width-with-padding without-margin height-2"></span>
+                    </li>
+                    <li class="d-flex align-center">
+                        <img class="mr-10" style="transform: rotate(180deg)" width="16" height="16"
+                            src="./assets/icons/logout.svg" alt="logout icon">
+                        <a href="/logout">Çıxış</a>
+                    </li>
+                    <span class="hr width-with-padding without-margin height-2"></span>
+                    <li class="d-flex align-center">
+                        Telefon: <a href="tel:*1031" style="width: 50%;">*1031</a>
+                        <a href="#"
+                            style="background-color: #57bb63; width: 60%; padding: 10px; margin-right: 16px; display: flex; color: white;">
+                            <img class="mr-10" src="./assets/icons/whatsapp.svg" alt="">
+                            Whatsapp dəstək
+                        </a>
+                    </li>
+                </ul>
+            </ul>
+            <!-- Mobile menu navigation section ends -->
+        </div>
+        <!-- Responsive menu ends -->
     </header>
 
     <footer class="footer">
@@ -195,12 +340,14 @@
                     <ul class="footer__navigation-list__item--first">
                         <li class="mb-20">
                             <span>
-                                <img src="./assets/icons/N21Logo.svg" class="" alt="">
+                                <span class="footer__navigation-list__item--first__logo-wrapper">
+                                    <img src="./assets/icons/N21Logo.svg" class="" alt="">
+                                </span>
                                 <span class="d-block mt-10">
                                     Online internet mağaza
-                                    <span
-                                        class="d-none footer__navigation-list__item--first--hidden-contact-info">Telefon:
-                                        <a href="tel:*1021">*1021</a></span>
+                                    <span class="d-none footer__navigation-list__item--first--hidden-contact-info">
+                                        Telefon:<a style="font-family: SFProText-Bold; font-size: 21px; color: #ffffff;"
+                                            href="tel:*1021">*1021</a></span>
                                 </span>
                             </span>
                         </li>
@@ -280,7 +427,7 @@
                 </li>
                 <li class="footer__navigation-list__item">
                     <ul class="footer__navigation-list__item--fourth">
-                        <li>Sosial media</li>
+                        <li class="footer__navigation-list__item--fourth__list-item--social-links">Sosial media</li>
                         <ul class="footer__navigation-list__item--fourth__social-links-list d-flex justify-between">
                             <li class="footer__navigation-list__item--fourth__social-links-list__item">
                                 <a href="#"
@@ -319,7 +466,7 @@
                                 </a>
                             </li>
                         </ul>
-                        <li>Dəstək</li>
+                        <li class="footer__navigation-list__item--fourth__list-item--support">Dəstək</li>
                         <ul class="footer__navigation-list__item--fourth__support-links d-flex justify-between">
                             <li class="footer__navigation-list__item--fourth__support-links__item">
                                 <a href="#"
@@ -334,17 +481,26 @@
                                 </a>
                             </li>
                         </ul>
-                        <li>Mobil tətbiqetmələr</li>
+                        <li class="footer__navigation-list__item--fourth__list-item--mobile-apps">Mobil tətbiqetmələr
+                        </li>
                         <ul class="footer__navigation-list__item--fourth__apps d-flex justify-between">
-                            <li></li>
-                            <li></li>
+                            <li>
+                                <a href="/appstore">
+                                    <img src="./assets/icons/app-store-badge.svg" alt="app store badge">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/appstore">
+                                    <img src="./assets/icons/google-play-badge.svg" alt="google play store badge">
+                                </a>
+                            </li>
                         </ul>
                     </ul>
                 </li>
             </ul>
         </div>
         <div class="footer__lower-part">
-            <div class="container d-flex">
+            <div class="custom-container d-flex">
                 <p>© 2020 <span>"N21” MMC.</span> Bütün hüquqlar qorunur. </p>
                 <span class="vr"></span>
                 <div>
@@ -354,6 +510,10 @@
             </div>
         </div>
     </footer>
+    <span class="scroll-to-top">
+        <img src="./assets/icons/category-arrow.svg" alt="arrow up icon">
+    </span>
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>

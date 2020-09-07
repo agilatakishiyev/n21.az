@@ -38,9 +38,32 @@
                         <a class="header__upper-navigation__list-item__link" href="#">Sual-cavab</a>
                     </li>
                 </ul>
-                <div class="header__upper-navigation--right">
+                <div class="header__upper-navigation--right d-flex">
                     <a href="#">Aylıq ödəniş</a>
-                    <a href="#">Azerbaycan</a>
+                    <div class="header__upper-navigation--right--lang-wrapper">
+                        <div class="custom-select-wrapper">
+                            <div class="custom-select">
+                                <div class="custom-select__trigger">
+                                    <span>
+                                        <img width="15" height="10" src="./assets/icons/azerbaijan-flag-small.png"
+                                            alt="">
+                                        Azərbaycan
+                                    </span>
+                                    <img src="./assets/icons/category-arrow.svg" alt="">
+                                </div>
+                                <div class="custom-options">
+                                    <span class="custom-option selected" data-value="aze">
+                                        <img width="15" height="10" src="./assets/icons/azerbaijan-flag-small.png"
+                                            alt="azerbaijani flag">
+                                        Azərbaycan</span>
+                                    <span class="custom-option" data-value="rus">
+                                        <img width="15" height="10" src="./assets/icons/russia-flag-small.png"
+                                            alt="russia flag">
+                                        Rusiya</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="d-flex justify-between header__center-part">
@@ -519,6 +542,7 @@
             </div>
         </div>
     </section>
+
     <footer class="footer">
         <div class="custom-container">
             <ul class="footer__navigation-list d-flex">
@@ -526,12 +550,14 @@
                     <ul class="footer__navigation-list__item--first">
                         <li class="mb-20">
                             <span>
-                                <img src="./assets/icons/N21Logo.svg" class="" alt="">
+                                <span class="footer__navigation-list__item--first__logo-wrapper">
+                                    <img src="./assets/icons/N21Logo.svg" class="" alt="">
+                                </span>
                                 <span class="d-block mt-10">
                                     Online internet mağaza
-                                    <span
-                                        class="d-none footer__navigation-list__item--first--hidden-contact-info">Telefon:
-                                        <a href="tel:*1021">*1021</a></span>
+                                    <span class="d-none footer__navigation-list__item--first--hidden-contact-info">
+                                        Telefon:<a style="font-family: SFProText-Bold; font-size: 21px; color: #ffffff;"
+                                            href="tel:*1021">*1021</a></span>
                                 </span>
                             </span>
                         </li>
@@ -611,7 +637,7 @@
                 </li>
                 <li class="footer__navigation-list__item">
                     <ul class="footer__navigation-list__item--fourth">
-                        <li>Sosial media</li>
+                        <li class="footer__navigation-list__item--fourth__list-item--social-links">Sosial media</li>
                         <ul class="footer__navigation-list__item--fourth__social-links-list d-flex justify-between">
                             <li class="footer__navigation-list__item--fourth__social-links-list__item">
                                 <a href="#"
@@ -650,7 +676,7 @@
                                 </a>
                             </li>
                         </ul>
-                        <li>Dəstək</li>
+                        <li class="footer__navigation-list__item--fourth__list-item--support">Dəstək</li>
                         <ul class="footer__navigation-list__item--fourth__support-links d-flex justify-between">
                             <li class="footer__navigation-list__item--fourth__support-links__item">
                                 <a href="#"
@@ -665,10 +691,19 @@
                                 </a>
                             </li>
                         </ul>
-                        <li>Mobil tətbiqetmələr</li>
+                        <li class="footer__navigation-list__item--fourth__list-item--mobile-apps">Mobil tətbiqetmələr
+                        </li>
                         <ul class="footer__navigation-list__item--fourth__apps d-flex justify-between">
-                            <li></li>
-                            <li></li>
+                            <li>
+                                <a href="/appstore">
+                                    <img src="./assets/icons/app-store-badge.svg" alt="app store badge">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/appstore">
+                                    <img src="./assets/icons/google-play-badge.svg" alt="google play store badge">
+                                </a>
+                            </li>
                         </ul>
                     </ul>
                 </li>
@@ -685,6 +720,9 @@
             </div>
         </div>
     </footer>
+    <span class="scroll-to-top">
+        <img src="./assets/icons/category-arrow.svg" alt="arrow up icon">
+    </span>
     <script src="./assets/js/main.js"></script>
     <script>
         (function () {
