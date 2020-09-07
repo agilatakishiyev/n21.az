@@ -47,4 +47,14 @@
             }
         })
     }
+    document.addEventListener('DOMContentLoaded', function () {
+        const catalogButton = document.querySelector('.header__center-part__catalog-button');
+        // const catalogSection = document.querySelector('.header__center-part__catalog-section');
+        if(catalogButton) {
+            document.querySelector('.header__center-part__input-wrapper').classList.add('with-catalog');
+            // catalogButton.onclick = function () {
+            //     catalogSection.classList.add('show');
+            // }
+        }
+    });
 })()

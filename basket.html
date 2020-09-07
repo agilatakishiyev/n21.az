@@ -74,6 +74,21 @@
                         <img src="./assets/icons/N21Logo.svg" alt="n21.az logo">
                     </a>
                 </div>
+                <div class="header__center-part__catalog-button">
+                    <button class="button primary button--sm d-flex align-center" href="#">
+                        <img src="./assets/icons/menu.svg" alt="menu icon" style="margin-right: 10px;">
+                        Kataloq
+                        <img src="./assets/icons/category-arrow.svg" alt="arrow icon"
+                            style="transform: rotate(90deg); margin-left: 8px;">
+                    </button>
+                    <!-- <section class="header__center-part__catalog-section">
+                        <div class="header__center-part__catalog-section__categories">
+                            <div class="d-flex justify-between align-center">
+                                <div class="header__center-part__catalog-section__categories__item"></div>
+                            </div>
+                        </div>
+                    </section> -->
+                </div>
                 <div class="header__center-part__input-wrapper">
                     <input type="text" placeholder="Axtardığınız kəliməni buraya yazın…"
                         class="header__center-part__input-wrapper__input">
@@ -381,8 +396,9 @@
                                                 </span>
                                                 <span
                                                     class="basket--left__table__body__td-pricing--actual-price d-block">
-                                                    44529
-                                                    <span class="azn">AZN</span></span>
+                                                    <span>44529</span>
+                                                    <span class="azn">AZN</span>
+                                                </span>
                                             </div>
                                             <div class="counter">
                                                 <span class="counter__decrement">-</span>
@@ -392,7 +408,7 @@
                                             <div class="basket--left__table__body__pricing-mobile">
                                                 <span
                                                     class="d-block basket--left__table__body__pricing-mobile__total-label">Cəm</span>
-                                                <span class="total-price">44000</span>
+                                                <span class="total-price">44529</span>
                                                 <span class="azn">AZN</span>
                                             </div>
                                         </div>
@@ -403,8 +419,10 @@
                                                 <span class="product-price">44529</span>
                                                 <span class="azn">AZN</span>
                                             </span>
-                                            <span class="basket--left__table__body__td-pricing--actual-price">44529<span
-                                                    class="azn">AZN</span></span>
+                                            <span class="basket--left__table__body__td-pricing--actual-price">
+                                                <span>44529</span>
+                                                <span class="azn">AZN</span>
+                                            </span>
                                         </div>
                                     </td>
                                     <td class="mobile-hidden">
@@ -415,7 +433,7 @@
                                         </div>
                                     </td>
                                     <td class="mobile-hidden">
-                                        <span class="total-price">44000 </span>
+                                        <span class="total-price">44529</span>
                                         <span class="azn">AZN</span>
                                     </td>
                                 </tr>
@@ -451,8 +469,9 @@
                                                 </span>
                                                 <span
                                                     class="basket--left__table__body__td-pricing--actual-price d-block">
-                                                    44529
-                                                    <span class="azn">AZN</span></span>
+                                                    <span>44529</span>
+                                                    <span class="azn">AZN</span>
+                                                </span>
                                             </div>
                                             <div class="counter">
                                                 <span class="counter__decrement">-</span>
@@ -462,7 +481,7 @@
                                             <div class="basket--left__table__body__pricing-mobile">
                                                 <span
                                                     class="d-block basket--left__table__body__pricing-mobile__total-label">Cəm</span>
-                                                <span class="total-price">44000</span>
+                                                <span class="total-price">44529</span>
                                                 <span class="azn">AZN</span>
                                             </div>
                                         </div>
@@ -473,8 +492,10 @@
                                                 <span class="product-price">44529</span>
                                                 <span class="azn">AZN</span>
                                             </span>
-                                            <span class="basket--left__table__body__td-pricing--actual-price">44529<span
-                                                    class="azn">AZN</span></span>
+                                            <span class="basket--left__table__body__td-pricing--actual-price">
+                                                <span>44529</span>
+                                                <span class="azn">AZN</span>
+                                            </span>
                                         </div>
                                     </td>
                                     <td class="mobile-hidden">
@@ -485,7 +506,7 @@
                                         </div>
                                     </td>
                                     <td class="mobile-hidden">
-                                        <span class="total-price">44000 </span>
+                                        <span class="total-price">44529</span>
                                         <span class="azn">AZN</span>
                                     </td>
                                 </tr>
@@ -496,14 +517,16 @@
                 <div class="col-3">
                     <div class="basket--right">
                         <h2>Səbətdəki mallar</h2>
-                        <p class="mt-20">Malların qiyməti: 12578<span class="azn">AZN</span></p>
-                        <p class="mt-20">Endirim: 1280 <span class="azn">AZN</span></p>
+                        <p class="mt-20">Malların qiyməti: <span class="sum-of-product-prices">0</span><span
+                                class="azn">AZN</span></p>
+                        <p class="mt-20">Endirim: <span class="discount-price">1000</span> <span class="azn">AZN</span>
+                        </p>
                         <span class="hr"></span>
-                        <h3>Yekun məbləğ: 758 <span class="azn">AZN</span></h3>
+                        <h3>Yekun məbləğ: <span class="after-discount-price">0</span> <span class="azn">AZN</span></h3>
                     </div>
                     <div class="d-flex justify-between align-baseline mt-20 row">
-                        <button type="submit" class="button button--md primary col-6">Sifarişi
-                            rəsmiləşdir</button>
+                        <button type="submit" class="button button--md primary col-6">
+                            Sifarişi rəsmiləşdir</button>
                         <button type="submit" class="button button--sm secondary col-5">Bir kliklə al</button>
                     </div>
                 </div>
@@ -693,6 +716,9 @@
     <script src="./assets/js/main.js"></script>
     <script>
         (function () {
+            const sumOfAllProducts = document.querySelector('.sum-of-product-prices');
+            const discountAmount = Number(document.querySelector('.discount-price').innerText);
+            const discountedPriceHolder = document.querySelector('.after-discount-price');
             const counters = document.querySelectorAll('.counter').forEach(counter => {
                 const decrementButton = counter.querySelector('span[class*="__decrement"]');
                 const countPlaceholder = counter.querySelector('span[class*="__count"]');
@@ -704,12 +730,45 @@
                     if (count === 1) { return }
                     countPlaceholder.innerHTML = --count;
                     totalProductPriceHolder.innerText = productPrice * count;
+                    if (window.innerWidth <= 1320) {
+                        calculateFinalAmountAndShowItInResponsiveMode();
+                    } else {
+                        calculateFinalAmountAndShowIt();
+                    }
                 }
                 incrementButton.onclick = () => {
                     countPlaceholder.innerHTML = ++count;
                     totalProductPriceHolder.innerText = productPrice * count;
+                    if (window.innerWidth <= 1320) {
+                        calculateFinalAmountAndShowItInResponsiveMode();
+                    } else {
+                        calculateFinalAmountAndShowIt();
+                    }
                 }
             });
+            function calculateFinalAmountAndShowIt() {
+                let sum = 0;
+                document.querySelectorAll('.basket--left__table tbody tr td:last-child').forEach(function (tableData) {
+                    const productCount = Number(tableData.previousElementSibling.querySelector('.counter__count').innerText);
+                    const actualProductPrice = Number(tableData.previousElementSibling.previousElementSibling.querySelector('.basket--left__table__body__td-pricing--actual-price span:first-child').innerText);
+                    sum += productCount * actualProductPrice;
+                })
+
+                sumOfAllProducts.innerText = sum;
+                discountedPriceHolder.innerText = discountAmount ? sum - discountAmount : sum;
+            }
+            function calculateFinalAmountAndShowItInResponsiveMode() {
+                let sum = 0;
+                document.querySelectorAll('.basket--left__table tbody tr td:first-child').forEach(function (tableData) {
+                    console.log(tableData);
+                    const productCount = Number(tableData.querySelector('.counter__count').innerText);
+                    const actualProductPrice = Number(tableData.querySelector('.basket--left__table__body__td-pricing--actual-price span:first-child').innerText);
+                    sum += productCount * actualProductPrice;
+                })
+
+                sumOfAllProducts.innerText = sum;
+                discountedPriceHolder.innerText = discountAmount ? sum - discountAmount : sum;
+            }
             document.querySelectorAll('.delete-product').forEach(deleteButton => {
                 deleteButton.onclick = function (e) {
                     e.preventDefault();
@@ -723,7 +782,14 @@
                     const tRow = e.composedPath().find(element => element.tagName === 'TR');
                     tRow.remove();
                 }
-            })
+            });
+            document.addEventListener('DOMContentLoaded', function () {
+                if (window.innerWidth <= 1320) {
+                    calculateFinalAmountAndShowItInResponsiveMode();
+                } else {
+                    calculateFinalAmountAndShowIt();
+                }
+            });
         }())
     </script>
 </body>
