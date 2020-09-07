@@ -5,12 +5,20 @@
     &__item {
         margin-bottom: 60px;
         position: relative;
+
+        & > a:link,
+        & > a:visited,
+        & > a:hover,
+        & > a:active {
+            color: $color-black;
+        }
+
         &__image {
             width: 100%;
             object-fit: cover;
         }
 
-        &__date {
+        &__deadline {
             color: $color-gray;
             display: inline-block;
             padding: 15px 0 15px;
@@ -18,12 +26,6 @@
         &__text {
             font-size: 18px;
             line-height: 1.44;
-        }
-
-        &__link {
-            position: absolute;
-            top: 50%;
-            left: 50%;
         }
     }
 }
