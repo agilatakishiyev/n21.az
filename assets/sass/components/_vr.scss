@@ -4,5 +4,8 @@
     background-color: #aaaaaa;
     @media only screen and (max-width: 82.5rem) {
         display: none;
+        &.not-hidden {
+            display: block;
+        }
     }
 }

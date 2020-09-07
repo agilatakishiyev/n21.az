@@ -40,8 +40,12 @@
         width: 50%;
         padding: 12px 15px;
         margin-top: 30px;
+        & > div {
+            width: 25%;
+        }
         @media only screen and (max-width: 86.5rem) {
-            width: 70%;
+            width: 90%;
+            padding: 12px 5px;
             // margin: 30px auto 0;
         }
     }
