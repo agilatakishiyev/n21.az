@@ -462,6 +462,16 @@ main {
             display: none !important;
         }
     }
+    .all-categories-button-wrapper {
+        margin: 30px auto;
+        text-align: center;
+        &__button {
+            background-color: $color-blue-dark;
+        }
+        @media only screen and (max-width: 86.5rem) {
+            display: block !important;
+        }
+    }
 }
 
 .weekly-discounts {
@@ -496,6 +506,13 @@ main {
                     width: 90%;
                     padding: 12px 5px;
                     margin-top: 10px;
+                    font-size: 13px;
+                }
+            }
+
+            & > h1 {
+                @media only screen and (max-width: 86.5rem) {
+                    font-size: 15px;
                 }
             }
 
@@ -562,7 +579,7 @@ main {
             }
             img {
                 height: 200px;
-                width: 320px;
+                width: 100%;
                 object-fit: cover;
             }
             @media only screen and (max-width: 82.5rem) {
@@ -681,6 +698,7 @@ main {
 
     &--mobile {
         padding-bottom: 50px;
+        overflow-x: hidden;
         @media only screen and (max-width: 82.5rem) {
             display: block !important;
         }
@@ -949,6 +967,9 @@ main {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    & > a {
+        color: $color-black;
+    }
     &__image-wrapper {
         height: 190px;
         display: flex;

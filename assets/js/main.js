@@ -61,31 +61,34 @@
     // countdown timer code starts
     document.addEventListener('DOMContentLoaded', function () {
         const endDateElement = document.querySelector('.end-date');
-        const endDate = new Date(endDateElement.innerText).getTime();
+        const endDate = new Date(endDateElement?.innerText).getTime();
         const timerDays = document.querySelector('.timer-days');
         const timerHours = document.querySelector('.timer-hours');
         const timerMinutes = document.querySelector('.timer-minutes');
         const timerSeconds = document.querySelector('.timer-seconds');
 
-        setInterval(
-            function () {
-                const now = new Date().getTime();
-                const t = endDate - now;
-
-                if (t >= 0) {
-                    let days = Math.floor(t / (1000 * 60 * 60 * 24));
-                    let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    let mins = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-                    let secs = Math.floor((t % (1000 * 60)) / 1000);
-
-                    timerDays.innerHTML = days;
-                    timerHours.innerHTML = ("0" + hours).slice(-2);
-                    timerMinutes.innerHTML = ("0" + mins).slice(-2);
-                    timerSeconds.innerHTML = ("0" + secs).slice(-2);
-                }
-            },
-            1000
-        );
+        // if there is a timer in the page
+        if(endDate) {
+            setInterval(
+                function () {
+                    const now = new Date().getTime();
+                    const t = endDate - now;
+    
+                    if (t >= 0) {
+                        let days = Math.floor(t / (1000 * 60 * 60 * 24));
+                        let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        let mins = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+                        let secs = Math.floor((t % (1000 * 60)) / 1000);
+    
+                        timerDays.innerHTML = days;
+                        timerHours.innerHTML = ("0" + hours).slice(-2);
+                        timerMinutes.innerHTML = ("0" + mins).slice(-2);
+                        timerSeconds.innerHTML = ("0" + secs).slice(-2);
+                    }
+                },
+                1000
+            );
+        }
     });
     // countdown timer code ends
 
@@ -120,5 +123,26 @@
         lazyLoad: false,
         wrapAround: true
     });
+
     // Products for mobile carouse view 
+    const mainCarousel = new Flickity('.carousel-main', {
+        prevNextButtons: false,
+        wrapAround: true,
+        imagesLoaded: true,
+        lazyLoad: false,
+    });
+
+    const carousel = new Flickity('.carousel');
+    const carouselNav = document.querySelector('.carousel-nav');
+    const carouselNavCells = carouselNav.querySelectorAll('.carousel-cell');
+    carouselNavCells.forEach(carouselNavCell => {
+        carouselNavCell.onclick = function (event) {
+            carouselNavCells.forEach(prevCell => {
+                prevCell.classList.remove('is-nav-selected');
+            })
+            event.currentTarget.classList.add('is-nav-selected');
+            carousel.select([...carouselNavCells].indexOf(event.currentTarget));
+        }
+    });
+
 })()

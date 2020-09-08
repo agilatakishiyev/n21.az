@@ -24,6 +24,15 @@
         color: $color-primary;
     }
 
+    &.tertiary {
+        background-color: $color-primary-light;
+    }
+
+    &.gray {
+        background-color: $color-gray-4;
+        color: $color-black;
+    }
+
     &--md {
         padding: 12px 20px;
     }
