@@ -134,8 +134,8 @@
 
     const carousel = new Flickity('.carousel');
     const carouselNav = document.querySelector('.carousel-nav');
-    const carouselNavCells = carouselNav.querySelectorAll('.carousel-cell');
-    carouselNavCells.forEach(carouselNavCell => {
+    const carouselNavCells = carouselNav?.querySelectorAll('.carousel-cell');
+    carouselNavCells?.forEach(carouselNavCell => {
         carouselNavCell.onclick = function (event) {
             carouselNavCells.forEach(prevCell => {
                 prevCell.classList.remove('is-nav-selected');
@@ -145,4 +145,47 @@
         }
     });
 
+    function throttle (delay, fn) {
+        let inThrottle = false;
+    
+        return args => {
+            if (inThrottle) {
+                return;
+            }
+
+            inThrottle = true;
+            fn(args);
+            setTimeout(
+                function () {
+                    inThrottle = false;
+                }, 
+                delay
+            );
+        };
+    }
+
+    const searchInput = window.innerWidth >= 1320 ?  document.querySelector('.header__center-part__input-wrapper__input') :
+        document.querySelector('.header__mobile-search__input-wrapper__input');
+    const searchResults = window.innerWidth >=1320 ?  document.querySelector('.header__center-part__input-wrapper__search-results') :
+        document.querySelector('.header__mobile-search__input-wrapper__search-results');
+    const searchResultsCountPlaceholder = document.querySelector('.header__center-part__input-wrapper__search-results--count');
+    const sendRequestThrottle = throttle(1000, search);
+    function search (query) {
+        // send request here
+        console.log('sent a request with following query:', query);
+        // template for results
+        `<a href="#" class="header__center-part__input-wrapper__search-results__item d-flex align-center">
+            <img width="30" height="30" src="./assets/images/washing-machine.png" alt="washing machine">
+            <p>Paltaryuyan maşın BOSCH WAJ20180ME</p>
+        </a>`
+        searchResults.classList.add('active');
+        searchResultsCountPlaceholder.innerText = '120'
+    }
+    searchInput.onkeyup = function (e) {
+        if(!e.currentTarget.value) {
+            searchResults.classList.remove('active');
+        }else {
+            sendRequestThrottle(e.currentTarget.value);
+        }
+    }
 })()

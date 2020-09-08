@@ -62,10 +62,6 @@
             position: relative;
             width: 41%;
 
-            @media only screen and (max-width: 82.5rem) {
-                display: none !important;
-            }
-
             &__input {
                 position: absolute;
                 width: 100%;
@@ -87,6 +83,41 @@
 
             &.with-catalog {
                 width: 30%;
+            }
+
+            &__search-results {
+                position: absolute;
+                width: 100%;
+                top: 40px;
+                left: 0;
+                z-index: 999;
+                display: none;
+
+                &.active {
+                    display: block;
+                    padding: 5px 5px 15px;
+                    background-color: $color-white;
+                    body {
+                        opacity: 0.5;
+                    }
+                }
+                &__item {
+                    padding: 5px;
+                    & > p {
+                        color: #252323;
+                        font-size: $font-size-14;
+                    }
+                    &:hover {
+                        background-color: #f5f6f6;
+                    }
+                }
+                &--count__wrapper {
+                    color: #6c757d;
+                }
+            }
+
+            @media only screen and (max-width: 82.5rem) {
+                display: none !important;
             }
         }
 
@@ -291,6 +322,37 @@
                 position: absolute;
                 top: 0;
                 right: 0;
+            }
+
+            &__search-results {
+                position: absolute;
+                width: 100%;
+                top: 40px;
+                left: 0;
+                z-index: 999;
+                display: none;
+
+                &.active {
+                    display: block;
+                    padding: 5px 5px 15px;
+                    background-color: $color-white;
+                    body {
+                        opacity: 0.5;
+                    }
+                }
+                &__item {
+                    padding: 5px;
+                    & > p {
+                        color: #252323;
+                        font-size: $font-size-14;
+                    }
+                    &:hover {
+                        background-color: #f5f6f6;
+                    }
+                }
+                &--count__wrapper {
+                    color: #6c757d;
+                }
             }
         }
     }
