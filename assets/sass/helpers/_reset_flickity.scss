@@ -9,3 +9,16 @@
 .flickity-button-icon {
     fill: #c4c4c4;
 }
+
+.main-center__carousel {
+    .flickity-viewport {
+        @media only screen and (max-width: 82.5rem) {
+            height: 205px !important;
+        }
+    }
+    .flickity-button {
+        @media only screen and (max-width: 82.5rem) {
+            display: none;
+        }
+    }
+}

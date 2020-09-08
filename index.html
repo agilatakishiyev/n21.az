@@ -1564,19 +1564,41 @@
         <div class="container">
             <div class="images-section-2__items">
                 <div class="row">
-                    <div class="images-section-2__items__item col-xl-5 col-lg-12">
-                        <img src="./assets/images/deanna-alys-6LBBOwkPzyQ-unsplash.jpg" alt="">
+                    <div class="col-xl-5 col-lg-12">
+                        <div class="images-section-2__items__item">
+                            <img src="./assets/images/deanna-alys-6LBBOwkPzyQ-unsplash.jpg" alt="">
+                        </div>
                     </div>
-                    <div class="images-section-2__items__item col-xl-2 col-lg-12">
-                        <img src="./assets/images/deanna-alys-6LBBOwkPzyQ-unsplash.jpg" alt="">
+                    <div class="col-xl-2 col-lg-12">
+                        <div class="images-section-2__items__item">
+                            <img src="./assets/images/deanna-alys-6LBBOwkPzyQ-unsplash.jpg" alt="">
+                        </div>
                     </div>
-                    <div class="images-section-2__items__item col-xl-5 col-lg-12">
-                        <img src="./assets/images/deanna-alys-6LBBOwkPzyQ-unsplash.jpg" alt="">
+                    <div class="col-xl-5 col-lg-12">
+                        <div class="images-section-2__items__item">
+                            <img src="./assets/images/deanna-alys-6LBBOwkPzyQ-unsplash.jpg" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
     </section>
     <!-- Images section 2 ends -->
+
+    <!-- Images section 2 mobile view(carousel ) starts here -->
+    <section class="images-section-2--mobile d-none">
+        <div class="images-section-2--mobile__carousel">
+            <div class="images-section-2__items__item">
+                <img src="./assets/images/3.jpg" alt="">
+            </div>
+            <div class="images-section-2__items__item">
+                <img src="./assets/images/5.jpg" alt="">
+            </div>
+            <div class="images-section-2__items__item">
+                <img src="./assets/images/4.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- Images section 2 mobile view(carousel ) ends here -->
 
     <!-- Products which will be displayed in mobile view with carousel starts here -->
     <section class="products-carousel--mobile d-none">
@@ -2252,37 +2274,37 @@
     <section class="six-images">
         <div class="container">
             <div class="row">
-                <div class="col-xl-2 col-lg-6">
+                <div class="col-xl-2 col-6">
                     <div class="six-images__image-wrapper">
                         <img src="./assets/images/eniko-kis-KsLPTsYaqIQ-unsplash.jpg" alt=""
                             class="six-images__image-wrapper__image">
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-6">
+                <div class="col-xl-2 col-6">
                     <div class="six-images__image-wrapper">
                         <img src="./assets/images/eniko-kis-KsLPTsYaqIQ-unsplash.jpg" alt=""
                             class="six-images__image-wrapper__image">
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-6">
+                <div class="col-xl-2 col-6">
                     <div class="six-images__image-wrapper">
                         <img src="./assets/images/eniko-kis-KsLPTsYaqIQ-unsplash.jpg" alt=""
                             class="six-images__image-wrapper__image">
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-6">
+                <div class="col-xl-2 col-6">
                     <div class="six-images__image-wrapper">
                         <img src="./assets/images/eniko-kis-KsLPTsYaqIQ-unsplash.jpg" alt=""
                             class="six-images__image-wrapper__image">
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-6">
+                <div class="col-xl-2 col-6">
                     <div class="six-images__image-wrapper">
                         <img src="./assets/images/eniko-kis-KsLPTsYaqIQ-unsplash.jpg" alt=""
                             class="six-images__image-wrapper__image">
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-6">
+                <div class="col-xl-2 col-6">
                     <div class="six-images__image-wrapper">
                         <img src="./assets/images/eniko-kis-KsLPTsYaqIQ-unsplash.jpg" alt=""
                             class="six-images__image-wrapper__image">
@@ -2997,6 +3019,13 @@
             imagesLoaded: true,
             lazyLoad: false,
             wrapAround: true
+        });
+        const imagesSection2 = new Flickity('.images-section-2--mobile__carousel', {
+            prevNextButtons: false,
+            pageDots: false,
+            cellAlign: 'left',
+            imagesLoaded: true,
+            lazyLoad: false,
         });
     </script>
     <script>

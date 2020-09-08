@@ -562,16 +562,28 @@ main {
             }
             img {
                 height: 200px;
-                width: 100%;
+                width: 320px;
                 object-fit: cover;
             }
+            @media only screen and (max-width: 82.5rem) {
+                width: 320px;
+            }
+        }
+    }
+    @media only screen and (max-width: 82.5rem) {
+        display: none !important;
+    }
+    &--mobile {
+        margin: 30px 0;
+        @media only screen and (max-width: 82.5rem) {
+            display: block !important;
         }
     }
 }
 
 .products-carousel--mobile {
     margin-bottom: 30px;
-    @media only screen and (max-width: 86.5rem) {
+    @media only screen and (max-width: 82.5rem) {
         display: block !important;
     }
 }
@@ -646,6 +658,7 @@ main {
     }
 
     &--mobile {
+        margin-top: 30px;
         @media only screen and (max-width: 82.5rem) {
             display: block !important;
         }
@@ -769,7 +782,9 @@ main {
                             width: 45px;
                             height: 45px;
                             border-radius: 50%;
-                            @media only screen and (max-width: 82.5rem) {
+                            @media only screen and (max-width: 22.5rem) {
+                                width: 30px;
+                                height: 30px;
                             }
                             &.--facebook {
                                 background-color: #3c5b9b;
