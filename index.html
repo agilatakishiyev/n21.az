@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="./assets/flickity/flickity.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>n21.az - main page</title>
 </head>
@@ -404,7 +405,15 @@
                 </div>
                 <div class="main-center d-flex justify-between flex-direction-col">
                     <div class="main-center__carousel">
-                        1
+                        <div class="main-center__carousel__item">
+                            <img src="./assets/images/mikkel-bech-yjAFnkLtKY0-unsplash.jpg" alt="">
+                        </div>
+                        <div class="main-center__carousel__item">
+                            <img src="./assets/images/eniko-kis-KsLPTsYaqIQ-unsplash.jpg" alt="">
+                        </div>
+                        <div class="main-center__carousel__item">
+                            <img src="./assets/images/deanna-alys-6LBBOwkPzyQ-unsplash.jpg" alt="">
+                        </div>
                     </div>
                     <ul class="main-center__base-categories d-flex justify-between">
                         <li class="main-center__base-categories__item">
@@ -457,13 +466,2335 @@
             </div>
         </div>
     </main>
-    <section id="weekly-discounts"></section>
-    <section id="products">
+    <section class="weekly-discounts">
+        <div class="custom-container">
+            <div class="weekly-discounts__inner">
+                <div class="weekly-discounts__inner__header">
+                    <h1>HƏFTƏNİN ENDİRİMLƏRİ</h1>
+                    <div class="weekly-discounts__inner__header__timer d-flex">
+                        <!-- INFO FOR BACKEND -->
+                        <!-- add end date in shown format inside bottom element, it is not shown in the UI -->
+                        <span class="end-date d-none">October 12, 2020 12:00:00</span>
+                        <div class="d-flex flex-direction-col align-center justify-between">
+                            <span class="timer-days">0</span>
+                            <span>Gün</span>
+                        </div>
+                        <span class="vr not-hidden" style="height: auto;"></span>
+                        <div class="d-flex flex-direction-col align-center justify-between">
+                            <span class="timer-hours">0</span>
+                            <span>Saat</span>
+                        </div>
+                        <span class="vr not-hidden" style="height: auto;"></span>
+                        <div class="d-flex flex-direction-col align-center justify-between">
+                            <span class="timer-minutes">0</span>
+                            <span>Dəqiqə</span>
+                        </div>
+                        <span class="vr not-hidden" style="height: auto;"></span>
+                        <div class="d-flex flex-direction-col align-center justify-between">
+                            <span class="timer-seconds">0</span>
+                            <span>Saniyə</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Products in desktop starts -->
+                <div class="weekly-discounts__inner__product-items d-flex">
+                    <div class="weekly-discounts__inner__product-items__item product-item">
+                        <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                            <img src="./assets/images/television.jpg" alt="television image"
+                                class="product-item__image-wrapper__image">
+                        </div>
+                        <div class="product-item__name">
+                            <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                        </div>
+                        <div class="product-item__features">
+                            <span>SMART TV,</span>
+                            <span>8K UHD</span>
+                        </div>
+                        <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                            <div class="product-item__pricing-and-basket__prices">
+                                <span class="product-item__pricing-and-basket__prices--discounted">
+                                    <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                        799
+                                    </span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices--old-price">
+                                    <span>999</span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                    AZN</span>
+                            </div>
+                            <span class="product-item__pricing-and-basket__basket">
+                                <img src="./assets/icons/basket.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="weekly-discounts__inner__product-items__item product-item">
+                        <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                            <img src="./assets/images/television.jpg" alt="television image"
+                                class="product-item__image-wrapper__image">
+                        </div>
+                        <div class="product-item__name">
+                            <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                        </div>
+                        <div class="product-item__features">
+                            <span>SMART TV,</span>
+                            <span>8K UHD</span>
+                        </div>
+                        <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                            <div class="product-item__pricing-and-basket__prices">
+                                <span class="product-item__pricing-and-basket__prices--discounted">
+                                    <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                        799
+                                    </span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices--old-price">
+                                    <span>999</span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                    AZN</span>
+                            </div>
+                            <span class="product-item__pricing-and-basket__basket">
+                                <img src="./assets/icons/basket.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="weekly-discounts__inner__product-items__item product-item">
+                        <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                            <img src="./assets/images/eniko-kis-KsLPTsYaqIQ-unsplash.jpg" alt="television image"
+                                class="product-item__image-wrapper__image">
+                        </div>
+                        <div class="product-item__name">
+                            <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                        </div>
+                        <div class="product-item__features">
+                            <span>SMART TV,</span>
+                            <span>8K UHD</span>
+                        </div>
+                        <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                            <div class="product-item__pricing-and-basket__prices">
+                                <span class="product-item__pricing-and-basket__prices--discounted">
+                                    <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                        799
+                                    </span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices--old-price">
+                                    <span>999</span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                    AZN</span>
+                            </div>
+                            <span class="product-item__pricing-and-basket__basket">
+                                <img src="./assets/icons/basket.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="weekly-discounts__inner__product-items__item product-item">
+                        <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                            <img src="./assets/images/television.jpg" alt="television image"
+                                class="product-item__image-wrapper__image">
+                        </div>
+                        <div class="product-item__name">
+                            <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                        </div>
+                        <div class="product-item__features">
+                            <span>SMART TV,</span>
+                            <span>8K UHD</span>
+                        </div>
+                        <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                            <div class="product-item__pricing-and-basket__prices">
+                                <span class="product-item__pricing-and-basket__prices--discounted">
+                                    <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                        799
+                                    </span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices--old-price">
+                                    <span>999</span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                    AZN</span>
+                            </div>
+                            <span class="product-item__pricing-and-basket__basket">
+                                <img src="./assets/icons/basket.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="weekly-discounts__inner__product-items__item product-item">
+                        <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                            <img src="./assets/images/mikkel-bech-yjAFnkLtKY0-unsplash.jpg" alt="television image"
+                                class="product-item__image-wrapper__image">
+                        </div>
+                        <div class="product-item__name">
+                            <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                        </div>
+                        <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                            <div class="product-item__pricing-and-basket__prices">
+                                <span class="product-item__pricing-and-basket__prices--discounted">
+                                    <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                        799
+                                    </span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices--old-price">
+                                    <span>999</span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                    AZN</span>
+                            </div>
+                            <span class="product-item__pricing-and-basket__basket">
+                                <img src="./assets/icons/basket.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Products in desktop ends -->
+
+                <!-- Products in mobile view(carousel) starts -->
+                <div class="products-carousel d-none">
+                    <div class="weekly-discounts__inner__product-items__item product-item">
+                        <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                            <img src="./assets/images/television.jpg" alt="television image"
+                                class="product-item__image-wrapper__image">
+                        </div>
+                        <div class="product-item__name">
+                            <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                        </div>
+                        <div class="product-item__features">
+                            <span>SMART TV,</span>
+                            <span>8K UHD</span>
+                        </div>
+                        <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                            <div class="product-item__pricing-and-basket__prices">
+                                <span class="product-item__pricing-and-basket__prices--discounted">
+                                    <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                        799
+                                    </span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices--old-price">
+                                    <span>999</span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                    AZN</span>
+                            </div>
+                            <span class="product-item__pricing-and-basket__basket">
+                                <img src="./assets/icons/basket.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="weekly-discounts__inner__product-items__item product-item">
+                        <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                            <img src="./assets/images/television.jpg" alt="television image"
+                                class="product-item__image-wrapper__image">
+                        </div>
+                        <div class="product-item__name">
+                            <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                        </div>
+                        <div class="product-item__features">
+                            <span>SMART TV,</span>
+                            <span>8K UHD</span>
+                        </div>
+                        <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                            <div class="product-item__pricing-and-basket__prices">
+                                <span class="product-item__pricing-and-basket__prices--discounted">
+                                    <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                        799
+                                    </span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices--old-price">
+                                    <span>999</span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                    AZN</span>
+                            </div>
+                            <span class="product-item__pricing-and-basket__basket">
+                                <img src="./assets/icons/basket.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="weekly-discounts__inner__product-items__item product-item">
+                        <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                            <img src="./assets/images/television.jpg" alt="television image"
+                                class="product-item__image-wrapper__image">
+                        </div>
+                        <div class="product-item__name">
+                            <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                        </div>
+                        <div class="product-item__features">
+                            <span>SMART TV,</span>
+                            <span>8K UHD</span>
+                        </div>
+                        <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                            <div class="product-item__pricing-and-basket__prices">
+                                <span class="product-item__pricing-and-basket__prices--discounted">
+                                    <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                        799
+                                    </span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices--old-price">
+                                    <span>999</span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                    AZN</span>
+                            </div>
+                            <span class="product-item__pricing-and-basket__basket">
+                                <img src="./assets/icons/basket.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="weekly-discounts__inner__product-items__item product-item">
+                        <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                            <img src="./assets/images/television.jpg" alt="television image"
+                                class="product-item__image-wrapper__image">
+                        </div>
+                        <div class="product-item__name">
+                            <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                        </div>
+                        <div class="product-item__features">
+                            <span>SMART TV,</span>
+                            <span>8K UHD</span>
+                        </div>
+                        <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                            <div class="product-item__pricing-and-basket__prices">
+                                <span class="product-item__pricing-and-basket__prices--discounted">
+                                    <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                        799
+                                    </span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices--old-price">
+                                    <span>999</span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                    AZN</span>
+                            </div>
+                            <span class="product-item__pricing-and-basket__basket">
+                                <img src="./assets/icons/basket.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="weekly-discounts__inner__product-items__item product-item">
+                        <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                            <img src="./assets/images/television.jpg" alt="television image"
+                                class="product-item__image-wrapper__image">
+                        </div>
+                        <div class="product-item__name">
+                            <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                        </div>
+                        <div class="product-item__features">
+                            <span>SMART TV,</span>
+                            <span>8K UHD</span>
+                        </div>
+                        <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                            <div class="product-item__pricing-and-basket__prices">
+                                <span class="product-item__pricing-and-basket__prices--discounted">
+                                    <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                        799
+                                    </span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices--old-price">
+                                    <span>999</span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                    AZN</span>
+                            </div>
+                            <span class="product-item__pricing-and-basket__basket">
+                                <img src="./assets/icons/basket.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="weekly-discounts__inner__product-items__item product-item">
+                        <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                            <img src="./assets/images/television.jpg" alt="television image"
+                                class="product-item__image-wrapper__image">
+                        </div>
+                        <div class="product-item__name">
+                            <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                        </div>
+                        <div class="product-item__features">
+                            <span>SMART TV,</span>
+                            <span>8K UHD</span>
+                        </div>
+                        <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                            <div class="product-item__pricing-and-basket__prices">
+                                <span class="product-item__pricing-and-basket__prices--discounted">
+                                    <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                        799
+                                    </span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices--old-price">
+                                    <span>999</span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                    AZN</span>
+                            </div>
+                            <span class="product-item__pricing-and-basket__basket">
+                                <img src="./assets/icons/basket.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Products in mobile view(carousel) ends -->
+            </div>
+        </div>
     </section>
-    <section id="viewed-products"></section>
+    <!-- Images section 1 starts, should be only 7 items according to design -->
+    <section class="images-section-1">
+        <div class="custom-container">
+            <div class="images-section-1__items d-flex justify-between">
+                <div class="images-section-1__items__item">
+                    <img src="./assets/images/mikkel-bech-yjAFnkLtKY0-unsplash.jpg" alt="image"
+                        class="images-section-1__items__item__image">
+                </div>
+                <div class="images-section-1__items__item">
+                    <img src="./assets/images/mikkel-bech-yjAFnkLtKY0-unsplash.jpg" alt="image"
+                        class="images-section-1__items__item__image">
+                </div>
+                <div class="images-section-1__items__item">
+                    <img src="./assets/images/mikkel-bech-yjAFnkLtKY0-unsplash.jpg" alt="image"
+                        class="images-section-1__items__item__image">
+                </div>
+                <div class="images-section-1__items__item">
+                    <img src="./assets/images/mikkel-bech-yjAFnkLtKY0-unsplash.jpg" alt="image"
+                        class="images-section-1__items__item__image">
+                </div>
+                <div class="images-section-1__items__item">
+                    <img src="./assets/images/mikkel-bech-yjAFnkLtKY0-unsplash.jpg" alt="image"
+                        class="images-section-1__items__item__image">
+                </div>
+                <div class="images-section-1__items__item">
+                    <img src="./assets/images/mikkel-bech-yjAFnkLtKY0-unsplash.jpg" alt="image"
+                        class="images-section-1__items__item__image">
+                </div>
+                <div class="images-section-1__items__item">
+                    <img src="./assets/images/mikkel-bech-yjAFnkLtKY0-unsplash.jpg" alt="image"
+                        class="images-section-1__items__item__image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Images section 1 ends -->
+
+
+    <!-- Producst from a category section starts here -->
+    <section class="products-from-a-category">
+        <div class="custom-container">
+            <h2 class="mb-20">Televizorlar</h2>
+        </div>
+        <div class="custom-container">
+            <div class="products-from-a-category__items d-flex">
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Products from a category section ends here -->
+
+    <!-- Products from a category mobile view(carousel)  starts here-->
+    <section class="products-from-a-category--mobile d-none">
+        <div class="custom-container">
+            <h2 class="mb-20">Televizorlar</h2>
+        </div>
+        <div class="custom-container">
+            <div class="products-from-a-category--mobile__carousel">
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Products from a category mobile view(carousel)  ends here-->
+
+
+    <!-- Images section 2 starts -->
+    <section class="images-section-2">
+        <div class="container">
+            <div class="images-section-2__items">
+                <div class="row">
+                    <div class="images-section-2__items__item col-xl-5 col-lg-12">
+                        <img src="./assets/images/deanna-alys-6LBBOwkPzyQ-unsplash.jpg" alt="">
+                    </div>
+                    <div class="images-section-2__items__item col-xl-2 col-lg-12">
+                        <img src="./assets/images/deanna-alys-6LBBOwkPzyQ-unsplash.jpg" alt="">
+                    </div>
+                    <div class="images-section-2__items__item col-xl-5 col-lg-12">
+                        <img src="./assets/images/deanna-alys-6LBBOwkPzyQ-unsplash.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- Images section 2 ends -->
+
+    <!-- Products which will be displayed in mobile view with carousel starts here -->
+    <section class="products-carousel--mobile d-none">
+        <div class="custom-container">
+            <div class="products-carousel--mobile__carousel">
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Products which will be displayed in mobile view with carousel ends here -->
+
+
+    <!-- Image with products section starts(one image, 8 products) -->
+    <section class="image-and-products">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3">
+                    <img class="image-and-products__image" src="./assets/images/mikkel-bech-yjAFnkLtKY0-unsplash.jpg"
+                        alt="">
+                </div>
+                <div class="col-xl-9">
+                    <div class="row">
+                        <div class="col-xl-3">
+                            <div class="product-item">
+                                <div class="product-item__image-wrapper">
+                                    <img src="./assets/images/television.jpg" alt="television image"
+                                        class="product-item__image-wrapper__image">
+                                </div>
+                                <div class="product-item__name">
+                                    <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                                </div>
+                                <div class="product-item__features">
+                                    <span>SMART TV,</span>
+                                    <span>8K UHD</span>
+                                </div>
+                                <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                                    <div class="product-item__pricing-and-basket__prices">
+                                        <span class="product-item__pricing-and-basket__prices--discounted">
+                                            <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                                799
+                                            </span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                        <span class="product-item__pricing-and-basket__prices--old-price">
+                                            <span>999</span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                        <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay
+                                            66.6
+                                            AZN</span>
+                                    </div>
+                                    <span class="product-item__pricing-and-basket__basket">
+                                        <img src="./assets/icons/basket.svg" alt="">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3">
+                            <div class="product-item">
+                                <div class="product-item__image-wrapper">
+                                    <img src="./assets/images/television.jpg" alt="television image"
+                                        class="product-item__image-wrapper__image">
+                                </div>
+                                <div class="product-item__name">
+                                    <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                                </div>
+                                <div class="product-item__features">
+                                    <span>SMART TV,</span>
+                                    <span>8K UHD</span>
+                                </div>
+                                <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                                    <div class="product-item__pricing-and-basket__prices">
+                                        <span class="product-item__pricing-and-basket__prices--discounted">
+                                            <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                                799
+                                            </span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                        <span class="product-item__pricing-and-basket__prices--old-price">
+                                            <span>999</span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                        <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay
+                                            66.6
+                                            AZN</span>
+                                    </div>
+                                    <span class="product-item__pricing-and-basket__basket">
+                                        <img src="./assets/icons/basket.svg" alt="">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3">
+                            <div class="product-item">
+                                <div class="product-item__image-wrapper">
+                                    <img src="./assets/images/television.jpg" alt="television image"
+                                        class="product-item__image-wrapper__image">
+                                </div>
+                                <div class="product-item__name">
+                                    <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                                </div>
+                                <div class="product-item__features">
+                                    <span>SMART TV,</span>
+                                    <span>8K UHD</span>
+                                </div>
+                                <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                                    <div class="product-item__pricing-and-basket__prices">
+                                        <span class="product-item__pricing-and-basket__prices--discounted">
+                                            <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                                799
+                                            </span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                        <span class="product-item__pricing-and-basket__prices--old-price">
+                                            <span>999</span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                        <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay
+                                            66.6
+                                            AZN</span>
+                                    </div>
+                                    <span class="product-item__pricing-and-basket__basket">
+                                        <img src="./assets/icons/basket.svg" alt="">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3">
+                            <div class="product-item">
+                                <div class="product-item__image-wrapper">
+                                    <img src="./assets/images/television.jpg" alt="television image"
+                                        class="product-item__image-wrapper__image">
+                                </div>
+                                <div class="product-item__name">
+                                    <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                                </div>
+                                <div class="product-item__features">
+                                    <span>SMART TV,</span>
+                                    <span>8K UHD</span>
+                                </div>
+                                <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                                    <div class="product-item__pricing-and-basket__prices">
+                                        <span class="product-item__pricing-and-basket__prices--discounted">
+                                            <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                                799
+                                            </span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                        <span class="product-item__pricing-and-basket__prices--old-price">
+                                            <span>999</span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                        <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay
+                                            66.6
+                                            AZN</span>
+                                    </div>
+                                    <span class="product-item__pricing-and-basket__basket">
+                                        <img src="./assets/icons/basket.svg" alt="">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3">
+                            <div class="product-item">
+                                <div class="product-item__image-wrapper">
+                                    <img src="./assets/images/television.jpg" alt="television image"
+                                        class="product-item__image-wrapper__image">
+                                </div>
+                                <div class="product-item__name">
+                                    <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                                </div>
+                                <div class="product-item__features">
+                                    <span>SMART TV,</span>
+                                    <span>8K UHD</span>
+                                </div>
+                                <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                                    <div class="product-item__pricing-and-basket__prices">
+                                        <span class="product-item__pricing-and-basket__prices--discounted">
+                                            <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                                799
+                                            </span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                        <span class="product-item__pricing-and-basket__prices--old-price">
+                                            <span>999</span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                        <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay
+                                            66.6
+                                            AZN</span>
+                                    </div>
+                                    <span class="product-item__pricing-and-basket__basket">
+                                        <img src="./assets/icons/basket.svg" alt="">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3">
+                            <div class="product-item">
+                                <div class="product-item__image-wrapper">
+                                    <img src="./assets/images/television.jpg" alt="television image"
+                                        class="product-item__image-wrapper__image">
+                                </div>
+                                <div class="product-item__name">
+                                    <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                                </div>
+                                <div class="product-item__features">
+                                    <span>SMART TV,</span>
+                                    <span>8K UHD</span>
+                                </div>
+                                <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                                    <div class="product-item__pricing-and-basket__prices">
+                                        <span class="product-item__pricing-and-basket__prices--discounted">
+                                            <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                                799
+                                            </span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                        <span class="product-item__pricing-and-basket__prices--old-price">
+                                            <span>999</span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                        <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay
+                                            66.6
+                                            AZN</span>
+                                    </div>
+                                    <span class="product-item__pricing-and-basket__basket">
+                                        <img src="./assets/icons/basket.svg" alt="">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3">
+                            <div class="product-item">
+                                <div class="product-item__image-wrapper">
+                                    <img src="./assets/images/television.jpg" alt="television image"
+                                        class="product-item__image-wrapper__image">
+                                </div>
+                                <div class="product-item__name">
+                                    <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                                </div>
+                                <div class="product-item__features">
+                                    <span>SMART TV,</span>
+                                    <span>8K UHD</span>
+                                </div>
+                                <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                                    <div class="product-item__pricing-and-basket__prices">
+                                        <span class="product-item__pricing-and-basket__prices--discounted">
+                                            <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                                799
+                                            </span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                        <span class="product-item__pricing-and-basket__prices--old-price">
+                                            <span>999</span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                        <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay
+                                            66.6
+                                            AZN</span>
+                                    </div>
+                                    <span class="product-item__pricing-and-basket__basket">
+                                        <img src="./assets/icons/basket.svg" alt="">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3">
+                            <div class="product-item">
+                                <div class="product-item__image-wrapper">
+                                    <img src="./assets/images/television.jpg" alt="television image"
+                                        class="product-item__image-wrapper__image">
+                                </div>
+                                <div class="product-item__name">
+                                    <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                                </div>
+                                <div class="product-item__features">
+                                    <span>SMART TV,</span>
+                                    <span>8K UHD</span>
+                                </div>
+                                <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                                    <div class="product-item__pricing-and-basket__prices">
+                                        <span class="product-item__pricing-and-basket__prices--discounted">
+                                            <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                                799
+                                            </span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                        <span class="product-item__pricing-and-basket__prices--old-price">
+                                            <span>999</span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                        <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay
+                                            66.6
+                                            AZN</span>
+                                    </div>
+                                    <span class="product-item__pricing-and-basket__basket">
+                                        <img src="./assets/icons/basket.svg" alt="">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Image with products section ends -->
+
+    <section class="two-images">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="two-images__image-wrapper">
+                        <img src="./assets/images/1.jpg" alt="" class="two-images__image-wrapper__image">
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="two-images__image-wrapper">
+                        <img src="./assets/images/2.jpg" alt="" class="two-images__image-wrapper__image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image with products section-3 starts(one image 3products) -->
+    <section class="image-and-products">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6">
+                    <img class="image-and-products__image" src="./assets/images/eniko-kis-KsLPTsYaqIQ-unsplash.jpg"
+                        alt="">
+                </div>
+                <div class="col-xl-6">
+                    <div class="row">
+                        <div class="col-xl-4">
+                            <div class="product-item">
+                                <div class="product-item__image-wrapper">
+                                    <img src="./assets/images/television.jpg" alt="television image"
+                                        class="product-item__image-wrapper__image">
+                                </div>
+                                <div class="product-item__name">
+                                    <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                                </div>
+                                <div class="product-item__features">
+                                    <span>SMART TV,</span>
+                                    <span>8K UHD</span>
+                                </div>
+                                <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                                    <div class="product-item__pricing-and-basket__prices">
+                                        <span class="product-item__pricing-and-basket__prices--discounted">
+                                            <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                                799
+                                            </span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                        <span class="product-item__pricing-and-basket__prices--old-price">
+                                            <span>999</span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                        <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay
+                                            66.6
+                                            AZN</span>
+                                    </div>
+                                    <span class="product-item__pricing-and-basket__basket">
+                                        <img src="./assets/icons/basket.svg" alt="">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4">
+                            <div class="product-item">
+                                <div class="product-item__image-wrapper">
+                                    <img src="./assets/images/television.jpg" alt="television image"
+                                        class="product-item__image-wrapper__image">
+                                </div>
+                                <div class="product-item__name">
+                                    <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                                </div>
+                                <div class="product-item__features">
+                                    <span>SMART TV,</span>
+                                    <span>8K UHD</span>
+                                </div>
+                                <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                                    <div class="product-item__pricing-and-basket__prices">
+                                        <span class="product-item__pricing-and-basket__prices--discounted">
+                                            <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                                799
+                                            </span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                        <span class="product-item__pricing-and-basket__prices--old-price">
+                                            <span>999</span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                        <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay
+                                            66.6
+                                            AZN</span>
+                                    </div>
+                                    <span class="product-item__pricing-and-basket__basket">
+                                        <img src="./assets/icons/basket.svg" alt="">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4">
+                            <div class="product-item">
+                                <div class="product-item__image-wrapper">
+                                    <img src="./assets/images/television.jpg" alt="television image"
+                                        class="product-item__image-wrapper__image">
+                                </div>
+                                <div class="product-item__name">
+                                    <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                                </div>
+                                <div class="product-item__features">
+                                    <span>SMART TV,</span>
+                                    <span>8K UHD</span>
+                                </div>
+                                <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                                    <div class="product-item__pricing-and-basket__prices">
+                                        <span class="product-item__pricing-and-basket__prices--discounted">
+                                            <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                                799
+                                            </span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                        <span class="product-item__pricing-and-basket__prices--old-price">
+                                            <span>999</span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                        <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay
+                                            66.6
+                                            AZN</span>
+                                    </div>
+                                    <span class="product-item__pricing-and-basket__basket">
+                                        <img src="./assets/icons/basket.svg" alt="">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Image with products section-3 ends -->
+
+    <!-- Section six images starts -->
+    <section class="six-images">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-2 col-lg-6">
+                    <div class="six-images__image-wrapper">
+                        <img src="./assets/images/eniko-kis-KsLPTsYaqIQ-unsplash.jpg" alt=""
+                            class="six-images__image-wrapper__image">
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-6">
+                    <div class="six-images__image-wrapper">
+                        <img src="./assets/images/eniko-kis-KsLPTsYaqIQ-unsplash.jpg" alt=""
+                            class="six-images__image-wrapper__image">
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-6">
+                    <div class="six-images__image-wrapper">
+                        <img src="./assets/images/eniko-kis-KsLPTsYaqIQ-unsplash.jpg" alt=""
+                            class="six-images__image-wrapper__image">
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-6">
+                    <div class="six-images__image-wrapper">
+                        <img src="./assets/images/eniko-kis-KsLPTsYaqIQ-unsplash.jpg" alt=""
+                            class="six-images__image-wrapper__image">
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-6">
+                    <div class="six-images__image-wrapper">
+                        <img src="./assets/images/eniko-kis-KsLPTsYaqIQ-unsplash.jpg" alt=""
+                            class="six-images__image-wrapper__image">
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-6">
+                    <div class="six-images__image-wrapper">
+                        <img src="./assets/images/eniko-kis-KsLPTsYaqIQ-unsplash.jpg" alt=""
+                            class="six-images__image-wrapper__image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section six images ends -->
+
+    <!-- Image with products section-3 starts(one image 2products) -->
+    <section class="image-and-products">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6">
+                    <img class="image-and-products__image" src="./assets/images/eniko-kis-KsLPTsYaqIQ-unsplash.jpg"
+                        alt="">
+                </div>
+                <div class="col-xl-6">
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="product-item">
+                                <div class="product-item__image-wrapper">
+                                    <img src="./assets/images/television.jpg" alt="television image"
+                                        class="product-item__image-wrapper__image">
+                                </div>
+                                <div class="product-item__name">
+                                    <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                                </div>
+                                <div class="product-item__features">
+                                    <span>SMART TV,</span>
+                                    <span>8K UHD</span>
+                                </div>
+                                <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                                    <div class="product-item__pricing-and-basket__prices">
+                                        <span class="product-item__pricing-and-basket__prices--discounted">
+                                            <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                                799
+                                            </span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                        <span class="product-item__pricing-and-basket__prices--old-price">
+                                            <span>999</span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                        <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay
+                                            66.6
+                                            AZN</span>
+                                    </div>
+                                    <span class="product-item__pricing-and-basket__basket">
+                                        <img src="./assets/icons/basket.svg" alt="">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="product-item">
+                                <div class="product-item__image-wrapper">
+                                    <img src="./assets/images/television.jpg" alt="television image"
+                                        class="product-item__image-wrapper__image">
+                                </div>
+                                <div class="product-item__name">
+                                    <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                                </div>
+                                <div class="product-item__features">
+                                    <span>SMART TV,</span>
+                                    <span>8K UHD</span>
+                                </div>
+                                <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                                    <div class="product-item__pricing-and-basket__prices">
+                                        <span class="product-item__pricing-and-basket__prices--discounted">
+                                            <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                                799
+                                            </span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                        <span class="product-item__pricing-and-basket__prices--old-price">
+                                            <span>999</span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                        <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay
+                                            66.6
+                                            AZN</span>
+                                    </div>
+                                    <span class="product-item__pricing-and-basket__basket">
+                                        <img src="./assets/icons/basket.svg" alt="">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Image with products section-3 ends -->
+
+
+    <!-- Viewed products section starts here-->
+    <section class="viewed-products">
+        <div class="custom-container">
+            <div class="d-flex justify-between mb-20" style="align-items: flex-end">
+                <h3>Baxdıqlarınız</h3>
+                <a href="" class="blue-link">Hamısına bax</a>
+            </div>
+            <div class="d-flex">
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Viewed products section ends here-->
+
+    <!-- Viewed products section mobile(carousel) starts here-->
+    <section class="viewed-products--mobile d-none">
+        <div class="custom-container">
+            <div class="d-flex justify-between mb-20" style="align-items: flex-end">
+                <h3>Baxdıqlarınız</h3>
+            </div>
+            <div class="viewed-products--mobile__carousel">
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                        <img src="./assets/images/television.jpg" alt="television image"
+                            class="product-item__image-wrapper__image">
+                    </div>
+                    <div class="product-item__name">
+                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                    </div>
+                    <div class="product-item__features">
+                        <span>SMART TV,</span>
+                        <span>8K UHD</span>
+                    </div>
+                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                        <div class="product-item__pricing-and-basket__prices">
+                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                    799
+                                </span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                <span>999</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                AZN</span>
+                        </div>
+                        <span class="product-item__pricing-and-basket__basket">
+                            <img src="./assets/icons/basket.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Viewed products section mobile(carousel) ends here-->
+
+    <!-- Footer starts here -->
     <footer class="footer">
         <div class="custom-container">
             <ul class="footer__navigation-list d-flex">
+                <!-- Footer navigation list starts here -->
                 <li class="footer__navigation-list__item">
                     <ul class="footer__navigation-list__item--first">
                         <li class="mb-20">
@@ -554,6 +2885,7 @@
                     </ul>
                 </li>
                 <li class="footer__navigation-list__item">
+                    <!-- Footer social navigation list starts here -->
                     <ul class="footer__navigation-list__item--fourth">
                         <li class="footer__navigation-list__item--fourth__list-item--social-links">Sosial media</li>
                         <ul class="footer__navigation-list__item--fourth__social-links-list d-flex justify-between">
@@ -595,6 +2927,8 @@
                             </li>
                         </ul>
                         <li class="footer__navigation-list__item--fourth__list-item--support">Dəstək</li>
+
+                        <!-- Footer support buttons (whatsapp telegram) starts here -->
                         <ul class="footer__navigation-list__item--fourth__support-links d-flex justify-between">
                             <li class="footer__navigation-list__item--fourth__support-links__item">
                                 <a href="#"
@@ -609,8 +2943,12 @@
                                 </a>
                             </li>
                         </ul>
+                        <!-- Footer support buttons ends here -->
+
                         <li class="footer__navigation-list__item--fourth__list-item--mobile-apps">Mobil tətbiqetmələr
                         </li>
+
+                        <!-- Footer mobile app buttons starts here -->
                         <ul class="footer__navigation-list__item--fourth__apps d-flex justify-between">
                             <li>
                                 <a href="/appstore">
@@ -623,8 +2961,12 @@
                                 </a>
                             </li>
                         </ul>
+                        <!-- Footer mobile apps buttons ends here -->
+
                     </ul>
+                    <!-- Footer social navigation list ends here -->
                 </li>
+                <!-- Footer navigation list ends here -->
             </ul>
         </div>
         <div class="footer__lower-part">
@@ -638,10 +2980,25 @@
             </div>
         </div>
     </footer>
+    <!-- Footer ends here -->
+
     <span class="scroll-to-top">
         <img src="./assets/icons/category-arrow.svg" alt="arrow up icon">
     </span>
+    <script src="./assets/flickity/flickity.min.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script>
+        const flkty = new Flickity('.products-carousel', {
+            prevNextButtons: false,
+            pageDots: false,
+            cellAlign: 'left'
+        });
+        const mainCenterCarousel = new Flickity('.main-center__carousel', {
+            imagesLoaded: true,
+            lazyLoad: false,
+            wrapAround: true
+        });
+    </script>
     <script>
     </script>
 </body>
