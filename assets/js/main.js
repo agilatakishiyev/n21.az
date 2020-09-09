@@ -1,5 +1,7 @@
 (function ( ) {
     const mobileNavigation = document.querySelector('.header__mobile-navigation');
+    const mobileCategoriesList = document.querySelectorAll('.header__mobile-navigation__categories-list__item');
+    const mobileBackToCatalogueLinks = document.querySelectorAll('a[href="back-to-categories"]');
     const scrollToTopButton = document.querySelector('.scroll-to-top');
     const menuIcon = document.querySelector('.menu-icon');
     const closeIcon = document.querySelector('.close-icon');
@@ -8,6 +10,7 @@
     }
     closeIcon.onclick = function () {
         mobileNavigation.classList.remove('open');
+        document.querySelector('.header__mobile-navigation__categories-list__item__sub-categories-wrapper.open').classList.remove('open');
     }
     scrollToTopButton.onclick = function () {
         window.scrollTo({
@@ -23,6 +26,20 @@
             scrollToTopButton.classList.add('show');
         }
     }
+
+    mobileCategoriesList.forEach(function (mobileCategory ) {
+        mobileCategory.onclick = function () {
+            mobileCategory.querySelector('.header__mobile-navigation__categories-list__item__sub-categories-wrapper').classList?.add('open');
+        }
+    });
+
+    mobileBackToCatalogueLinks.forEach(function (mobileBackToCatalogueLink) {
+        mobileBackToCatalogueLink.onclick = function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            mobileBackToCatalogueLink.parentElement?.classList.remove('open');
+        }
+    })
 
     // toggling select options states(open or close)
     document.querySelector('.custom-select-wrapper').addEventListener('click', function() {

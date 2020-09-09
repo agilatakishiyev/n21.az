@@ -260,7 +260,7 @@
             </div>
         </div>
         <!-- Responsive menu starts -->
-        <div class="header__mobile-navigation">
+        <div class="header__mobile-navigation open">
             <!-- Close icon, logo, and languages section starts -->
             <div class="header__mobile-navigation__upper-part d-flex justify-between">
                 <div class="header__mobile-navigation__upper-part--left-side d-flex align-center">
@@ -282,6 +282,35 @@
                     <span class="header__mobile-navigation__categories-list__item--left-image"></span>
                     <span>Televizor audio</span>
                     <img src="./assets/icons/slider-arrows.svg" alt="">
+                    <div class="header__mobile-navigation__categories-list__item__sub-categories-wrapper">
+                        <!-- dont change href of the a tag below -->
+                        <a href="back-to-categories"
+                            class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__back-link">
+                            <img width="20" height="20" src="./assets/images/2.jpg" alt="">
+                            <span>Kataloqa geri qayıt</span>
+                        </a>
+                        <span class="hr width-with-padding height-2"></span>
+                        <p class="d-flex justify-between align-center">Noutbuklar, komputerlər <img
+                                src="./assets/icons/category-arrow.svg" alt=""></p>
+                        <ul class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__list">
+                            <li
+                                class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__list__item">
+                                <a href="#notebooks">Noutbuklar</a>
+                            </li>
+                            <li
+                                class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__list__item">
+                                <a href="#computers">Komputerlər</a>
+                            </li>
+                            <li
+                                class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__list__item">
+                                <a href="#monitors">Monitorlar</a>
+                            </li>
+                            <li
+                                class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__list__item">
+                                <a href="#monoblocks">Monobloklar</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="header__mobile-navigation__categories-list__item d-flex align-center">
                     <span class="header__mobile-navigation__categories-list__item--left-image"></span>
@@ -370,7 +399,7 @@
                     </li>
                     <span class="hr width-with-padding without-margin height-2"></span>
                     <li class="d-flex align-center">
-                        Telefon: <a href="tel:*1031" style="width: 50%;">*1031</a>
+                        Telefon: <a href="tel:*1031" style="width: 50%; font-weight: bold; font-size: 21px;">*1031</a>
                         <a href="#"
                             style="background-color: #57bb63; width: 60%; padding: 10px; margin-right: 16px; color: white;"
                             class="d-flex justify-center">
@@ -3066,7 +3095,10 @@
         const flkty = new Flickity('.products-carousel', {
             prevNextButtons: false,
             pageDots: false,
-            cellAlign: 'left'
+            cellAlign: 'left',
+            wrapAround: true,
+            imagesLoaded: true,
+            lazyLoad: false,
         });
         const mainCenterCarousel = new Flickity('.main-center__carousel', {
             imagesLoaded: true,
