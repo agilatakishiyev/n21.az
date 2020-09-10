@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    @include respond(tab-port) {
+    @include respond(phone) {
         padding: 0;
     }
 }
