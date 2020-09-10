@@ -1,0 +1,209 @@
+.main-profile {
+    margin-top: 30px;
+    margin-bottom: 60px;
+    position: relative;
+    &__tabs {
+        border-right: 1px solid $color-gray-6;
+        &__item {
+            padding: 20px 40px 20px 0;
+            border-bottom: 1px solid $color-gray-6;
+            &:not(:first-child) {
+                cursor: pointer;
+            }
+            &__icon {
+                width: 40px;
+                height: 40px;
+                background-color: #f5f6fa;
+                margin-right: 20px;
+            }
+
+            &__inner {
+                padding: 15px;
+                border-radius: 2px;
+                background-color: #f5f6fa;
+                & > span {
+                    color: #252323;
+                    margin-left: 20px;
+                }
+                &__name {
+                    font-size: $font-size-14;
+                    margin-bottom: 5px;
+                }
+                &__phone {
+                    font-size: $font-size-12;
+                }
+            }
+
+            &__badge {
+                padding: 7px;
+                border-radius: 50%;
+                background-color: #f5f6fa;
+                margin-left: auto;
+            }
+
+            &[class*="no-border"] {
+                border-bottom: none;
+            }
+            &[class*="pt-10"] {
+                padding-top: 10px;
+            }
+
+            &[class*="pb-10"] {
+                padding-bottom: 10px;
+            }
+
+            &.active {
+                border-right: 2px solid $color-blue-dark;
+            }
+        }
+    }
+
+    &__content {
+        padding: 20px 40px 20px 0;
+        position: relative;
+        & > div {
+            opacity: 0;
+            // position: static;
+            top: 0px;
+            left: 0px;
+            width: 0;
+            height: 0;
+            &.active {
+                width: 100%;
+                height: max-content;
+                opacity: 1;
+            }
+        }
+
+        &__liked {
+            &__inner {
+                display: flex;
+                flex-wrap: wrap;
+                & > .product-item {
+                    width: 25%;
+                }
+            }
+            &__header {
+                margin-bottom: 30px;
+            }
+        }
+
+        &__orders {
+            &__tab-header {
+                ul {
+                    li {
+                        margin-right: 30px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            &__tab-body {
+                padding: 0 40px 20px 0;
+                height: auto;
+                position: relative;
+                & > div {
+                    opacity: 0;
+                    position: static;
+                    top: 0px;
+                    left: 0px;
+                    width: 0;
+                    height: 0;
+                    &.active {
+                        width: 100%;
+                        height: max-content;
+                        opacity: 1;
+                    }
+                }
+
+                &__accordion {
+                    &__item {
+                        &__header {
+                            color: $color-gray;
+                            font-size: $font-size-13;
+                            &__badge {
+                                display: inline-block;
+                                width: 16px;
+                                height: 41px;
+                                margin-right: 10px;
+                                border-radius: $border-radius-base * 4;
+
+                                &.--rejected {
+                                    background-color: $color-gray-4;
+                                }
+                                &.--done {
+                                    background-color: #00a046;
+                                }
+                                &.--waiting {
+                                    background-color: #ffeb3b;
+                                }
+                                &.--returned {
+                                    background-color: #de5252;
+                                }
+                            }
+                            &__wrapper {
+                                width: 50%;
+                                &__bottom {
+                                    color: #252323;
+                                }
+                            }
+                            & > img {
+                                margin-left: auto;
+                            }
+                        }
+                        &__body {
+                            padding-left: 0 !important;
+                            &-content {
+                                padding-left: 30px !important;
+                                &__left {
+                                    & span:first-child {
+                                        color: #0060d2;
+                                        font-size: $font-size-14;
+                                        margin-bottom: 30px;
+                                    }
+                                    & > p {
+                                        margin-top: 20px;
+                                        font-size: $font-size-14;
+                                    }
+                                }
+                                &__right {
+                                    & > span:first-child {
+                                        color: $color-gray;
+                                        font-size: $font-size-14;
+                                        margin-bottom: 30px;
+                                    }
+
+                                    &__products {
+                                        &__item {
+                                            margin-bottom: 20px;
+                                            &__name {
+                                                color: #0060d2;
+                                                font-size: $font-size-13;
+                                                width: 45%;
+                                            }
+                                            & > div > span:first-child {
+                                                color: #6c757d;
+                                                margin-bottom: 10px;
+                                                font-size: $font-size-14;
+                                            }
+                                            & > div > span:nth-child(2) {
+                                                font-size: $font-size-13;
+                                            }
+                                        }
+                                    }
+                                    & > div {
+                                        font-size: $font-size-14;
+                                        margin-bottom: 20px;
+                                        & span:first-child {
+                                            color: $color-gray;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

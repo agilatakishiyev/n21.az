@@ -1,0 +1,18 @@
+.pagination {
+    width: 50%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    cursor: pointer;
+    &__item {
+        padding: 10px 15px;
+        color: $color-black;
+        border-radius: $border-radius-base;
+        border: solid 1px $color-gray-4;
+        background-color: $color-white;
+        &.active {
+            background-color: $color-blue-dark;
+            color: $color-white;
+        }
+    }
+}

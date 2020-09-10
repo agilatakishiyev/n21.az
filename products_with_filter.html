@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="./assets/flickity/flickity.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>n21.az - product with filter</title>
 </head>
 
@@ -77,6 +80,30 @@
                     <input type="text" placeholder="Axtardığınız kəliməni buraya yazın…"
                         class="header__center-part__input-wrapper__input">
                     <img src="./assets/icons/search.svg" alt="" class="header__center-part__input-wrapper__search-icon">
+                    <div class="header__center-part__input-wrapper__search-results">
+                        <a href="#"
+                            class="header__center-part__input-wrapper__search-results__item d-flex align-center">
+                            <img width="30" height="30" src="./assets/images/washing-machine.png" alt="washing machine">
+                            <p>Paltaryuyan maşın BOSCH WAJ20180ME</p>
+                        </a>
+                        <a href="#"
+                            class="header__center-part__input-wrapper__search-results__item d-flex align-center">
+                            <img width="30" height="30" src="./assets/images/washing-machine.png" alt="washing machine">
+                            <p>Paltaryuyan maşın BOSCH WAJ20180ME</p>
+                        </a>
+                        <a href="#"
+                            class="header__center-part__input-wrapper__search-results__item d-flex align-center">
+                            <img width="30" height="30" src="./assets/images/washing-machine.png" alt="washing machine">
+                            <p>Paltaryuyan maşın BOSCH WAJ20180ME</p>
+                        </a>
+                        <div class="d-flex align-center justify-center mt-20">
+                            <div class="mr-10 header__center-part__input-wrapper__search-results--count__wrapper">
+                                <span class="header__center-part__input-wrapper__search-results--count">102</span>
+                                <span>mehsul tapildi</span>
+                            </div>
+                            <a href="#all-results" class="blue-link">Bütün nəticələr bax</a>
+                        </div>
+                    </div>
                 </div>
                 <ul class="header__center-part__customer-navigation d-flex align-center">
                     <li class="header__center-part__customer-navigation__list-item">
@@ -161,6 +188,30 @@
                             </g>
                         </svg>
                     </span>
+                    <div class="header__mobile-search__input-wrapper__search-results">
+                        <a href="#"
+                            class="header__center-part__input-wrapper__search-results__item d-flex align-center">
+                            <img width="30" height="30" src="./assets/images/washing-machine.png" alt="washing machine">
+                            <p>Paltaryuyan maşın BOSCH WAJ20180ME</p>
+                        </a>
+                        <a href="#"
+                            class="header__center-part__input-wrapper__search-results__item d-flex align-center">
+                            <img width="30" height="30" src="./assets/images/washing-machine.png" alt="washing machine">
+                            <p>Paltaryuyan maşın BOSCH WAJ20180ME</p>
+                        </a>
+                        <a href="#"
+                            class="header__center-part__input-wrapper__search-results__item d-flex align-center">
+                            <img width="30" height="30" src="./assets/images/washing-machine.png" alt="washing machine">
+                            <p>Paltaryuyan maşın BOSCH WAJ20180ME</p>
+                        </a>
+                        <div class="d-flex align-center justify-center mt-20">
+                            <div class="mr-10 header__center-part__input-wrapper__search-results--count__wrapper">
+                                <span class="header__center-part__input-wrapper__search-results--count">102</span>
+                                <span>mehsul tapildi</span>
+                            </div>
+                            <a href="#all-results" class="blue-link">Bütün nəticələr bax</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="d-flex header__bottom-part justify-between align-center">
@@ -231,6 +282,35 @@
                     <span class="header__mobile-navigation__categories-list__item--left-image"></span>
                     <span>Televizor audio</span>
                     <img src="./assets/icons/slider-arrows.svg" alt="">
+                    <div class="header__mobile-navigation__categories-list__item__sub-categories-wrapper">
+                        <!-- dont change href of the a tag below -->
+                        <a href="back-to-categories"
+                            class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__back-link">
+                            <img width="20" height="20" src="./assets/images/2.jpg" alt="">
+                            <span>Kataloqa geri qayıt</span>
+                        </a>
+                        <span class="hr width-with-padding height-2"></span>
+                        <p class="d-flex justify-between align-center">Noutbuklar, komputerlər <img
+                                src="./assets/icons/category-arrow.svg" alt=""></p>
+                        <ul class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__list">
+                            <li
+                                class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__list__item">
+                                <a href="#notebooks">Noutbuklar</a>
+                            </li>
+                            <li
+                                class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__list__item">
+                                <a href="#computers">Komputerlər</a>
+                            </li>
+                            <li
+                                class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__list__item">
+                                <a href="#monitors">Monitorlar</a>
+                            </li>
+                            <li
+                                class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__list__item">
+                                <a href="#monoblocks">Monobloklar</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="header__mobile-navigation__categories-list__item d-flex align-center">
                     <span class="header__mobile-navigation__categories-list__item--left-image"></span>
@@ -319,9 +399,10 @@
                     </li>
                     <span class="hr width-with-padding without-margin height-2"></span>
                     <li class="d-flex align-center">
-                        Telefon: <a href="tel:*1031" style="width: 50%;">*1031</a>
+                        Telefon: <a href="tel:*1031" style="width: 50%; font-weight: bold; font-size: 21px;">*1031</a>
                         <a href="#"
-                            style="background-color: #57bb63; width: 60%; padding: 10px; margin-right: 16px; display: flex; color: white;">
+                            style="background-color: #57bb63; width: 60%; padding: 10px; margin-right: 16px; color: white;"
+                            class="d-flex justify-center">
                             <img class="mr-10" src="./assets/icons/whatsapp.svg" alt="">
                             Whatsapp dəstək
                         </a>
@@ -333,9 +414,11 @@
         <!-- Responsive menu ends -->
     </header>
 
+    <!-- Footer starts here -->
     <footer class="footer">
         <div class="custom-container">
             <ul class="footer__navigation-list d-flex">
+                <!-- Footer navigation list starts here -->
                 <li class="footer__navigation-list__item">
                     <ul class="footer__navigation-list__item--first">
                         <li class="mb-20">
@@ -426,6 +509,7 @@
                     </ul>
                 </li>
                 <li class="footer__navigation-list__item">
+                    <!-- Footer social navigation list starts here -->
                     <ul class="footer__navigation-list__item--fourth">
                         <li class="footer__navigation-list__item--fourth__list-item--social-links">Sosial media</li>
                         <ul class="footer__navigation-list__item--fourth__social-links-list d-flex justify-between">
@@ -467,6 +551,8 @@
                             </li>
                         </ul>
                         <li class="footer__navigation-list__item--fourth__list-item--support">Dəstək</li>
+
+                        <!-- Footer support buttons (whatsapp telegram) starts here -->
                         <ul class="footer__navigation-list__item--fourth__support-links d-flex justify-between">
                             <li class="footer__navigation-list__item--fourth__support-links__item">
                                 <a href="#"
@@ -481,8 +567,12 @@
                                 </a>
                             </li>
                         </ul>
+                        <!-- Footer support buttons ends here -->
+
                         <li class="footer__navigation-list__item--fourth__list-item--mobile-apps">Mobil tətbiqetmələr
                         </li>
+
+                        <!-- Footer mobile app buttons starts here -->
                         <ul class="footer__navigation-list__item--fourth__apps d-flex justify-between">
                             <li>
                                 <a href="/appstore">
@@ -495,8 +585,12 @@
                                 </a>
                             </li>
                         </ul>
+                        <!-- Footer mobile apps buttons ends here -->
+
                     </ul>
+                    <!-- Footer social navigation list ends here -->
                 </li>
+                <!-- Footer navigation list ends here -->
             </ul>
         </div>
         <div class="footer__lower-part">
@@ -510,9 +604,11 @@
             </div>
         </div>
     </footer>
+    <!-- Footer ends here -->
     <span class="scroll-to-top">
         <img src="./assets/icons/category-arrow.svg" alt="arrow up icon">
     </span>
+    <script src="./assets/flickity/flickity.min.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
 

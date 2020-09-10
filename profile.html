@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="./assets/flickity/flickity.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>n21.az - profile page</title>
 </head>
@@ -78,6 +80,30 @@
                     <input type="text" placeholder="Axtardığınız kəliməni buraya yazın…"
                         class="header__center-part__input-wrapper__input">
                     <img src="./assets/icons/search.svg" alt="" class="header__center-part__input-wrapper__search-icon">
+                    <div class="header__center-part__input-wrapper__search-results">
+                        <a href="#"
+                            class="header__center-part__input-wrapper__search-results__item d-flex align-center">
+                            <img width="30" height="30" src="./assets/images/washing-machine.png" alt="washing machine">
+                            <p>Paltaryuyan maşın BOSCH WAJ20180ME</p>
+                        </a>
+                        <a href="#"
+                            class="header__center-part__input-wrapper__search-results__item d-flex align-center">
+                            <img width="30" height="30" src="./assets/images/washing-machine.png" alt="washing machine">
+                            <p>Paltaryuyan maşın BOSCH WAJ20180ME</p>
+                        </a>
+                        <a href="#"
+                            class="header__center-part__input-wrapper__search-results__item d-flex align-center">
+                            <img width="30" height="30" src="./assets/images/washing-machine.png" alt="washing machine">
+                            <p>Paltaryuyan maşın BOSCH WAJ20180ME</p>
+                        </a>
+                        <div class="d-flex align-center justify-center mt-20">
+                            <div class="mr-10 header__center-part__input-wrapper__search-results--count__wrapper">
+                                <span class="header__center-part__input-wrapper__search-results--count">102</span>
+                                <span>mehsul tapildi</span>
+                            </div>
+                            <a href="#all-results" class="blue-link">Bütün nəticələr bax</a>
+                        </div>
+                    </div>
                 </div>
                 <ul class="header__center-part__customer-navigation d-flex align-center">
                     <li class="header__center-part__customer-navigation__list-item">
@@ -162,6 +188,30 @@
                             </g>
                         </svg>
                     </span>
+                    <div class="header__mobile-search__input-wrapper__search-results">
+                        <a href="#"
+                            class="header__center-part__input-wrapper__search-results__item d-flex align-center">
+                            <img width="30" height="30" src="./assets/images/washing-machine.png" alt="washing machine">
+                            <p>Paltaryuyan maşın BOSCH WAJ20180ME</p>
+                        </a>
+                        <a href="#"
+                            class="header__center-part__input-wrapper__search-results__item d-flex align-center">
+                            <img width="30" height="30" src="./assets/images/washing-machine.png" alt="washing machine">
+                            <p>Paltaryuyan maşın BOSCH WAJ20180ME</p>
+                        </a>
+                        <a href="#"
+                            class="header__center-part__input-wrapper__search-results__item d-flex align-center">
+                            <img width="30" height="30" src="./assets/images/washing-machine.png" alt="washing machine">
+                            <p>Paltaryuyan maşın BOSCH WAJ20180ME</p>
+                        </a>
+                        <div class="d-flex align-center justify-center mt-20">
+                            <div class="mr-10 header__center-part__input-wrapper__search-results--count__wrapper">
+                                <span class="header__center-part__input-wrapper__search-results--count">102</span>
+                                <span>mehsul tapildi</span>
+                            </div>
+                            <a href="#all-results" class="blue-link">Bütün nəticələr bax</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="d-flex header__bottom-part justify-between align-center">
@@ -232,6 +282,35 @@
                     <span class="header__mobile-navigation__categories-list__item--left-image"></span>
                     <span>Televizor audio</span>
                     <img src="./assets/icons/slider-arrows.svg" alt="">
+                    <div class="header__mobile-navigation__categories-list__item__sub-categories-wrapper">
+                        <!-- dont change href of the a tag below -->
+                        <a href="back-to-categories"
+                            class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__back-link">
+                            <img width="20" height="20" src="./assets/images/2.jpg" alt="">
+                            <span>Kataloqa geri qayıt</span>
+                        </a>
+                        <span class="hr width-with-padding height-2"></span>
+                        <p class="d-flex justify-between align-center">Noutbuklar, komputerlər <img
+                                src="./assets/icons/category-arrow.svg" alt=""></p>
+                        <ul class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__list">
+                            <li
+                                class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__list__item">
+                                <a href="#notebooks">Noutbuklar</a>
+                            </li>
+                            <li
+                                class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__list__item">
+                                <a href="#computers">Komputerlər</a>
+                            </li>
+                            <li
+                                class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__list__item">
+                                <a href="#monitors">Monitorlar</a>
+                            </li>
+                            <li
+                                class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__list__item">
+                                <a href="#monoblocks">Monobloklar</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="header__mobile-navigation__categories-list__item d-flex align-center">
                     <span class="header__mobile-navigation__categories-list__item--left-image"></span>
@@ -320,9 +399,10 @@
                     </li>
                     <span class="hr width-with-padding without-margin height-2"></span>
                     <li class="d-flex align-center">
-                        Telefon: <a href="tel:*1031" style="width: 50%;">*1031</a>
+                        Telefon: <a href="tel:*1031" style="width: 50%; font-weight: bold; font-size: 21px;">*1031</a>
                         <a href="#"
-                            style="background-color: #57bb63; width: 60%; padding: 10px; margin-right: 16px; display: flex; color: white;">
+                            style="background-color: #57bb63; width: 60%; padding: 10px; margin-right: 16px; color: white;"
+                            class="d-flex justify-center">
                             <img class="mr-10" src="./assets/icons/whatsapp.svg" alt="">
                             Whatsapp dəstək
                         </a>
@@ -334,9 +414,1048 @@
         <!-- Responsive menu ends -->
     </header>
 
+    <main class="main-profile">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-12">
+                    <div class="main-profile__tabs">
+                        <div data-tab-id="none" class="main-profile__tabs__item">
+                            <div class="main-profile__tabs__item__inner d-flex justify-center align-center">
+                                <img width="22" height="22" src="./assets/icons/user-black.svg" alt="user icon">
+                                <span>
+                                    <span class="main-profile__tabs__item__inner__name d-block">Xəyal Quliyev</span>
+                                    <span class="main-profile__tabs__item__inner__phone d-block">+994504551168</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div data-tab-id="private" class="main-profile__tabs__item d-flex align-center">
+                            <span class="main-profile__tabs__item__icon d-flex align-center justify-center">
+                                <img width="16" height="16" src="./assets/icons/user-black.svg" alt="user icon">
+                            </span>
+                            <span>Şəxsi məlumatlar</span>
+                        </div>
+                        <div data-tab-id="orders"
+                            class="main-profile__tabs__item active pb-10 no-border d-flex align-center">
+                            <span class="main-profile__tabs__item__icon d-flex align-center justify-center">
+                                <img width="16" height="16" src="./assets/icons/219-heart.svg" alt="">
+                            </span>
+                            <span>Sifarişlərim</span>
+                        </div>
+                        <div data-tab-id="liked" class="main-profile__tabs__item pt-10 d-flex align-center">
+                            <span class="main-profile__tabs__item__icon d-flex align-center justify-center">
+                                <img width="16" height="16" src="./assets/icons/heart.svg" alt="">
+                            </span>
+                            <span>Bəyəndiklərim</span>
+                        </div>
+                        <div data-tab-id="viewed" class="main-profile__tabs__item pb-10 no-border d-flex align-center">
+                            <span class="main-profile__tabs__item__icon d-flex align-center justify-center">
+                                <img width="16" height="16" src="./assets/icons/eye.svg" alt="">
+                            </span>
+                            <span>Baxdıqlarınız</span>
+                            <span class="main-profile__tabs__item__badge">10</span>
+                        </div>
+                        <div data-tab-id="comparison-list" class="main-profile__tabs__item pt-10 d-flex align-center">
+                            <span class="main-profile__tabs__item__icon d-flex align-center justify-center">
+                                <img width="16" height="16" src="./assets/icons/compare-black.svg" alt="">
+                            </span>
+                            <span>Müqayisə siyahısı</span>
+                        </div>
+                        <div data-tab-id="none"
+                            class="main-profile__tabs__item no-border d-flex align-center justify-center">
+                            <a href="/logout" style="color: #252323;">Çıxış et</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-9 col-lg-12">
+                    <div class="main-profile__content">
+                        <div data-tab-id="orders" class="main-profile__content__orders active">
+                            <h2>Sifarişlər</h2>
+                            <!-- Orders page tabs header starts -->
+                            <div class="main-profile__content__orders__tab-header">
+                                <ul class="main-profile__content__orders__tab-header__list d-flex mt-20">
+                                    <li class="main-profile__content__orders__tab-header__list__item active"
+                                        data-orders-tab-id="all">Hamisi</li>
+                                    <li class="main-profile__content__orders__tab-header__list__item"
+                                        data-orders-tab-id="waiting">Gözlədiklərim</li>
+                                    <li class="main-profile__content__orders__tab-header__list__item"
+                                        data-orders-tab-id="rejected">İmtina olunanlar</li>
+                                    <li class="main-profile__content__orders__tab-header__list__item"
+                                        data-orders-tab-id="returned">Geri qaytardıqlarım</li>
+                                </ul>
+                            </div>
+                            <!-- Orders page tabs header ends-->
+
+                            <!-- Orders page tabs body -->
+                            <div class="main-profile__content__orders__tab-body">
+                                <div data-orders-tab-id="all" class="active">
+                                    <div class="main-profile__content__orders__tab-body__accordion accordion">
+                                        <!-- Single accordion item in orders page starts -->
+                                        <div
+                                            class="main-profile__content__orders__tab-body__accordion__item accordion-item">
+                                            <div
+                                                class="main-profile__content__orders__tab-body__accordion__item__header accordion-item-header">
+                                                <span
+                                                    class="main-profile__content__orders__tab-body__accordion__item__header__badge --returned"></span>
+                                                <div
+                                                    class="main-profile__content__orders__tab-body__accordion__item__header__wrapper d-flex justify-between">
+                                                    <div>
+                                                        <span class="d-block">№ 44 12 97 ; Tarix: 14.08.2020</span>
+                                                        <span
+                                                            class="main-profile__content__orders__tab-body__accordion__item__header__wrapper__bottom">
+                                                            İmtina olundu
+                                                        </span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="d-block">Sifarişin məbləği</span>
+                                                        <span
+                                                            class="main-profile__content__orders__tab-body__accordion__item__header__wrapper__bottom">
+                                                            1239 AZN</span>
+                                                    </div>
+                                                </div>
+                                                <img width="16" height="16" src="./assets/icons/down-chevron.svg"
+                                                    alt="">
+                                            </div>
+                                            <div
+                                                class="main-profile__content__orders__tab-body__accordion__item__body accordion-item-body">
+                                                <div
+                                                    class="main-profile__content__orders__tab-body__accordion__item__body-content accordion-item-body-content d-flex">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-xl-4 col-12">
+                                                                <div
+                                                                    class="main-profile__content__orders__tab-body__accordion__item__body-content__left">
+                                                                    <span>Sifarişin tarixçəsi</span>
+                                                                    <p>Kuryerlə ünvana çatdırılma</p>
+                                                                    <p>Sumqayıt, 9 mkr, ev 16/17, m.47</p>
+                                                                    <p>Xəyal Quliyev</p>
+                                                                    <p>+994 50 455 11 68</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-8 col-12">
+                                                                <div
+                                                                    class="main-profile__content__orders__tab-body__accordion__item__body-content__right">
+                                                                    <span>Məhsullar</span>
+                                                                    <ul
+                                                                        class="main-profile__content__orders__tab-body__accordion__item__body-content__right__products">
+                                                                        <li
+                                                                            class="main-profile__content__orders__tab-body__accordion__item__body-content__right__products__item d-flex justify-between align-center">
+                                                                            <img width="50" height="50"
+                                                                                src="./assets/images/washing-machine.png"
+                                                                                alt="">
+                                                                            <span
+                                                                                class="main-profile__content__orders__tab-body__accordion__item__body-content__right__products__item__name">Televizor
+                                                                                LG 32" LED TV (32LM550BPVA)</span>
+                                                                            <div>
+                                                                                <span class="d-block">Qiymət</span>
+                                                                                <span>1245 AZN</span>
+                                                                            </div>
+                                                                            <div class="t-center">
+                                                                                <span class="d-block">Say</span>
+                                                                                <span> 1</span>
+                                                                            </div>
+                                                                            <div style="text-align: right;">
+                                                                                <span class="d-block">Cəm</span>
+                                                                                <span>1245 AZN</span>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li
+                                                                            class="main-profile__content__orders__tab-body__accordion__item__body-content__right__products__item d-flex justify-between align-center">
+                                                                            <img width="50" height="50"
+                                                                                src="./assets/images/washing-machine.png"
+                                                                                alt="">
+                                                                            <span
+                                                                                class="main-profile__content__orders__tab-body__accordion__item__body-content__right__products__item__name">Televizor
+                                                                                LG 32" LED TV (32LM550BPVA)</span>
+                                                                            <div>
+                                                                                <span class="d-block">Qiymət</span>
+                                                                                <span>1245 AZN</span>
+                                                                            </div>
+                                                                            <div class="t-center">
+                                                                                <span class="d-block">Say</span>
+                                                                                <span> 1</span>
+                                                                            </div>
+                                                                            <div style="text-align: right;">
+                                                                                <span class="d-block">Cəm</span>
+                                                                                <span>1245 AZN</span>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li
+                                                                            class="main-profile__content__orders__tab-body__accordion__item__body-content__right__products__item d-flex justify-between align-center">
+                                                                            <img width="50" height="50"
+                                                                                src="./assets/images/washing-machine.png"
+                                                                                alt="">
+                                                                            <span
+                                                                                class="main-profile__content__orders__tab-body__accordion__item__body-content__right__products__item__name">Televizor
+                                                                                LG 32" LED TV (32LM550BPVA)</span>
+                                                                            <div>
+                                                                                <span class="d-block">Qiymət</span>
+                                                                                <span>1245 AZN</span>
+                                                                            </div>
+                                                                            <div class="t-center">
+                                                                                <span class="d-block">Say</span>
+                                                                                <span> 1</span>
+                                                                            </div>
+                                                                            <div style="text-align: right;">
+                                                                                <span class="d-block">Cəm</span>
+                                                                                <span>1245 AZN</span>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <div class="d-flex justify-between align-center">
+                                                                        <span>Ödəmə üsulu</span>
+                                                                        <span>Qapıda nağd</span>
+                                                                    </div>
+                                                                    <div class="d-flex justify-between align-center">
+                                                                        <span>Ödəmə üsulu</span>
+                                                                        <span>Qapıda nağd</span>
+                                                                    </div>
+                                                                    <div class="d-flex justify-between align-center">
+                                                                        <span>Ödəmə üsulu</span>
+                                                                        <span>Qapıda nağd</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Single accordion item in orders page ends-->
+                                        <!-- Single accordion item in orders page starts-->
+                                        <div
+                                            class="main-profile__content__orders__tab-body__accordion__item accordion-item">
+                                            <div
+                                                class="main-profile__content__orders__tab-body__accordion__item__header accordion-item-header">
+                                                <span
+                                                    class="main-profile__content__orders__tab-body__accordion__item__header__badge --done"></span>
+                                                <div
+                                                    class="main-profile__content__orders__tab-body__accordion__item__header__wrapper d-flex justify-between">
+                                                    <div>
+                                                        <span class="d-block">№ 44 12 97 ; Tarix: 14.08.2020</span>
+                                                        <span
+                                                            class="main-profile__content__orders__tab-body__accordion__item__header__wrapper__bottom">
+                                                            İmtina olundu
+                                                        </span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="d-block">Sifarişin məbləği</span>
+                                                        <span
+                                                            class="main-profile__content__orders__tab-body__accordion__item__header__wrapper__bottom">
+                                                            1239 AZN</span>
+                                                    </div>
+                                                </div>
+                                                <img width="16" height="16" src="./assets/icons/down-chevron.svg"
+                                                    alt="">
+                                            </div>
+                                            <div
+                                                class="main-profile__content__orders__tab-body__accordion__item__body accordion-item-body">
+                                                <div
+                                                    class="main-profile__content__orders__tab-body__accordion__item__body-content accordion-item-body-content d-flex">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-xl-4 col-12">
+                                                                <div
+                                                                    class="main-profile__content__orders__tab-body__accordion__item__body-content__left">
+                                                                    <span>Sifarişin tarixçəsi</span>
+                                                                    <p>Kuryerlə ünvana çatdırılma</p>
+                                                                    <p>Sumqayıt, 9 mkr, ev 16/17, m.47</p>
+                                                                    <p>Xəyal Quliyev</p>
+                                                                    <p>+994 50 455 11 68</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-8 col-12">
+                                                                <div
+                                                                    class="main-profile__content__orders__tab-body__accordion__item__body-content__right">
+                                                                    <span>Məhsullar</span>
+                                                                    <ul
+                                                                        class="main-profile__content__orders__tab-body__accordion__item__body-content__right__products">
+                                                                        <!-- Single product in an order item starting-->
+                                                                        <li
+                                                                            class="main-profile__content__orders__tab-body__accordion__item__body-content__right__products__item d-flex justify-between align-center">
+                                                                            <img width="50" height="50"
+                                                                                src="./assets/images/washing-machine.png"
+                                                                                alt="">
+                                                                            <span
+                                                                                class="main-profile__content__orders__tab-body__accordion__item__body-content__right__products__item__name">Televizor
+                                                                                LG 32" LED TV (32LM550BPVA)</span>
+                                                                            <div>
+                                                                                <span class="d-block">Qiymət</span>
+                                                                                <span>1245 AZN</span>
+                                                                            </div>
+                                                                            <div class="t-center">
+                                                                                <span class="d-block">Say</span>
+                                                                                <span> 1</span>
+                                                                            </div>
+                                                                            <div style="text-align: right;">
+                                                                                <span class="d-block">Cəm</span>
+                                                                                <span>1245 AZN</span>
+                                                                            </div>
+                                                                        </li>
+                                                                        <!-- Single product in an order item ending -->
+
+                                                                        <!-- Single product in an order item starting -->
+                                                                        <li
+                                                                            class="main-profile__content__orders__tab-body__accordion__item__body-content__right__products__item d-flex justify-between align-center">
+                                                                            <img width="50" height="50"
+                                                                                src="./assets/images/washing-machine.png"
+                                                                                alt="">
+                                                                            <span
+                                                                                class="main-profile__content__orders__tab-body__accordion__item__body-content__right__products__item__name">Televizor
+                                                                                LG 32" LED TV (32LM550BPVA)</span>
+                                                                            <div>
+                                                                                <span class="d-block">Qiymət</span>
+                                                                                <span>1245 AZN</span>
+                                                                            </div>
+                                                                            <div class="t-center">
+                                                                                <span class="d-block">Say</span>
+                                                                                <span> 1</span>
+                                                                            </div>
+                                                                            <div style="text-align: right;">
+                                                                                <span class="d-block">Cəm</span>
+                                                                                <span>1245 AZN</span>
+                                                                            </div>
+                                                                        </li>
+                                                                        <!-- Single product in an order item ending -->
+
+                                                                    </ul>
+                                                                    <!-- Order details goes under here  -->
+                                                                    <div class="d-flex justify-between align-center">
+                                                                        <span>Ödəmə üsulu</span>
+                                                                        <span>Qapıda nağd</span>
+                                                                    </div>
+                                                                    <div class="d-flex justify-between align-center">
+                                                                        <span>Ödəmə üsulu</span>
+                                                                        <span>Qapıda nağd</span>
+                                                                    </div>
+                                                                    <div class="d-flex justify-between align-center">
+                                                                        <span>Ödəmə üsulu</span>
+                                                                        <span>Qapıda nağd</span>
+                                                                    </div>
+                                                                    <!-- Order details goes above here  -->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Single accordion item in orders page end-->
+
+                                        <!-- Single accordion item in orders page start -->
+                                        <div
+                                            class="main-profile__content__orders__tab-body__accordion__item accordion-item">
+                                            <div
+                                                class="main-profile__content__orders__tab-body__accordion__item__header accordion-item-header">
+                                                <span
+                                                    class="main-profile__content__orders__tab-body__accordion__item__header__badge --waiting"></span>
+                                                <div
+                                                    class="main-profile__content__orders__tab-body__accordion__item__header__wrapper d-flex justify-between">
+                                                    <div>
+                                                        <span class="d-block">№ 44 12 97 ; Tarix: 14.08.2020</span>
+                                                        <span
+                                                            class="main-profile__content__orders__tab-body__accordion__item__header__wrapper__bottom">
+                                                            İmtina olundu
+                                                        </span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="d-block">Sifarişin məbləği</span>
+                                                        <span
+                                                            class="main-profile__content__orders__tab-body__accordion__item__header__wrapper__bottom">
+                                                            1239 AZN</span>
+                                                    </div>
+                                                </div>
+                                                <img width="16" height="16" src="./assets/icons/down-chevron.svg"
+                                                    alt="">
+                                            </div>
+                                            <div
+                                                class="main-profile__content__orders__tab-body__accordion__item__body accordion-item-body">
+                                                <div
+                                                    class="main-profile__content__orders__tab-body__accordion__item__body-content accordion-item-body-content d-flex">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-xl-4 col-12">
+                                                                <div
+                                                                    class="main-profile__content__orders__tab-body__accordion__item__body-content__left">
+                                                                    <span>Sifarişin tarixçəsi</span>
+                                                                    <p>Kuryerlə ünvana çatdırılma</p>
+                                                                    <p>Sumqayıt, 9 mkr, ev 16/17, m.47</p>
+                                                                    <p>Xəyal Quliyev</p>
+                                                                    <p>+994 50 455 11 68</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-8 col-12">
+                                                                <div
+                                                                    class="main-profile__content__orders__tab-body__accordion__item__body-content__right">
+                                                                    <span>Məhsullar</span>
+                                                                    <ul
+                                                                        class="main-profile__content__orders__tab-body__accordion__item__body-content__right__products">
+                                                                        <li
+                                                                            class="main-profile__content__orders__tab-body__accordion__item__body-content__right__products__item d-flex justify-between align-center">
+                                                                            <img width="50" height="50"
+                                                                                src="./assets/images/washing-machine.png"
+                                                                                alt="">
+                                                                            <span
+                                                                                class="main-profile__content__orders__tab-body__accordion__item__body-content__right__products__item__name">Televizor
+                                                                                LG 32" LED TV (32LM550BPVA)</span>
+                                                                            <div>
+                                                                                <span class="d-block">Qiymət</span>
+                                                                                <span>1245 AZN</span>
+                                                                            </div>
+                                                                            <div class="t-center">
+                                                                                <span class="d-block">Say</span>
+                                                                                <span> 1</span>
+                                                                            </div>
+                                                                            <div style="text-align: right;">
+                                                                                <span class="d-block">Cəm</span>
+                                                                                <span>1245 AZN</span>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <div class="d-flex justify-between align-center">
+                                                                        <span>Ödəmə üsulu</span>
+                                                                        <span>Qapıda nağd</span>
+                                                                    </div>
+                                                                    <div class="d-flex justify-between align-center">
+                                                                        <span>Ödəmə üsulu</span>
+                                                                        <span>Qapıda nağd</span>
+                                                                    </div>
+                                                                    <div class="d-flex justify-between align-center">
+                                                                        <span>Ödəmə üsulu</span>
+                                                                        <span>Qapıda nağd</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Single accordion item in orders page end-->
+
+                                        <!-- Single accordion item in orders page start -->
+                                        <div
+                                            class="main-profile__content__orders__tab-body__accordion__item accordion-item">
+                                            <div
+                                                class="main-profile__content__orders__tab-body__accordion__item__header accordion-item-header">
+                                                <span
+                                                    class="main-profile__content__orders__tab-body__accordion__item__header__badge --rejected"></span>
+                                                <div
+                                                    class="main-profile__content__orders__tab-body__accordion__item__header__wrapper d-flex justify-between">
+                                                    <div>
+                                                        <span class="d-block">№ 44 12 97 ; Tarix: 14.08.2020</span>
+                                                        <span
+                                                            class="main-profile__content__orders__tab-body__accordion__item__header__wrapper__bottom">
+                                                            İmtina olundu
+                                                        </span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="d-block">Sifarişin məbləği</span>
+                                                        <span
+                                                            class="main-profile__content__orders__tab-body__accordion__item__header__wrapper__bottom">
+                                                            1239 AZN</span>
+                                                    </div>
+                                                </div>
+                                                <img width="16" height="16" src="./assets/icons/down-chevron.svg"
+                                                    alt="">
+                                            </div>
+                                            <div
+                                                class="main-profile__content__orders__tab-body__accordion__item__body accordion-item-body">
+                                                <div
+                                                    class="main-profile__content__orders__tab-body__accordion__item__body-content accordion-item-body-content d-flex">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-xl-4 col-12">
+                                                                <div
+                                                                    class="main-profile__content__orders__tab-body__accordion__item__body-content__left">
+                                                                    <span>Sifarişin tarixçəsi</span>
+                                                                    <p>Kuryerlə ünvana çatdırılma</p>
+                                                                    <p>Sumqayıt, 9 mkr, ev 16/17, m.47</p>
+                                                                    <p>Xəyal Quliyev</p>
+                                                                    <p>+994 50 455 11 68</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-8 col-12">
+                                                                <div
+                                                                    class="main-profile__content__orders__tab-body__accordion__item__body-content__right">
+                                                                    <span>Məhsullar</span>
+                                                                    <ul
+                                                                        class="main-profile__content__orders__tab-body__accordion__item__body-content__right__products">
+                                                                        <li
+                                                                            class="main-profile__content__orders__tab-body__accordion__item__body-content__right__products__item d-flex justify-between align-center">
+                                                                            <img width="50" height="50"
+                                                                                src="./assets/images/washing-machine.png"
+                                                                                alt="">
+                                                                            <span
+                                                                                class="main-profile__content__orders__tab-body__accordion__item__body-content__right__products__item__name">Televizor
+                                                                                LG 32" LED TV (32LM550BPVA)</span>
+                                                                            <div>
+                                                                                <span class="d-block">Qiymət</span>
+                                                                                <span>1245 AZN</span>
+                                                                            </div>
+                                                                            <div class="t-center">
+                                                                                <span class="d-block">Say</span>
+                                                                                <span> 1</span>
+                                                                            </div>
+                                                                            <div style="text-align: right;">
+                                                                                <span class="d-block">Cəm</span>
+                                                                                <span>1245 AZN</span>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <div class="d-flex justify-between align-center">
+                                                                        <span>Ödəmə üsulu</span>
+                                                                        <span>Qapıda nağd</span>
+                                                                    </div>
+                                                                    <div class="d-flex justify-between align-center">
+                                                                        <span>Ödəmə üsulu</span>
+                                                                        <span>Qapıda nağd</span>
+                                                                    </div>
+                                                                    <div class="d-flex justify-between align-center">
+                                                                        <span>Ödəmə üsulu</span>
+                                                                        <span>Qapıda nağd</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Single accordion item in orders page end -->
+                                    </div>
+                                </div>
+                                <div data-orders-tab-id="waiting">
+                                    <div class="main-profile__content__orders__tab-body__accordion accordion">
+                                        <div
+                                            class="main-profile__content__orders__tab-body__accordion__item accordion-item">
+                                            <div
+                                                class="main-profile__content__orders__tab-body__accordion__item__header accordion-item-header">
+                                                <span
+                                                    class="main-profile__content__orders__tab-body__accordion__item__header__badge --rejected"></span>
+                                                <div
+                                                    class="main-profile__content__orders__tab-body__accordion__item__header__wrapper d-flex justify-between">
+                                                    <div>
+                                                        <span class="d-block">№ 44 12 97 ; Tarix: 14.08.2020</span>
+                                                        <span
+                                                            class="main-profile__content__orders__tab-body__accordion__item__header__wrapper__bottom">
+                                                            İmtina olundu
+                                                        </span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="d-block">Sifarişin məbləği</span>
+                                                        <span
+                                                            class="main-profile__content__orders__tab-body__accordion__item__header__wrapper__bottom">
+                                                            1239 AZN</span>
+                                                    </div>
+                                                </div>
+                                                <img width="16" height="16" src="./assets/icons/down-chevron.svg"
+                                                    alt="">
+                                            </div>
+                                            <div
+                                                class="main-profile__content__orders__tab-body__accordion__item__body accordion-item-body">
+                                                <div
+                                                    class="main-profile__content__orders__tab-body__accordion__item__body-content accordion-item-body-content d-flex">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-xl-4 col-12">
+                                                                <div
+                                                                    class="main-profile__content__orders__tab-body__accordion__item__body-content__left">
+                                                                    <span>Sifarişin tarixçəsi</span>
+                                                                    <p>Kuryerlə ünvana çatdırılma</p>
+                                                                    <p>Sumqayıt, 9 mkr, ev 16/17, m.47</p>
+                                                                    <p>Xəyal Quliyev</p>
+                                                                    <p>+994 50 455 11 68</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-8 col-12">
+                                                                <div
+                                                                    class="main-profile__content__orders__tab-body__accordion__item__body-content__right">
+                                                                    <span>Məhsullar</span>
+                                                                    <ul
+                                                                        class="main-profile__content__orders__tab-body__accordion__item__body-content__right__products">
+                                                                        <li
+                                                                            class="main-profile__content__orders__tab-body__accordion__item__body-content__right__products__item d-flex justify-between align-center">
+                                                                            <img width="50" height="50"
+                                                                                src="./assets/images/washing-machine.png"
+                                                                                alt="">
+                                                                            <span
+                                                                                class="main-profile__content__orders__tab-body__accordion__item__body-content__right__products__item__name">Televizor
+                                                                                LG 32" LED TV (32LM550BPVA)</span>
+                                                                            <div>
+                                                                                <span class="d-block">Qiymət</span>
+                                                                                <span>1245 AZN</span>
+                                                                            </div>
+                                                                            <div class="t-center">
+                                                                                <span class="d-block">Say</span>
+                                                                                <span> 1</span>
+                                                                            </div>
+                                                                            <div style="text-align: right;">
+                                                                                <span class="d-block">Cəm</span>
+                                                                                <span>1245 AZN</span>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li
+                                                                            class="main-profile__content__orders__tab-body__accordion__item__body-content__right__products__item d-flex justify-between align-center">
+                                                                            <img width="50" height="50"
+                                                                                src="./assets/images/washing-machine.png"
+                                                                                alt="">
+                                                                            <span
+                                                                                class="main-profile__content__orders__tab-body__accordion__item__body-content__right__products__item__name">Televizor
+                                                                                LG 32" LED TV (32LM550BPVA)</span>
+                                                                            <div>
+                                                                                <span class="d-block">Qiymət</span>
+                                                                                <span>1245 AZN</span>
+                                                                            </div>
+                                                                            <div class="t-center">
+                                                                                <span class="d-block">Say</span>
+                                                                                <span> 1</span>
+                                                                            </div>
+                                                                            <div style="text-align: right;">
+                                                                                <span class="d-block">Cəm</span>
+                                                                                <span>1245 AZN</span>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li
+                                                                            class="main-profile__content__orders__tab-body__accordion__item__body-content__right__products__item d-flex justify-between align-center">
+                                                                            <img width="50" height="50"
+                                                                                src="./assets/images/washing-machine.png"
+                                                                                alt="">
+                                                                            <span
+                                                                                class="main-profile__content__orders__tab-body__accordion__item__body-content__right__products__item__name">Televizor
+                                                                                LG 32" LED TV (32LM550BPVA)</span>
+                                                                            <div>
+                                                                                <span class="d-block">Qiymət</span>
+                                                                                <span>1245 AZN</span>
+                                                                            </div>
+                                                                            <div class="t-center">
+                                                                                <span class="d-block">Say</span>
+                                                                                <span> 1</span>
+                                                                            </div>
+                                                                            <div style="text-align: right;">
+                                                                                <span class="d-block">Cəm</span>
+                                                                                <span>1245 AZN</span>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <div class="d-flex justify-between align-center">
+                                                                        <span>Ödəmə üsulu</span>
+                                                                        <span>Qapıda nağd</span>
+                                                                    </div>
+                                                                    <div class="d-flex justify-between align-center">
+                                                                        <span>Ödəmə üsulu</span>
+                                                                        <span>Qapıda nağd</span>
+                                                                    </div>
+                                                                    <div class="d-flex justify-between align-center">
+                                                                        <span>Ödəmə üsulu</span>
+                                                                        <span>Qapıda nağd</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-orders-tab-id="rejected">rejected</div>
+                                <div data-orders-tab-id="returned">returned</div>
+                            </div>
+                            <!-- Orders page tabs body -->
+
+                        </div>
+                        <div data-tab-id="private" class="main-profile__content__private">Shexsi</div>
+                        <div data-tab-id="liked" class="main-profile__content__liked">
+                            <h2 class="main-profile__content__liked__header">Bəyəndiklərim</h2>
+                            <div class="main-profile__content__liked__inner">
+                                <div class="product-item">
+                                    <div class="product-item__image-wrapper">
+                                        <img src="./assets/images/television.jpg" alt="television image"
+                                            class="product-item__image-wrapper__image">
+                                    </div>
+                                    <div class="product-item__name">
+                                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                                    </div>
+                                    <div class="product-item__features">
+                                        <span>SMART TV,</span>
+                                        <span>8K UHD</span>
+                                    </div>
+                                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                                        <div class="product-item__pricing-and-basket__prices">
+                                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                                <span
+                                                    class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                                    799
+                                                </span>
+                                                <span class="azn">AZN</span>
+                                            </span>
+                                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                                <span>999</span>
+                                                <span class="azn">AZN</span>
+                                            </span>
+                                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12
+                                                ay
+                                                66.6
+                                                AZN</span>
+                                        </div>
+                                        <span class="product-item__pricing-and-basket__basket">
+                                            <img src="./assets/icons/basket.svg" alt="">
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="product-item">
+                                    <div class="product-item__image-wrapper">
+                                        <img src="./assets/images/television.jpg" alt="television image"
+                                            class="product-item__image-wrapper__image">
+                                    </div>
+                                    <div class="product-item__name">
+                                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                                    </div>
+                                    <div class="product-item__features">
+                                        <span>SMART TV,</span>
+                                        <span>8K UHD</span>
+                                    </div>
+                                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                                        <div class="product-item__pricing-and-basket__prices">
+                                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                                <span
+                                                    class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                                    799
+                                                </span>
+                                                <span class="azn">AZN</span>
+                                            </span>
+                                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                                <span>999</span>
+                                                <span class="azn">AZN</span>
+                                            </span>
+                                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12
+                                                ay
+                                                66.6
+                                                AZN</span>
+                                        </div>
+                                        <span class="product-item__pricing-and-basket__basket">
+                                            <img src="./assets/icons/basket.svg" alt="">
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="product-item">
+                                    <div class="product-item__image-wrapper">
+                                        <img src="./assets/images/television.jpg" alt="television image"
+                                            class="product-item__image-wrapper__image">
+                                    </div>
+                                    <div class="product-item__name">
+                                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                                    </div>
+                                    <div class="product-item__features">
+                                        <span>SMART TV,</span>
+                                        <span>8K UHD</span>
+                                    </div>
+                                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                                        <div class="product-item__pricing-and-basket__prices">
+                                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                                <span
+                                                    class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                                    799
+                                                </span>
+                                                <span class="azn">AZN</span>
+                                            </span>
+                                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                                <span>999</span>
+                                                <span class="azn">AZN</span>
+                                            </span>
+                                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12
+                                                ay
+                                                66.6
+                                                AZN</span>
+                                        </div>
+                                        <span class="product-item__pricing-and-basket__basket">
+                                            <img src="./assets/icons/basket.svg" alt="">
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="product-item">
+                                    <div class="product-item__image-wrapper">
+                                        <img src="./assets/images/television.jpg" alt="television image"
+                                            class="product-item__image-wrapper__image">
+                                    </div>
+                                    <div class="product-item__name">
+                                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                                    </div>
+                                    <div class="product-item__features">
+                                        <span>SMART TV,</span>
+                                        <span>8K UHD</span>
+                                    </div>
+                                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                                        <div class="product-item__pricing-and-basket__prices">
+                                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                                <span
+                                                    class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                                    799
+                                                </span>
+                                                <span class="azn">AZN</span>
+                                            </span>
+                                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                                <span>999</span>
+                                                <span class="azn">AZN</span>
+                                            </span>
+                                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12
+                                                ay
+                                                66.6
+                                                AZN</span>
+                                        </div>
+                                        <span class="product-item__pricing-and-basket__basket">
+                                            <img src="./assets/icons/basket.svg" alt="">
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="product-item">
+                                    <div class="product-item__image-wrapper">
+                                        <img src="./assets/images/television.jpg" alt="television image"
+                                            class="product-item__image-wrapper__image">
+                                    </div>
+                                    <div class="product-item__name">
+                                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                                    </div>
+                                    <div class="product-item__features">
+                                        <span>SMART TV,</span>
+                                        <span>8K UHD</span>
+                                    </div>
+                                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                                        <div class="product-item__pricing-and-basket__prices">
+                                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                                <span
+                                                    class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                                    799
+                                                </span>
+                                                <span class="azn">AZN</span>
+                                            </span>
+                                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                                <span>999</span>
+                                                <span class="azn">AZN</span>
+                                            </span>
+                                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12
+                                                ay
+                                                66.6
+                                                AZN</span>
+                                        </div>
+                                        <span class="product-item__pricing-and-basket__basket">
+                                            <img src="./assets/icons/basket.svg" alt="">
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="button show-more">Daha çox göstər</button>
+                            <ul class="pagination">
+                                <li class="pagination__item active">1</li>
+                                <li class="pagination__item">2</li>
+                                <li class="pagination__item">3</li>
+                                <li class="pagination__item">4</li>
+                                <li class="pagination__item">5</li>
+                                <li class="pagination__item">6</li>
+                            </ul>
+                        </div>
+                        <div data-tab-id="viewed" class="main-profile__content__viewed">
+                            <h2 class="main-profile__content__liked__header">Baxdıqlarınız</h2>
+                            <div class="main-profile__content__liked__inner">
+                                <div class="product-item">
+                                    <div class="product-item__image-wrapper">
+                                        <img src="./assets/images/television.jpg" alt="television image"
+                                            class="product-item__image-wrapper__image">
+                                    </div>
+                                    <div class="product-item__name">
+                                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                                    </div>
+                                    <div class="product-item__features">
+                                        <span>SMART TV,</span>
+                                        <span>8K UHD</span>
+                                    </div>
+                                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                                        <div class="product-item__pricing-and-basket__prices">
+                                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                                <span
+                                                    class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                                    799
+                                                </span>
+                                                <span class="azn">AZN</span>
+                                            </span>
+                                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                                <span>999</span>
+                                                <span class="azn">AZN</span>
+                                            </span>
+                                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12
+                                                ay
+                                                66.6
+                                                AZN</span>
+                                        </div>
+                                        <span class="product-item__pricing-and-basket__basket">
+                                            <img src="./assets/icons/basket.svg" alt="">
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="product-item">
+                                    <div class="product-item__image-wrapper">
+                                        <img src="./assets/images/television.jpg" alt="television image"
+                                            class="product-item__image-wrapper__image">
+                                    </div>
+                                    <div class="product-item__name">
+                                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                                    </div>
+                                    <div class="product-item__features">
+                                        <span>SMART TV,</span>
+                                        <span>8K UHD</span>
+                                    </div>
+                                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                                        <div class="product-item__pricing-and-basket__prices">
+                                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                                <span
+                                                    class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                                    799
+                                                </span>
+                                                <span class="azn">AZN</span>
+                                            </span>
+                                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                                <span>999</span>
+                                                <span class="azn">AZN</span>
+                                            </span>
+                                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12
+                                                ay
+                                                66.6
+                                                AZN</span>
+                                        </div>
+                                        <span class="product-item__pricing-and-basket__basket">
+                                            <img src="./assets/icons/basket.svg" alt="">
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="product-item">
+                                    <div class="product-item__image-wrapper">
+                                        <img src="./assets/images/television.jpg" alt="television image"
+                                            class="product-item__image-wrapper__image">
+                                    </div>
+                                    <div class="product-item__name">
+                                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                                    </div>
+                                    <div class="product-item__features">
+                                        <span>SMART TV,</span>
+                                        <span>8K UHD</span>
+                                    </div>
+                                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                                        <div class="product-item__pricing-and-basket__prices">
+                                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                                <span
+                                                    class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                                    799
+                                                </span>
+                                                <span class="azn">AZN</span>
+                                            </span>
+                                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                                <span>999</span>
+                                                <span class="azn">AZN</span>
+                                            </span>
+                                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12
+                                                ay
+                                                66.6
+                                                AZN</span>
+                                        </div>
+                                        <span class="product-item__pricing-and-basket__basket">
+                                            <img src="./assets/icons/basket.svg" alt="">
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="product-item">
+                                    <div class="product-item__image-wrapper">
+                                        <img src="./assets/images/television.jpg" alt="television image"
+                                            class="product-item__image-wrapper__image">
+                                    </div>
+                                    <div class="product-item__name">
+                                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                                    </div>
+                                    <div class="product-item__features">
+                                        <span>SMART TV,</span>
+                                        <span>8K UHD</span>
+                                    </div>
+                                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                                        <div class="product-item__pricing-and-basket__prices">
+                                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                                <span
+                                                    class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                                    799
+                                                </span>
+                                                <span class="azn">AZN</span>
+                                            </span>
+                                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                                <span>999</span>
+                                                <span class="azn">AZN</span>
+                                            </span>
+                                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12
+                                                ay
+                                                66.6
+                                                AZN</span>
+                                        </div>
+                                        <span class="product-item__pricing-and-basket__basket">
+                                            <img src="./assets/icons/basket.svg" alt="">
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="product-item">
+                                    <div class="product-item__image-wrapper">
+                                        <img src="./assets/images/television.jpg" alt="television image"
+                                            class="product-item__image-wrapper__image">
+                                    </div>
+                                    <div class="product-item__name">
+                                        <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                                    </div>
+                                    <div class="product-item__features">
+                                        <span>SMART TV,</span>
+                                        <span>8K UHD</span>
+                                    </div>
+                                    <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                                        <div class="product-item__pricing-and-basket__prices">
+                                            <span class="product-item__pricing-and-basket__prices--discounted">
+                                                <span
+                                                    class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                                    799
+                                                </span>
+                                                <span class="azn">AZN</span>
+                                            </span>
+                                            <span class="product-item__pricing-and-basket__prices--old-price">
+                                                <span>999</span>
+                                                <span class="azn">AZN</span>
+                                            </span>
+                                            <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12
+                                                ay
+                                                66.6
+                                                AZN</span>
+                                        </div>
+                                        <span class="product-item__pricing-and-basket__basket">
+                                            <img src="./assets/icons/basket.svg" alt="">
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="button show-more">Daha çox göstər</button>
+                            <ul class="pagination">
+                                <li class="pagination__item active">1</li>
+                                <li class="pagination__item">2</li>
+                                <li class="pagination__item">3</li>
+                                <li class="pagination__item">4</li>
+                                <li class="pagination__item">5</li>
+                                <li class="pagination__item">6</li>
+                            </ul>
+                        </div>
+                        <div data-tab-id="comparison-list" class="main-profile__content__comparison-list">Comparison
+                            list</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer starts here -->
     <footer class="footer">
         <div class="custom-container">
             <ul class="footer__navigation-list d-flex">
+                <!-- Footer navigation list starts here -->
                 <li class="footer__navigation-list__item">
                     <ul class="footer__navigation-list__item--first">
                         <li class="mb-20">
@@ -427,6 +1546,7 @@
                     </ul>
                 </li>
                 <li class="footer__navigation-list__item">
+                    <!-- Footer social navigation list starts here -->
                     <ul class="footer__navigation-list__item--fourth">
                         <li class="footer__navigation-list__item--fourth__list-item--social-links">Sosial media</li>
                         <ul class="footer__navigation-list__item--fourth__social-links-list d-flex justify-between">
@@ -468,6 +1588,8 @@
                             </li>
                         </ul>
                         <li class="footer__navigation-list__item--fourth__list-item--support">Dəstək</li>
+
+                        <!-- Footer support buttons (whatsapp telegram) starts here -->
                         <ul class="footer__navigation-list__item--fourth__support-links d-flex justify-between">
                             <li class="footer__navigation-list__item--fourth__support-links__item">
                                 <a href="#"
@@ -482,8 +1604,12 @@
                                 </a>
                             </li>
                         </ul>
+                        <!-- Footer support buttons ends here -->
+
                         <li class="footer__navigation-list__item--fourth__list-item--mobile-apps">Mobil tətbiqetmələr
                         </li>
+
+                        <!-- Footer mobile app buttons starts here -->
                         <ul class="footer__navigation-list__item--fourth__apps d-flex justify-between">
                             <li>
                                 <a href="/appstore">
@@ -496,8 +1622,12 @@
                                 </a>
                             </li>
                         </ul>
+                        <!-- Footer mobile apps buttons ends here -->
+
                     </ul>
+                    <!-- Footer social navigation list ends here -->
                 </li>
+                <!-- Footer navigation list ends here -->
             </ul>
         </div>
         <div class="footer__lower-part">
@@ -511,10 +1641,59 @@
             </div>
         </div>
     </footer>
+    <!-- Footer ends here -->
+
     <span class="scroll-to-top">
         <img src="./assets/icons/category-arrow.svg" alt="arrow up icon">
     </span>
+    <script src="./assets/flickity/flickity.min.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script>
+        (function () {
+            const tabs = document.querySelectorAll('.main-profile__tabs__item');
+            const tabContents = document.querySelectorAll('div[class^="main-profile__content"]');
+            tabs.forEach(function (tab) {
+                tab.onclick = function () {
+                    if (tab.getAttribute('data-tab-id') === 'none') {
+                        return;
+                    }
+                    tabs.forEach(function (tab) {
+                        tab.classList.remove('active');
+                    })
+                    tabContents.forEach(function (tabContent) {
+                        tabContent.classList.remove('active');
+                    })
+                    const matchedTabContent = [...tabContents].find(function (tabContent) {
+                        return tabContent.getAttribute('data-tab-id') === tab.getAttribute('data-tab-id');
+                    });
+                    if (matchedTabContent) {
+                        matchedTabContent.classList.add('active');
+                        tab.classList.add('active');
+                    }
+                }
+            });
+
+            const orderTabs = document.querySelectorAll('.main-profile__content__orders__tab-header__list__item');
+            const orderTabContents = document.querySelectorAll('div[data-orders-tab-id]');
+            orderTabs.forEach(function (orderTab) {
+                orderTab.onclick = function () {
+                    orderTabs.forEach(function (orderTab) {
+                        orderTab.classList.remove('active');
+                    })
+                    orderTabContents.forEach(function (orderTabContent) {
+                        orderTabContent.classList.remove('active');
+                    })
+                    const matchedTabContent = [...orderTabContents].find(function (orderTabContent) {
+                        return orderTabContent.getAttribute('data-orders-tab-id') === orderTab.getAttribute('data-orders-tab-id');
+                    });
+                    if (matchedTabContent) {
+                        matchedTabContent.classList.add('active');
+                        orderTab.classList.add('active');
+                    }
+                }
+            });
+        })()
+    </script>
 </body>
 
 </html>

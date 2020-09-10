@@ -10,14 +10,32 @@
     }
     closeIcon.onclick = function () {
         mobileNavigation.classList.remove('open');
-        document.querySelector('.header__mobile-navigation__categories-list__item__sub-categories-wrapper.open').classList.remove('open');
+        document.querySelector('.header__mobile-navigation__categories-list__item__sub-categories-wrapper.open')?.classList.remove('open');
     }
+
+    mobileCategoriesList.forEach(function (mobileCategory ) {
+        mobileCategory.onclick = function () {
+            mobileCategory.querySelector('.header__mobile-navigation__categories-list__item__sub-categories-wrapper').classList?.add('open');
+        }
+    });
+    
+    mobileBackToCatalogueLinks.forEach(function (mobileBackToCatalogueLink) {
+        mobileBackToCatalogueLink.onclick = function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            mobileBackToCatalogueLink.parentElement?.classList.remove('open');
+        }
+    })
+
+    // Scroll to top button click function 
     scrollToTopButton.onclick = function () {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         })
     }
+
+    // Scroll to top button visibilty check  below
     window.onscroll = function (e) { 
         if(e.target.body.scrollTop === 0 ){
             scrollToTopButton.classList.remove('show');
@@ -26,20 +44,6 @@
             scrollToTopButton.classList.add('show');
         }
     }
-
-    mobileCategoriesList.forEach(function (mobileCategory ) {
-        mobileCategory.onclick = function () {
-            mobileCategory.querySelector('.header__mobile-navigation__categories-list__item__sub-categories-wrapper').classList?.add('open');
-        }
-    });
-
-    mobileBackToCatalogueLinks.forEach(function (mobileBackToCatalogueLink) {
-        mobileBackToCatalogueLink.onclick = function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-            mobileBackToCatalogueLink.parentElement?.classList.remove('open');
-        }
-    })
 
     // toggling select options states(open or close)
     document.querySelector('.custom-select-wrapper').addEventListener('click', function() {
@@ -64,6 +68,7 @@
             }
         })
     }
+
     document.addEventListener('DOMContentLoaded', function () {
         const catalogButton = document.querySelector('.header__center-part__catalog-button');
         // const catalogSection = document.querySelector('.header__center-part__catalog-section');
@@ -149,6 +154,7 @@
         lazyLoad: false,
     });
 
+    // Carousel in product details page
     const carousel = new Flickity('.carousel');
     const carouselNav = document.querySelector('.carousel-nav');
     const carouselNavCells = carouselNav?.querySelectorAll('.carousel-cell');
@@ -162,6 +168,7 @@
         }
     });
 
+    // Throttle util for delaying some frequent events like typing in a search input
     function throttle (delay, fn) {
         let inThrottle = false;
     
@@ -181,6 +188,7 @@
         };
     }
 
+    // Search input event for mobile and desktop code is down below
     const searchInput = window.innerWidth >= 1320 ?  document.querySelector('.header__center-part__input-wrapper__input') :
         document.querySelector('.header__mobile-search__input-wrapper__input');
     const searchResults = window.innerWidth >=1320 ?  document.querySelector('.header__center-part__input-wrapper__search-results') :
@@ -205,4 +213,21 @@
             sendRequestThrottle(e.currentTarget.value);
         }
     }
+
+    // Accordion code starts here
+    const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
+    accordionItemHeaders.forEach(accordionItemHeader => {
+        accordionItemHeader.addEventListener("click", _ => {
+
+            accordionItemHeader.classList.toggle("active");
+            const accordionItemBody = accordionItemHeader.nextElementSibling;
+            if(accordionItemHeader.classList.contains("active")) {
+            accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+            }
+            else {
+            accordionItemBody.style.maxHeight = 0;
+            }
+        });
+    });
+
 })()
