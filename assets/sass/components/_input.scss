@@ -82,10 +82,16 @@
 }
 
 .form-label {
+    margin-bottom: 5px;
+    display: block;
     @media only screen and (max-width: 82.5rem) {
         width: 100%;
         margin-bottom: 5px;
         display: block;
         font-size: 14px;
     }
+}
+
+input[type="date"] {
+    font-family: SFProText-Regular;
 }

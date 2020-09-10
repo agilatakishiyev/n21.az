@@ -59,13 +59,10 @@
     }
 
     &__content {
-        padding: 20px 40px 20px 0;
+        padding: 20px 0 20px 0;
         position: relative;
         & > div {
             opacity: 0;
-            // position: static;
-            top: 0px;
-            left: 0px;
             width: 0;
             height: 0;
             &.active {
@@ -81,6 +78,9 @@
                 flex-wrap: wrap;
                 & > .product-item {
                     width: 25%;
+                    @media only screen and (max-width: 82.5rem) {
+                        width: 50%;
+                    }
                 }
             }
             &__header {
@@ -105,8 +105,8 @@
                 & > div {
                     opacity: 0;
                     position: static;
-                    top: 0px;
-                    left: 0px;
+                    top: 0;
+                    left: 0;
                     width: 0;
                     height: 0;
                     &.active {
@@ -204,6 +204,57 @@
                     }
                 }
             }
+        }
+
+        &__private {
+            margin-left: 10px;
+            &__form {
+                border: 1px solid $color-gray-4;
+                padding: 50px;
+
+                & > h3 {
+                    margin-bottom: 50px;
+                }
+
+                &__input-wrapper {
+                    width: 100%;
+                    margin-bottom: 30px;
+                    & > input {
+                        width: 100%;
+                    }
+                    & > select {
+                        width: 100%;
+                    }
+                }
+
+                & label.form-label {
+                    font-size: $font-size-13;
+                }
+
+                &__button {
+                    padding: 8px 10px;
+                }
+
+                & > .address-form {
+                    & div[class^="col-xl"] {
+                        &.padding-right-10 {
+                            padding-right: 10px;
+                        }
+                        &.padding-left-10 {
+                            padding-left: 10px;
+                        }
+                    }
+                }
+            }
+
+            @media only screen and (max-width: 82.5rem) {
+                margin-left: 0;
+            }
+        }
+
+        @media only screen and (max-width: 82.5rem) {
+            padding-right: 0;
+            margin-top: 50px;
         }
     }
 }

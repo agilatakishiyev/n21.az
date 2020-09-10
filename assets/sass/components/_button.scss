@@ -33,6 +33,10 @@
         color: $color-black;
     }
 
+    &.red {
+        background-color: #de5252;
+    }
+
     &.show-more {
         width: 100%;
         border: solid 1px $color-gray-4;

@@ -428,14 +428,13 @@
                                 </span>
                             </div>
                         </div>
-                        <div data-tab-id="private" class="main-profile__tabs__item d-flex align-center">
+                        <div data-tab-id="private" class="main-profile__tabs__item d-flex align-center active">
                             <span class="main-profile__tabs__item__icon d-flex align-center justify-center">
                                 <img width="16" height="16" src="./assets/icons/user-black.svg" alt="user icon">
                             </span>
                             <span>Şəxsi məlumatlar</span>
                         </div>
-                        <div data-tab-id="orders"
-                            class="main-profile__tabs__item active pb-10 no-border d-flex align-center">
+                        <div data-tab-id="orders" class="main-profile__tabs__item  pb-10 no-border d-flex align-center">
                             <span class="main-profile__tabs__item__icon d-flex align-center justify-center">
                                 <img width="16" height="16" src="./assets/icons/219-heart.svg" alt="">
                             </span>
@@ -468,7 +467,7 @@
                 </div>
                 <div class="col-xl-9 col-lg-12">
                     <div class="main-profile__content">
-                        <div data-tab-id="orders" class="main-profile__content__orders active">
+                        <div data-tab-id="orders" class="main-profile__content__orders">
                             <h2>Sifarişlər</h2>
                             <!-- Orders page tabs header starts -->
                             <div class="main-profile__content__orders__tab-header">
@@ -1064,7 +1063,160 @@
                             <!-- Orders page tabs body -->
 
                         </div>
-                        <div data-tab-id="private" class="main-profile__content__private">Shexsi</div>
+                        <div data-tab-id="private" class="main-profile__content__private active">
+                            <div class="main-profile__content__private__form">
+                                <h3>Şəxsi məlumatlar</h3>
+                                <form class="private-information-form">
+                                    <div class="row">
+                                        <div class="col-xl-4">
+                                            <label class="form-label" for="firstname">Ad</label>
+                                            <div class="main-profile__content__private__form__input-wrapper">
+                                                <input id="firstname" class="form-input">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4">
+                                            <label class="form-label" for="lastname">Soyad</label>
+                                            <div class="main-profile__content__private__form__input-wrapper">
+                                                <input id="lastname" class="form-input">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4">
+                                            <label class="form-label" for="patronymic">Ata adı </label>
+                                            <div class="main-profile__content__private__form__input-wrapper">
+                                                <input id="patronymic" class="form-input" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4">
+                                            <label class="form-label" for="birthdate">Doğum tarixi</label>
+                                            <div class="main-profile__content__private__form__input-wrapper">
+                                                <input id="birthdate" class="form-input" type="date">
+                                            </div>
+                                        </div>
+                                        <div class=" col-xl-4">
+                                            <label class="form-label" for="gender">Cins </label>
+                                            <div class="main-profile__content__private__form__input-wrapper">
+                                                <select id="gender" class="form-input">
+                                                    <option>Seçin</option>
+                                                    <option value="male">Kishi</option>
+                                                    <option value="female">Qadin</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="button blue">Yaddaşda saxla</button>
+                                    <a class="ml-30" href="/reject" style="color: #252323;">İmtina et</a>
+                                </form>
+                            </div>
+                            <div class="main-profile__content__private__form">
+                                <h3>Əlaqə məlumatları</h3>
+                                <form class="contact-form">
+                                    <div class="row">
+                                        <div class="col-xl-4">
+                                            <label class="form-label" for="phone-number">Mobil nömrə</label>
+                                            <div class="main-profile__content__private__form__input-wrapper">
+                                                <input id="phone-number" class="form-input">
+                                            </div>
+                                            <div class="d-flex align-center justify-between">
+                                                <a href="#correct" style="color: #252323;">
+                                                    <img class="mr-10" width="16" height="16"
+                                                        src="./assets/icons/pencil.svg" alt="pencil icon">
+                                                    Düzəliş et
+                                                </a>
+                                                <button
+                                                    class="button red  main-profile__content__private__form__button">
+                                                    Nömrəni təsdiqlə
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4">
+                                            <label class="form-label" for="email">Mail ünvan</label>
+                                            <div class="main-profile__content__private__form__input-wrapper">
+                                                <input id="email" class="form-input">
+                                            </div>
+                                            <div class="d-flex align-center justify-between">
+                                                <a href="#correct" style="color: #252323;">
+                                                    <img class="mr-10" width="16" height="16"
+                                                        src="./assets/icons/pencil.svg" alt="pencil icon">
+                                                    Düzəliş et
+                                                </a>
+                                                <button class="button red main-profile__content__private__form__button">
+                                                    Maili təsdiqlə
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4">
+                                            <div class="d-flex justify-center mt-20">
+                                                <a href="#additionalnumber" style="color: #252323;">+ Əlavə nömrə</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: 30px;">
+                                        <button type="submit" class="button blue">Yaddaşda saxla</button>
+                                        <a class="ml-30" href="/reject" style="color: #252323;">İmtina et</a>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="main-profile__content__private__form">
+                                <h3>Çatdırılma ünvanı məlumatları</h3>
+                                <form class="address-form">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <label class="form-label" for="main-address">Əsas çatdırılma ünvanı</label>
+                                            <div class="main-profile__content__private__form__input-wrapper">
+                                                <select id="main-address" class="form-input">
+                                                    <option>Seçin</option>
+                                                    <option>Baki</option>
+                                                    <option>Sheki</option>
+                                                    <option>Xachmaz</option>
+                                                    <option>Kurdemir</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 padding-right-10">
+                                            <label class="form-label" for="city">Şəhər</label>
+                                            <div class="main-profile__content__private__form__input-wrapper">
+                                                <input id="city" class="form-input" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 padding-right-10 padding-left-10">
+                                            <label class="form-label" for="region">Rayon/Qəsəbə</label>
+                                            <div class="main-profile__content__private__form__input-wrapper">
+                                                <input id="region" class="form-input" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 padding-right-10 padding-left-10">
+                                            <label class="form-label" for="street">Küçə adı</label>
+                                            <div class="main-profile__content__private__form__input-wrapper">
+                                                <input id="street" class="form-input" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-1 padding-right-10 padding-left-10">
+                                            <label class="form-label" for="building">Bina</label>
+                                            <div class="main-profile__content__private__form__input-wrapper">
+                                                <input id="building" class="form-input" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-1 padding-left-10">
+                                            <label class="form-label" for="door">Mənzil</label>
+                                            <div class="main-profile__content__private__form__input-wrapper">
+                                                <input id="door" class="form-input" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-1" style="padding: 30px;">
+                                            <a href="/">
+                                                <img width="16" height="16" src="./assets/icons/trash.svg"
+                                                    alt="trash icon">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <a href="#newnumber" style="color: #252323;">+ Yeni ünvan əlavə et</a>
+                                    <div style="margin-top: 30px;">
+                                        <button type="submit" class="button blue">Yaddaşda saxla</button>
+                                        <a class="ml-30" href="/reject" style="color: #252323;">İmtina et</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                         <div data-tab-id="liked" class="main-profile__content__liked">
                             <h2 class="main-profile__content__liked__header">Bəyəndiklərim</h2>
                             <div class="main-profile__content__liked__inner">

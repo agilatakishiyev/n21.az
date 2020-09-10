@@ -230,4 +230,15 @@
         });
     });
 
+    // Pagination code starts
+    const paginationItems = document.querySelectorAll('.pagination__item');
+    paginationItems.forEach(function (paginationItem) {
+        paginationItem.onclick = function () {
+            paginationItems.forEach(function (pi) {
+                pi.classList.remove('active');
+            });
+            paginationItem.classList.add('active');
+        }
+    });
+
 })()
