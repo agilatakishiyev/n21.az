@@ -1,4 +1,5 @@
 @import "../variables";
+@import "../mixins";
 
 .checkout {
     &__page {
@@ -10,7 +11,7 @@
             &-forms {
                 border-bottom: 1px solid $color-gray-4;
                 padding: 50px;
-                @media only screen and (max-width: 82.5rem) {
+                @include respond(phone) {
                     padding: 16px;
                 }
 
@@ -22,14 +23,14 @@
                         padding-left: 0;
                     }
 
-                    @media only screen and (max-width: 82.5rem) {
+                    @include respond(phone) {
                         padding-top: 30px;
                         padding-left: 0;
                     }
 
                     &__form-wrapper {
                         & > div {
-                            @media only screen and (max-width: 82.5rem) {
+                            @include respond(phone) {
                                 flex-direction: column;
                                 align-items: flex-start;
                             }
@@ -38,7 +39,7 @@
                         &__label {
                             width: 10%;
                             text-align: right;
-                            @media only screen and (max-width: 82.5rem) {
+                            @include respond(phone) {
                                 width: 12%;
                                 text-align: left;
                             }
@@ -61,7 +62,7 @@
                                     color: $color-gray;
                                     font-size: $font-size-12;
                                     padding-top: 10px;
-                                    @media only screen and (max-width: 82.5rem) {
+                                    @include respond(phone) {
                                         font-size: 13px;
                                     }
                                 }
@@ -108,7 +109,7 @@
                                     }
                                     &__radio:checked + span:before {
                                         border: solid 8px $color-primary;
-                                        @media only screen and (max-width: 82.5rem) {
+                                        @include respond(phone) {
                                             border-width: 5px;
                                         }
                                     }
@@ -116,7 +117,7 @@
                                 &.checked {
                                     border-color: $color-primary;
                                 }
-                                @media only screen and (max-width: 82.5rem) {
+                                @include respond(phone) {
                                     width: 100%;
                                     margin-bottom: 30px;
                                 }
@@ -127,7 +128,7 @@
                     &__form-wrapper__input-holder {
                         width: 80%;
 
-                        @media only screen and (max-width: 82.5rem) {
+                        @include respond(phone) {
                             width: 100%;
                         }
 
@@ -137,7 +138,7 @@
                             color: $color-gray;
                             font-size: $font-size-14;
                             text-align: right;
-                            @media only screen and (max-width: 82.5rem) {
+                            @include respond(phone) {
                                 text-align: left;
                                 margin-top: 25px;
                             }
@@ -146,13 +147,13 @@
 
                     &__form-wrapper__input {
                         width: 60%;
-                        @media only screen and (max-width: 82.5rem) {
+                        @include respond(phone) {
                             margin-left: 0 !important;
                         }
                     }
                 }
 
-                @media only screen and (max-width: 82.5rem) {
+                @include respond(phone) {
                     h3 {
                         font-size: 18px !important;
                     }
@@ -166,7 +167,7 @@
             border: 1px solid $color-gray-4;
 
             & > h4 {
-                @media only screen and (max-width: 82.5rem) {
+                @include respond(phone) {
                     font-size: 18px;
                 }
             }
@@ -192,19 +193,19 @@
             &__pricing {
                 font-size: 1.125rem;
                 font-weight: normal;
-                @media only screen and (max-width: 82.5rem) {
+                @include respond(phone) {
                     font-size: 18px;
                 }
             }
 
             &__final-pricing {
                 font-weight: 600;
-                @media only screen and (max-width: 82.5rem) {
+                @include respond(phone) {
                     font-size: 18px;
                 }
             }
 
-            @media only screen and (max-width: 82.5rem) {
+            @include respond(phone) {
                 margin-top: 30px;
             }
         }
@@ -213,7 +214,7 @@
             border-radius: $border-radius-base;
         }
 
-        @media only screen and (max-width: 82.5rem) {
+        @include respond(phone) {
             flex-direction: column;
         }
     }
@@ -221,7 +222,7 @@
         &__button {
             margin-left: calc(72% / 2) !important;
             transform: translateX(-50%);
-            @media only screen and (max-width: 82.5rem) {
+            @include respond(phone) {
                 display: block;
                 margin: 0 auto !important;
                 transform: none;

@@ -17,6 +17,7 @@
 @import "components/select";
 @import "components/pagination";
 @import "components/accordion";
+@import "components/modal";
 
 @import "pages/index";
 @import "pages/checkout";
@@ -29,3 +30,5 @@
 @import "pages/dress_product";
 @import "pages/product_details";
 @import "pages/product_with_filter";
+@import "pages/liked_products_not_logged_in";
+@import "pages/viewed_products_not_logged_in";

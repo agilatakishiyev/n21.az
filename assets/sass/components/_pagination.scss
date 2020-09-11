@@ -1,11 +1,11 @@
 .pagination {
-    width: 50%;
+    width: max-content;
     display: flex;
     margin: 0 auto;
-    justify-content: space-evenly;
     cursor: pointer;
     &__item {
         padding: 10px 15px;
+        margin-right: 10px;
         color: $color-black;
         border-radius: $border-radius-base;
         border: solid 1px $color-gray-4;

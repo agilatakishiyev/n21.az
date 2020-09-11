@@ -1,4 +1,5 @@
 @import "../variables";
+@import "../mixins";
 
 .header {
     background-color: $color-blue-dark;
@@ -24,12 +25,12 @@
                 padding-right: 41px;
             }
 
-            @media only screen and (max-width: 82.5rem) {
+            @include respond(phone) {
                 display: none !important;
             }
         }
 
-        @media only screen and (max-width: 82.5rem) {
+        @include respond(phone) {
             display: none !important;
         }
     }
@@ -40,7 +41,7 @@
 
         &__image-wrapper {
             width: 10%;
-            @media only screen and (max-width: 82.5rem) {
+            @include respond(phone) {
                 width: 25%;
                 display: flex;
                 justify-content: space-between;
@@ -48,13 +49,13 @@
 
             & > a > img {
                 width: 106px;
-                @media only screen and (max-width: 82.5rem) {
+                @include respond(phone) {
                     width: 53px;
                 }
             }
 
             &__hamburger {
-                @media only screen and (max-width: 82.5rem) {
+                @include respond(phone) {
                     display: block !important;
                 }
             }
@@ -118,7 +119,7 @@
                 }
             }
 
-            @media only screen and (max-width: 82.5rem) {
+            @include respond(phone) {
                 display: none !important;
             }
         }
@@ -127,7 +128,7 @@
             width: 13%;
             height: 40px;
             position: relative;
-            @media only screen and (max-width: 82.5rem) {
+            @include respond(phone) {
                 display: none;
             }
         }
@@ -154,7 +155,7 @@
         //     }
         // }
 
-        @media only screen and (max-width: 82.5rem) {
+        @include respond(phone) {
             margin: 0;
             align-items: center;
         }
@@ -163,7 +164,7 @@
     &__center-part__customer-navigation {
         width: 49%;
 
-        @media only screen and (max-width: 82.5rem) {
+        @include respond(phone) {
             width: 60%;
             justify-content: space-between;
             align-items: baseline;
@@ -180,7 +181,7 @@
                 &--last {
                     padding: 0 30px;
                     height: 24px;
-                    @media only screen and (max-width: 82.5rem) {
+                    @include respond(phone) {
                         padding: 0;
                     }
                 }
@@ -189,7 +190,7 @@
                     display: inline-block;
                     width: 100%;
                     & > span {
-                        @media only screen and (max-width: 82.5rem) {
+                        @include respond(phone) {
                             font-size: 14px !important;
                         }
                     }
@@ -198,7 +199,7 @@
                 &--positioned {
                     position: relative;
                     & > span {
-                        @media only screen and (max-width: 82.5rem) {
+                        @include respond(phone) {
                             display: none;
                         }
                     }
@@ -207,7 +208,7 @@
                 &__text {
                     display: none;
                 }
-                @media only screen and (max-width: 82.5rem) {
+                @include respond(phone) {
                     padding: 0;
                 }
             }
@@ -232,19 +233,19 @@
             }
 
             &.--bar-chart {
-                @media only screen and (max-width: 82.5rem) {
+                @include respond(phone) {
                     display: none;
                 }
             }
             &.--login {
-                @media only screen and (max-width: 82.5rem) {
+                @include respond(phone) {
                     display: none;
                 }
             }
         }
 
         & .mobile-hidden-vr {
-            @media only screen and (max-width: 82.5rem) {
+            @include respond(phone) {
                 display: none !important;
             }
         }
@@ -260,13 +261,13 @@
 
                 & > a {
                     color: $color-white;
-                    @media only screen and (max-width: 82.5rem) {
+                    @include respond(phone) {
                         width: max-content;
                         display: block;
                     }
                 }
             }
-            @media only screen and (max-width: 82.5rem) {
+            @include respond(phone) {
                 width: 100%;
             }
         }
@@ -274,7 +275,7 @@
         & > p {
             color: $color-white;
             font-size: $font-size-14;
-            @media only screen and (max-width: 82.5rem) {
+            @include respond(phone) {
                 background-color: #0c384f;
                 padding-right: -2.5%;
                 width: 105%;
@@ -287,7 +288,7 @@
             }
         }
 
-        @media only screen and (max-width: 82.5rem) {
+        @include respond(phone) {
             flex-direction: column;
             align-items: flex-start;
         }
@@ -297,7 +298,7 @@
         width: 100%;
         height: 50px;
         position: relative;
-        @media only screen and (max-width: 82.5rem) {
+        @include respond(phone) {
             display: block !important;
         }
         &__input-wrapper {
@@ -508,7 +509,7 @@ main {
                 }
             }
         }
-        @media only screen and (max-width: 86.5rem) {
+        @include respond(phone) {
             display: none !important;
         }
     }
@@ -543,17 +544,17 @@ main {
                         background-color: #f1eeee;
                     }
                 }
-                @media only screen and (max-width: 86.5rem) {
+                @include respond(phone) {
                     width: max-content;
                     margin-right: 5px;
                 }
             }
-            @media only screen and (max-width: 86.5rem) {
+            @include respond(phone) {
                 overflow-y: scroll;
                 margin-top: 10px;
             }
         }
-        @media only screen and (max-width: 86.5rem) {
+        @include respond(phone) {
             width: 100%;
         }
     }
@@ -568,7 +569,7 @@ main {
                 margin-bottom: 10px;
             }
         }
-        @media only screen and (max-width: 86.5rem) {
+        @include respond(phone) {
             display: none !important;
         }
     }
@@ -578,7 +579,7 @@ main {
         &__button {
             background-color: $color-blue-dark;
         }
-        @media only screen and (max-width: 86.5rem) {
+        @include respond(phone) {
             display: block !important;
         }
     }
@@ -612,7 +613,7 @@ main {
                     width: 25%;
                 }
 
-                @media only screen and (max-width: 86.5rem) {
+                @include respond(phone) {
                     width: 90%;
                     padding: 12px 5px;
                     margin-top: 10px;
@@ -621,12 +622,12 @@ main {
             }
 
             & > h1 {
-                @media only screen and (max-width: 86.5rem) {
+                @include respond(phone) {
                     font-size: 15px;
                 }
             }
 
-            @media only screen and (max-width: 86.5rem) {
+            @include respond(phone) {
                 top: 0;
                 left: 50%;
                 width: 90%;
@@ -638,18 +639,18 @@ main {
         &__product-items {
             &__item {
                 width: 20%;
-                @media only screen and (max-width: 86.5rem) {
+                @include respond(phone) {
                     width: 250px;
                 }
             }
-            @media only screen and (max-width: 86.5rem) {
+            @include respond(phone) {
                 display: none !important;
             }
         }
     }
     & .products-carousel {
         margin-top: 30px;
-        @media only screen and (max-width: 86.5rem) {
+        @include respond(phone) {
             display: block !important;
         }
     }
@@ -667,12 +668,12 @@ main {
                 object-fit: cover;
             }
 
-            @media only screen and (max-width: 82.5rem) {
+            @include respond(phone) {
                 width: 100%;
                 margin-bottom: 30px;
             }
         }
-        @media only screen and (max-width: 82.5rem) {
+        @include respond(phone) {
             flex-direction: column;
             justify-content: space-between;
         }
@@ -692,17 +693,17 @@ main {
                 width: 100%;
                 object-fit: cover;
             }
-            @media only screen and (max-width: 82.5rem) {
+            @include respond(phone) {
                 width: 320px;
             }
         }
     }
-    @media only screen and (max-width: 82.5rem) {
+    @include respond(phone) {
         display: none !important;
     }
     &--mobile {
         margin: 30px 0;
-        @media only screen and (max-width: 82.5rem) {
+        @include respond(phone) {
             display: block !important;
         }
     }
@@ -710,7 +711,7 @@ main {
 
 .products-carousel--mobile {
     margin-bottom: 30px;
-    @media only screen and (max-width: 82.5rem) {
+    @include respond(phone) {
         display: block !important;
     }
 }
@@ -735,7 +736,7 @@ main {
         object-fit: cover;
     }
 
-    @media only screen and (max-width: 82.5rem) {
+    @include respond(phone) {
         display: none;
     }
 }
@@ -750,7 +751,7 @@ main {
             object-fit: cover;
         }
     }
-    @media only screen and (max-width: 82.5rem) {
+    @include respond(phone) {
         display: none !important;
     }
 }
@@ -761,11 +762,11 @@ main {
         &__image {
             border-radius: $border-radius-base * 1.5;
             width: 100%;
-            @media only screen and (max-width: 82.5rem) {
+            @include respond(phone) {
                 border-radius: $border-radius-base * 2.5;
             }
         }
-        @media only screen and (max-width: 82.5rem) {
+        @include respond(phone) {
             margin-bottom: 30px;
         }
     }
@@ -780,13 +781,13 @@ main {
         flex-wrap: wrap;
     }
 
-    @media only screen and (max-width: 82.5rem) {
+    @include respond(phone) {
         display: none !important;
     }
 
     &--mobile {
         margin-top: 30px;
-        @media only screen and (max-width: 82.5rem) {
+        @include respond(phone) {
             display: block !important;
         }
     }
@@ -802,14 +803,14 @@ main {
         font-size: 30px;
     }
 
-    @media only screen and (max-width: 82.5rem) {
+    @include respond(phone) {
         display: none !important;
     }
 
     &--mobile {
         padding-bottom: 50px;
         overflow-x: hidden;
-        @media only screen and (max-width: 82.5rem) {
+        @include respond(phone) {
             display: block !important;
         }
     }
@@ -844,7 +845,7 @@ main {
                     display: inline-block;
                 }
                 & > span {
-                    @media only screen and (max-width: 82.5rem) {
+                    @include respond(phone) {
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
@@ -852,7 +853,7 @@ main {
                     }
                 }
                 &.mobile-hidden {
-                    @media only screen and (max-width: 82.5rem) {
+                    @include respond(phone) {
                         display: none;
                     }
                 }
@@ -863,7 +864,7 @@ main {
                     & > img {
                         width: 106px;
                     }
-                    @media only screen and (max-width: 82.5rem) {
+                    @include respond(phone) {
                         width: 25%;
                         text-align: left;
                     }
@@ -876,7 +877,7 @@ main {
                 }
 
                 &--hidden-contact-info {
-                    @media only screen and (max-width: 82.5rem) {
+                    @include respond(phone) {
                         display: block !important;
                         margin-top: 10px;
                     }
@@ -893,7 +894,7 @@ main {
 
             &--second,
             &--third {
-                @media only screen and (max-width: 82.5rem) {
+                @include respond(phone) {
                     display: none;
                 }
             }
@@ -958,7 +959,7 @@ main {
                     }
                 }
                 &__list-item {
-                    @media screen and (max-width: 82.5rem) {
+                    @include respond(phone) {
                         &--social-links {
                             margin-top: 150px;
                         }
@@ -983,20 +984,20 @@ main {
                             }
                         }
                     }
-                    @media only screen and (max-width: 82.5rem) {
+                    @include respond(phone) {
                         justify-content: space-around !important;
                     }
                 }
-                @media only screen and (max-width: 82.5rem) {
+                @include respond(phone) {
                     text-align: center;
                 }
             }
-            @media only screen and (max-width: 82.5rem) {
+            @include respond(phone) {
                 width: 100%;
             }
         }
 
-        @media only screen and (max-width: 82.5rem) {
+        @include respond(phone) {
             flex-direction: column;
         }
     }
@@ -1006,7 +1007,7 @@ main {
         padding: 17px 0px 17px;
         margin-top: 88px;
 
-        @media only screen and (max-width: 82.5rem) {
+        @include respond(phone) {
             margin-top: 0;
         }
 
@@ -1024,20 +1025,20 @@ main {
         }
 
         & > div {
-            @media only screen and (max-width: 82.5rem) {
+            @include respond(phone) {
                 flex-direction: column;
                 align-items: flex-start;
             }
 
             & > p {
-                @media only screen and (max-width: 82.5rem) {
+                @include respond(phone) {
                     order: 1;
                     margin: 0 auto;
                 }
             }
 
             & > div {
-                @media only screen and (max-width: 82.5rem) {
+                @include respond(phone) {
                     width: 100%;
                     text-align: center;
                     margin-bottom: 16px;
@@ -1077,18 +1078,25 @@ main {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    position: relative;
     & > a {
         color: $color-black;
+    }
+    &__remove-icon {
+        position: absolute;
+        top: 20px;
+        right: 20px;
     }
     &__image-wrapper {
         height: 190px;
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
         &__image {
             width: 100%;
             object-fit: cover;
-            @media only screen and (max-width: 82.5rem) {
+            @include respond(phone) {
                 width: 75%;
             }
         }
@@ -1130,6 +1138,9 @@ main {
             &__monthly {
                 margin-top: 10px;
                 font-size: $font-size-13;
+            }
+            &__actions {
+                display: none;
             }
         }
         &__basket {

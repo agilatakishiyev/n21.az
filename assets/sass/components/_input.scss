@@ -1,3 +1,6 @@
+@import "../variables";
+@import "../mixins";
+
 .form-input {
     border: solid 1px #d9d9d9;
     border-radius: $border-radius-base;
@@ -13,7 +16,7 @@
             position: relative;
             margin-left: 24px;
 
-            @media only screen and (max-width: 82.5rem) {
+            @include respond(phone) {
                 margin-left: 0;
                 top: 20px;
             }
@@ -23,7 +26,7 @@
                 color: $color-white;
                 padding: 13px 20px;
 
-                @media only screen and (max-width: 82.5rem) {
+                @include respond(phone) {
                     padding: 9px 26px;
                 }
 
@@ -40,7 +43,7 @@
                     border-left: 10px solid transparent;
                     border-right: 10px solid $color-primary;
 
-                    @media only screen and (max-width: 82.5rem) {
+                    @include respond(phone) {
                         top: -19px;
                         left: 50%;
                         transform: translateX(-50%) rotate(90deg);
@@ -75,7 +78,7 @@
         }
     }
 
-    @media only screen and (max-width: 82.5rem) {
+    @include respond(phone) {
         width: 100% !important;
         font-size: 14px;
     }
@@ -84,7 +87,7 @@
 .form-label {
     margin-bottom: 5px;
     display: block;
-    @media only screen and (max-width: 82.5rem) {
+    @include respond(phone) {
         width: 100%;
         margin-bottom: 5px;
         display: block;

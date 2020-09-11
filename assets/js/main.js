@@ -241,4 +241,88 @@
         }
     });
 
+    const likedProductRemoveIcons = document.querySelectorAll('.liked-product-item__remove-icon');
+    const viewedProductRemoveIcons = document.querySelectorAll('.viewed-product-item__remove-icon');
+    viewedProductRemoveIcons.forEach(function (removeIcon) { 
+        removeIcon.onclick = function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            requestConfirmationModal(function (result) {
+                if(result) {
+                    e.target.parentElement.parentElement.remove();
+                    // removeProductFromStorage('viewed', '1');
+                }
+            });
+        }
+    });
+    likedProductRemoveIcons.forEach(function (removeIcon) { 
+        removeIcon.onclick = function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            requestConfirmationModal(function (result) {
+                if(result) {
+                    e.target.parentElement.parentElement.remove();
+                    // removeProductFromStorage('liked', '1');
+                }
+            });
+        }
+    });
+
+    function removeProductFromStorage (type, id) {
+        if(type === 'liked'){
+            // clear liked product from storage
+        }else if (type === 'viewed') {
+            // clear viewed product from storage
+        }
+    }
+
+    function requestConfirmationModal (cb) {
+        const modalWrapper = document.createElement('div');
+        modalWrapper.classList.add('modal-wrapper');
+        const modalContent = document.createElement('div');
+        modalContent.classList.add('modal-wrapper__content');
+        const modalHeader = document.createElement('div');
+        modalHeader.classList.add('modal-wrapper__content__header');
+        const modalButtonsWrapper = document.createElement('div');
+        modalButtonsWrapper.classList.add('modal-wrapper__content__buttons');
+        const headerElement = document.createElement('h2');
+        headerElement.innerText = 'Silmək istədiyinizdən əminsiniz mi?';
+        const closeIcon = document.createElement('img');
+        closeIcon.alt = 'close icon';
+        closeIcon.classList.add('modal-wrapper__content__header__close-icon');
+        closeIcon.src = './assets/icons/close.svg';
+        const closeButton = document.createElement('button');
+        closeButton.className = 'button white close button--sm';
+        closeButton.innerText = 'Xeyr, bağla';
+        const approveButton = document.createElement('button');
+        approveButton.className = 'button primary approve button--sm';
+        approveButton.innerText = 'Bəli əminəm';
+        modalHeader.append(headerElement, closeIcon);
+        modalButtonsWrapper.append(closeButton, approveButton);
+        modalContent.appendChild(modalHeader);
+        modalContent.appendChild(modalButtonsWrapper);
+        modalWrapper.appendChild(modalContent);
+        document.body.appendChild(modalWrapper);
+        document.onclick = function (e) {
+            if(e.target !== modalContent) {
+                modalWrapper.remove();
+                cb(false);
+            }
+        }
+        modalContent.onclick = function (e) {
+            e.stopPropagation();
+        }
+        approveButton.onclick = function () {
+            modalWrapper.remove();
+            cb(true);
+        }
+        closeIcon.onclick = function (){
+            modalWrapper.remove();
+            cb(false);
+        }
+        closeButton.onclick = function () {
+            modalWrapper.remove()
+            cb(false);
+        }
+    }
 })()

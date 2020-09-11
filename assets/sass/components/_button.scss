@@ -1,3 +1,6 @@
+@import "../variables";
+@import "../mixins";
+
 .button {
     padding: 17px 50px;
     outline: none;
@@ -5,6 +8,7 @@
     font-size: $font-size-14;
     color: $color-white;
     border-radius: $border-radius-base;
+    cursor: pointer;
 
     &:disabled {
         background-color: $color-gray !important;
@@ -37,6 +41,12 @@
         background-color: #de5252;
     }
 
+    &.white {
+        color: #555555;
+        border: solid 2px #d9d9d9;
+        background-color: $color-white;
+    }
+
     &.show-more {
         width: 100%;
         border: solid 1px $color-gray-4;
@@ -53,7 +63,7 @@
         padding: 11px 30px;
     }
 
-    @media only screen and (max-width: 82.5rem) {
+    @include respond(phone) {
         font-size: 14px;
     }
 }
