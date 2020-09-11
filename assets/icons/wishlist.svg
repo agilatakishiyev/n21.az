@@ -1,13 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
-    <title>Path</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="mobile-Index" transform="translate(-274.000000, -18.000000)" fill="#CFD9E0" fill-rule="nonzero">
-            <g id="Group" transform="translate(274.000000, 18.000000)">
-                <path d="M8,15.2 L6.84061538,14.1636923 C2.72,10.4996923 0,8.07384615 0,5.11630769 C0,2.69169231 1.936,0.8 4.4,0.8 C5.77731523,0.80805526 7.08622569,1.401428 8,2.432 C8.91377431,1.401428 10.2226848,0.80805526 11.6,0.8 C14.064,0.8 16,2.69169231 16,5.11630769 C16,8.07384615 13.28,10.4996923 9.15938462,14.1636923 L8,15.2 Z" id="Path"></path>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M8 15.2l-1.16-1.036C2.72 10.5 0 8.074 0 5.116 0 2.692 1.936.8 4.4.8A4.85 4.85 0 018 2.432 4.85 4.85 0 0111.6.8C14.064.8 16 2.692 16 5.116c0 2.958-2.72 5.384-6.84 9.048L8 15.2z" fill="#CFD9E0" fill-rule="nonzero"/></svg>

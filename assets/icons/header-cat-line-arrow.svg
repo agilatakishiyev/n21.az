@@ -1,15 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="8px" height="5px" viewBox="0 0 8 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
-    <title>expand_more - material</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="material" font-size="16" font-weight="normal">
-        <g id="Main" transform="translate(-763.000000, -159.000000)" fill="#FFFFFF">
-            <g id="Header">
-                <text id="expand_more---material">
-                    <tspan x="759" y="167"></tspan>
-                </text>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg width="8" height="5" xmlns="http://www.w3.org/2000/svg"><text transform="translate(-763 -159)" fill="#FFF" fill-rule="evenodd" font-family="material" font-size="16"><tspan x="759" y="167"></tspan></text></svg>

@@ -1,15 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
-    <title>Shape</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Main" transform="translate(-1112.000000, -78.000000)" fill="#CFD9E0" fill-rule="nonzero">
-            <g id="Header">
-                <g id="Group" transform="translate(1112.000000, 78.000000)">
-                    <path d="M8,0 C10.209139,0 12,1.790861 12,4 C12,6.209139 10.209139,8 8,8 C5.790861,8 4,6.209139 4,4 C4,1.790861 5.790861,0 8,0 Z M8,10 C12.4194286,10 16,11.7897143 16,14 L16,16 L0,16 L0,14 C0,11.7897143 3.57942857,10 8,10 Z" id="Shape"></path>
-                </g>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M8 0a4 4 0 110 8 4 4 0 010-8zm0 10c4.42 0 8 1.79 8 4v2H0v-2c0-2.21 3.58-4 8-4z" fill="#CFD9E0" fill-rule="nonzero"/></svg>
