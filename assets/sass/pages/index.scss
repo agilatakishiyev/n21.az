@@ -481,6 +481,11 @@
 main {
     margin-top: 20px;
     height: max-content;
+
+    .main-wrapper {
+        background-color: $color-white;
+    }
+
     .main-left {
         width: 19%;
         padding: 25px 20px 25px 15px;
@@ -534,8 +539,10 @@ main {
                 width: 18%;
                 border: solid 1px $color-gray-4;
                 border-radius: $border-radius-base;
+
                 &--inner {
                     padding: 10px 26px;
+                    color: $color-black;
 
                     &__image-wrapper {
                         margin-bottom: 4px;
@@ -573,6 +580,7 @@ main {
             display: none !important;
         }
     }
+
     .all-categories-button-wrapper {
         margin: 30px auto;
         text-align: center;
@@ -1049,6 +1057,16 @@ main {
             }
         }
     }
+}
+
+.shadow-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
 .scroll-to-top {
