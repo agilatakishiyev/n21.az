@@ -27,6 +27,32 @@
         }
     })
 
+    // categories code starts here
+    const categoryItems = document.querySelectorAll('.main-left__categories-list__item');
+    const subCategoriesWrapper = document.querySelector('.sub-categories-wrapper');
+    const subCategoriesInner = document.querySelectorAll('.sub-categories');
+    const shadowWrapper = document.querySelector('.shadow-wrapper');
+    categoryItems.forEach(function (categoryItem) {
+        const subCategoriesOfCurrentCategory = [...subCategoriesInner].find(function (subCat) {
+            return subCat.getAttribute('data-category-id') === categoryItem.getAttribute('data-category-id');
+        });
+        categoryItem.onmouseover = function (e) {
+            categoryItems.forEach(function (prevSelectedCat) {
+                prevSelectedCat.classList.remove('hovered');
+            })
+            categoryItem.classList.add('hovered');
+            subCategoriesWrapper.classList.remove('d-none');
+            subCategoriesOfCurrentCategory?.classList.remove('d-none');
+            shadowWrapper.classList.add('active');
+        }
+        categoryItem.onmouseout = function () {
+            this.classList.remove('hovered');
+            subCategoriesWrapper.classList.add('d-none');
+            subCategoriesOfCurrentCategory?.classList.add('d-none');
+            shadowWrapper.classList.remove('active');
+        }
+    });
+
     // Scroll to top button click function 
     scrollToTopButton.onclick = function () {
         window.scrollTo({
