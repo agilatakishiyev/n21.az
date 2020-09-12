@@ -1,1 +1,223 @@
 @import "../variables";
+@import "../mixins";
+
+.dress-product {
+    margin: 30px 0;
+
+    &__image-carousel {
+        &__item {
+            width: 100%;
+            height: 600px;
+        }
+
+        .flickity-viewport {
+            @media only screen and (max-width: 36rem) {
+                height: 368px !important;
+            }
+        }
+
+        .flickity-button {
+            @include respond(phone) {
+                display: none;
+            }
+        }
+
+        .flickity-page-dots {
+            @include respond(phone) {
+                display: none;
+            }
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            @include respond(phone) {
+                height: 100%;
+            }
+        }
+    }
+
+    &__details {
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            @include respond(phone) {
+                margin-top: 16px;
+            }
+        }
+        &__code {
+            color: #6c757d;
+            font-size: $font-size-14;
+        }
+        & > div {
+            width: 60%;
+        }
+        & > div > span {
+            &::after {
+                transform: rotate(160deg);
+                top: 3px;
+            }
+        }
+        & > p {
+            font-size: $font-size-14;
+            margin-top: 20px;
+        }
+
+        &__badge {
+            background-color: $color-primary;
+            color: $color-white;
+            font-size: 13px;
+            padding: 5px 12px;
+            border-radius: $border-radius-base / 2;
+        }
+
+        &__images {
+            margin-bottom: 30px;
+            & > img {
+                margin-right: 10px;
+            }
+        }
+
+        &__sizes {
+            width: 100% !important;
+            & > a {
+                color: #0060d2;
+                font-size: 13px;
+            }
+
+            &__number {
+                width: 50px;
+                height: 40px;
+                font-size: $font-size-14;
+                border: solid $border-radius-base / 2 $color-gray-6;
+                background-color: $color-white;
+
+                @include respond(phone) {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        &__features {
+            margin-top: 30px;
+            font-size: $font-size-14;
+            &__item {
+                margin-bottom: 10px;
+            }
+        }
+        &__actions {
+            & > button {
+                font-size: 15px;
+                &:first-child {
+                    padding: 16px 40px;
+                    margin-right: 20px;
+                    @include respond(phone) {
+                        margin-right: 10px;
+                        padding: 12px 30px !important;
+                    }
+                }
+                &:nth-of-type(2) {
+                    padding: 16px 35px;
+                    @include respond(phone) {
+                        padding: 12px 30px !important;
+                    }
+                }
+                @include respond(phone) {
+                    font-size: $font-size-14;
+                }
+                &.heart {
+                    @include respond(phone) {
+                        margin-left: 0;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.similar-dress-products {
+    margin-bottom: 30px;
+    h3 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    @include respond(phone) {
+        display: none;
+    }
+}
+
+.similar-dress-products-mobile {
+    h3 {
+        margin: 16px;
+    }
+    @include respond(phone) {
+        display: block !important;
+        margin-bottom: 90px;
+    }
+
+    &__carousel .dress-product-item {
+        width: 150px;
+        margin-right: 10px;
+        & > img {
+            height: 200px;
+        }
+    }
+}
+
+.dress-product-item {
+    width: 18.2%;
+    position: relative;
+
+    & .like {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 30px;
+        height: 30px;
+        background-color: $color-white;
+        border-radius: 50%;
+
+        & > svg > path {
+            fill: black;
+            fill-opacity: 0;
+            z-index: 50;
+        }
+        &.liked {
+            & > svg > path {
+                fill: $color-primary;
+                fill-opacity: 1;
+            }
+        }
+    }
+    & > img {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+    }
+
+    &__name {
+        font-size: $font-size-14;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+    &__pricing {
+        &--actual,
+        &--old {
+            font-size: 16px;
+        }
+        &--actual {
+            color: $color-primary;
+        }
+    }
+
+    &__sizes {
+        font-size: 13px;
+        margin-top: 20px;
+
+        &__item {
+            margin-right: 15px;
+        }
+    }
+}

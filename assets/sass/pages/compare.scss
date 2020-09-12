@@ -72,15 +72,6 @@
                 & button:first-child {
                     width: 60%;
                 }
-
-                &__heart {
-                    padding: 10px;
-                    background-color: #f5f6fa;
-                    margin-left: 20px;
-                    &:active svg path {
-                        fill: #000000 !important;
-                    }
-                }
             }
             &--delete {
                 position: absolute;

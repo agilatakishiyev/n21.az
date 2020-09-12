@@ -1,14 +1,16 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="./assets/flickity/flickity.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>n21.az - Dress product</title>
+    <title>n21.az - main page</title>
 </head>
 
 <body>
+    <!-- Header starts here -->
     <header class="header">
         <div class="custom-container">
             <div class="d-flex justify-between">
@@ -38,9 +40,32 @@
                         <a class="header__upper-navigation__list-item__link" href="#">Sual-cavab</a>
                     </li>
                 </ul>
-                <div class="header__upper-navigation--right">
+                <div class="header__upper-navigation--right d-flex">
                     <a href="#">Aylıq ödəniş</a>
-                    <a href="#">Azerbaycan</a>
+                    <div class="header__upper-navigation--right--lang-wrapper">
+                        <div class="custom-select-wrapper">
+                            <div class="custom-select">
+                                <div class="custom-select__trigger">
+                                    <span>
+                                        <img width="15" height="10" src="./assets/icons/azerbaijan-flag-small.png"
+                                            alt="">
+                                        Azərbaycan
+                                    </span>
+                                    <img src="./assets/icons/category-arrow.svg" alt="">
+                                </div>
+                                <div class="custom-options">
+                                    <span class="custom-option selected" data-value="aze">
+                                        <img width="15" height="10" src="./assets/icons/azerbaijan-flag-small.png"
+                                            alt="azerbaijani flag">
+                                        Azərbaycan</span>
+                                    <span class="custom-option" data-value="rus">
+                                        <img width="15" height="10" src="./assets/icons/russia-flag-small.png"
+                                            alt="russia flag">
+                                        Rusiya</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="d-flex justify-between header__center-part">
@@ -56,6 +81,30 @@
                     <input type="text" placeholder="Axtardığınız kəliməni buraya yazın…"
                         class="header__center-part__input-wrapper__input">
                     <img src="./assets/icons/search.svg" alt="" class="header__center-part__input-wrapper__search-icon">
+                    <div class="header__center-part__input-wrapper__search-results">
+                        <a href="#"
+                            class="header__center-part__input-wrapper__search-results__item d-flex align-center">
+                            <img width="30" height="30" src="./assets/images/washing-machine.png" alt="washing machine">
+                            <p>Paltaryuyan maşın BOSCH WAJ20180ME</p>
+                        </a>
+                        <a href="#"
+                            class="header__center-part__input-wrapper__search-results__item d-flex align-center">
+                            <img width="30" height="30" src="./assets/images/washing-machine.png" alt="washing machine">
+                            <p>Paltaryuyan maşın BOSCH WAJ20180ME</p>
+                        </a>
+                        <a href="#"
+                            class="header__center-part__input-wrapper__search-results__item d-flex align-center">
+                            <img width="30" height="30" src="./assets/images/washing-machine.png" alt="washing machine">
+                            <p>Paltaryuyan maşın BOSCH WAJ20180ME</p>
+                        </a>
+                        <div class="d-flex align-center justify-center mt-20">
+                            <div class="mr-10 header__center-part__input-wrapper__search-results--count__wrapper">
+                                <span class="header__center-part__input-wrapper__search-results--count">102</span>
+                                <span>mehsul tapildi</span>
+                            </div>
+                            <a href="#all-results" class="blue-link">Bütün nəticələr bax</a>
+                        </div>
+                    </div>
                 </div>
                 <ul class="header__center-part__customer-navigation d-flex align-center">
                     <li class="header__center-part__customer-navigation__list-item">
@@ -140,10 +189,34 @@
                             </g>
                         </svg>
                     </span>
+                    <div class="header__mobile-search__input-wrapper__search-results">
+                        <a href="#"
+                            class="header__center-part__input-wrapper__search-results__item d-flex align-center">
+                            <img width="30" height="30" src="./assets/images/washing-machine.png" alt="washing machine">
+                            <p>Paltaryuyan maşın BOSCH WAJ20180ME</p>
+                        </a>
+                        <a href="#"
+                            class="header__center-part__input-wrapper__search-results__item d-flex align-center">
+                            <img width="30" height="30" src="./assets/images/washing-machine.png" alt="washing machine">
+                            <p>Paltaryuyan maşın BOSCH WAJ20180ME</p>
+                        </a>
+                        <a href="#"
+                            class="header__center-part__input-wrapper__search-results__item d-flex align-center">
+                            <img width="30" height="30" src="./assets/images/washing-machine.png" alt="washing machine">
+                            <p>Paltaryuyan maşın BOSCH WAJ20180ME</p>
+                        </a>
+                        <div class="d-flex align-center justify-center mt-20">
+                            <div class="mr-10 header__center-part__input-wrapper__search-results--count__wrapper">
+                                <span class="header__center-part__input-wrapper__search-results--count">102</span>
+                                <span>mehsul tapildi</span>
+                            </div>
+                            <a href="#all-results" class="blue-link">Bütün nəticələr bax</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="d-flex header__bottom-part justify-between align-center">
-                <ul class="d-flex header__bottom-part__navigation-list" style="overflow-x: scroll;">
+                <ul class="d-flex header__bottom-part__navigation-list">
                     <li class="header__bottom-part__navigation-list__item">
                         <a href="#">
                             Kampaniyalar
@@ -210,6 +283,35 @@
                     <span class="header__mobile-navigation__categories-list__item--left-image"></span>
                     <span>Televizor audio</span>
                     <img src="./assets/icons/slider-arrows.svg" alt="">
+                    <div class="header__mobile-navigation__categories-list__item__sub-categories-wrapper">
+                        <!-- dont change href of the a tag below -->
+                        <a href="back-to-categories"
+                            class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__back-link">
+                            <img width="20" height="20" src="./assets/images/2.jpg" alt="">
+                            <span>Kataloqa geri qayıt</span>
+                        </a>
+                        <span class="hr width-with-padding height-2"></span>
+                        <p class="d-flex justify-between align-center">Noutbuklar, komputerlər <img
+                                src="./assets/icons/category-arrow.svg" alt=""></p>
+                        <ul class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__list">
+                            <li
+                                class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__list__item">
+                                <a href="#notebooks">Noutbuklar</a>
+                            </li>
+                            <li
+                                class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__list__item">
+                                <a href="#computers">Komputerlər</a>
+                            </li>
+                            <li
+                                class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__list__item">
+                                <a href="#monitors">Monitorlar</a>
+                            </li>
+                            <li
+                                class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__list__item">
+                                <a href="#monoblocks">Monobloklar</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="header__mobile-navigation__categories-list__item d-flex align-center">
                     <span class="header__mobile-navigation__categories-list__item--left-image"></span>
@@ -298,9 +400,10 @@
                     </li>
                     <span class="hr width-with-padding without-margin height-2"></span>
                     <li class="d-flex align-center">
-                        Telefon: <a href="tel:*1031" style="width: 50%;">*1031</a>
+                        Telefon: <a href="tel:*1031" style="width: 50%; font-weight: bold; font-size: 21px;">*1031</a>
                         <a href="#"
-                            style="background-color: #57bb63; width: 60%; padding: 10px; margin-right: 16px; display: flex; color: white;">
+                            style="background-color: #57bb63; width: 60%; padding: 10px; margin-right: 16px; color: white;"
+                            class="d-flex justify-center">
                             <img class="mr-10" src="./assets/icons/whatsapp.svg" alt="">
                             Whatsapp dəstək
                         </a>
@@ -311,33 +414,874 @@
         </div>
         <!-- Responsive menu ends -->
     </header>
+    <!-- Header ends here -->
 
-    <main class="dress-product-details">
+    <!-- Dress product main part starts -->
+    <main class="dress-product">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-12">
-                    <div class="dress-product-details__carousel">
-                        <img src="" alt="">
+                <div class="col-xl-8 col-12">
+                    <div class="dress-product__image-carousel">
+                        <div class="dress-product__image-carousel__item">
+                            <img src="./assets/images/5.jpg" alt="">
+                        </div>
+                        <div class="dress-product__image-arousel__item">
+                            <img src="./assets/images/1.jpg" alt="">
+                        </div>
+                        <div class="dress-product__image-carousel__item">
+                            <img src="./assets/images/3.jpg" alt="">
+                        </div>
+                        <div class="dress-product__image-carousel__item">
+                            <img src="./assets/images/2.jpg" alt="">
+                        </div>
+                        <div class="dress-product__image-carousel__item">
+                            <img src="./assets/images/4.jpg" alt="">
+                        </div>
+                        <div class="dress-product__image-carousel__item">
+                            <img src="./assets/images/5.jpg" alt="">
+                        </div>
+                        <div class="dress-product__image-carousel__item">
+                            <img src="./assets/images/1.jpg" alt="">
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-12">salam</div>
+                <div class="col-xl-4 col-12">
+                    <div class="dress-product__details">
+                        <h1>Don / Qırmızı düz saya</h1>
+                        <span class="dress-product__details__code">Məhsul kodu: 000123</span>
+                        <span class="hr"></span>
+                        <div class="d-flex align-center justify-between">
+                            <span style="font-size: 30px; color: #cc1a38;">
+                                <span>739</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="diagonal-red-line" style="font-size: 24px;">
+                                <span>600</span>
+                                <span class="azn">AZN</span>
+                            </span>
+                            <span class="dress-product__details__badge">20%</span>
+                        </div>
+                        <p>Taksit kartlarla 12 ay faizsiz. 12 x 6.58 AZN</p>
+                        <span class="hr"></span>
+                        <span class="d-block mb-10" style="font-size: 14px;"><span
+                                style="font-weight: bold; font-size:18px;">Rəng:</span>
+                            Qara</span>
+                        <div class="dress-product__details__images">
+                            <img width="45" height="60" src="./assets/images/deanna-alys-6LBBOwkPzyQ-unsplash.jpg"
+                                alt="">
+                            <img width="45" height="60" src="./assets/images/deanna-alys-6LBBOwkPzyQ-unsplash.jpg"
+                                alt="">
+                            <img width="45" height="60" src="./assets/images/deanna-alys-6LBBOwkPzyQ-unsplash.jpg"
+                                alt="">
+                        </div>
+                        <div class="dress-product__details__sizes d-flex justify-between mb-10">
+                            <span style="font-size: 14px;">
+                                <span style="font-weight: bold; font-size:18px;">Ölçü:</span>
+                                32
+                            </span>
+                            <a href="#body-sizes">Bədən ölçü cədvəli</a>
+                        </div>
+                        <ul class="d-flex justify-between flex-wrap-wrap">
+                            <li class="dress-product__details__sizes__number d-flex align-center justify-center">32</li>
+                            <li class="dress-product__details__sizes__number d-flex align-center justify-center">34</li>
+                            <li class="dress-product__details__sizes__number d-flex align-center justify-center">36</li>
+                            <li class="dress-product__details__sizes__number d-flex align-center justify-center">38</li>
+                            <li class="dress-product__details__sizes__number d-flex align-center justify-center">40</li>
+                            <li class="dress-product__details__sizes__number d-flex align-center justify-center">42</li>
+                        </ul>
+                        <ul class="dress-product__details__features">
+                            <li class="dress-product__details__features__item">Sürətli çatdırılma</li>
+                            <li class="dress-product__details__features__item">Pulsuz geyinib-yoxlama</li>
+                            <li class="dress-product__details__features__item">Rahat qaytarma və dəyişdirilmə</li>
+                        </ul>
+                        <ul class="dress-product__details__actions">
+                            <button class="button primary">Səbətə at</button>
+                            <button class="button secondary">Bir kliklə al</button>
+                            <button class="button heart">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                    <path fill="#cfd9e0"
+                                        d="M11.8 1c-1.682 0-3.129 1.368-3.799 2.797C7.33 2.368 5.883 1 4.201 1a4.202 4.202 0 00-4.2 4.2c0 4.716 4.758 5.953 8 10.616 3.065-4.634 8-6.05 8-10.616 0-2.319-1.882-4.2-4.2-4.2z" />
+                                </svg>
+                            </button>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
+    <!-- Dress product main part ends -->
 
+    <!-- Dress product about section starts -->
+    <section class="dress-product-about">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 col-12">
+                    <div class="product-details__about">
+                        <h2 class="product-details__about__header">Texniki göstəricilər - Televizor Samsung 24" LED TV
+                            (UE24H4070AU)
+                        </h2>
+                        <!-- One section of product about list items starts here -->
+                        <span>Ümumi göstəricilər</span>
+                        <span class="hr without-margin mt-10"></span>
+                        <ul class="product-details__about__list">
+                            <li class="product-details__about__list__item">
+                                <span class="product-details__about__list__item__key">Texnologiya</span>
+                                <span class="product-details__about__list__item__value">LED</span>
+                            </li>
+                            <li class="product-details__about__list__item">
+                                <span class="product-details__about__list__item__key">Texnologiya</span>
+                                <span class="product-details__about__list__item__value">LED</span>
+                            </li>
+                            <li class="product-details__about__list__item">
+                                <span class="product-details__about__list__item__key">Texnologiya</span>
+                                <span class="product-details__about__list__item__value">LED</span>
+                            </li>
+                            <li class="product-details__about__list__item">
+                                <span class="product-details__about__list__item__key">Texnologiya</span>
+                                <span class="product-details__about__list__item__value">LED</span>
+                            </li>
+                            <li class="product-details__about__list__item">
+                                <span class="product-details__about__list__item__key">Texnologiya</span>
+                                <span class="product-details__about__list__item__value">LED</span>
+                            </li>
+                            <li class="product-details__about__list__item">
+                                <span class="product-details__about__list__item__key">Texnologiya</span>
+                                <span class="product-details__about__list__item__value">LED</span>
+                            </li>
+                        </ul>
+                        <!-- One section of product about list items ends here -->
+
+                        <!-- One section of product about list items starts here -->
+                        <span>Ümumi göstəricilər</span>
+                        <span class="hr without-margin mt-10"></span>
+                        <ul class="product-details__about__list">
+                            <li class="product-details__about__list__item">
+                                <span class="product-details__about__list__item__key">Texnologiya</span>
+                                <span class="product-details__about__list__item__value">LED</span>
+                            </li>
+                            <li class="product-details__about__list__item">
+                                <span class="product-details__about__list__item__key">Texnologiya</span>
+                                <span class="product-details__about__list__item__value">LED</span>
+                            </li>
+                            <li class="product-details__about__list__item">
+                                <span class="product-details__about__list__item__key">Texnologiya</span>
+                                <span class="product-details__about__list__item__value">LED</span>
+                            </li>
+                            <li class="product-details__about__list__item">
+                                <span class="product-details__about__list__item__key">Texnologiya</span>
+                                <span class="product-details__about__list__item__value">LED</span>
+                            </li>
+                            <li class="product-details__about__list__item">
+                                <span class="product-details__about__list__item__key">Texnologiya</span>
+                                <span class="product-details__about__list__item__value">LED</span>
+                            </li>
+                            <li class="product-details__about__list__item">
+                                <span class="product-details__about__list__item__key">Texnologiya</span>
+                                <span class="product-details__about__list__item__value">LED</span>
+                            </li>
+                        </ul>
+                        <!-- One section of product about list items ends here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Dress product about section ends -->
+
+    <!-- Similar Dress products section starts here -->
+    <section class="similar-dress-products">
+        <div class="custom-container">
+            <h3>Bənzər mallar</h3>
+            <div class="d-flex">
+                <div class="dress-product-item">
+                    <a class="like d-flex align-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                            <path fill="black" fill-opacity="0"
+                                d="M11.8 1c-1.682 0-3.129 1.368-3.799 2.797C7.33 2.368 5.883 1 4.201 1a4.202 4.202 0 00-4.2 4.2c0 4.716 4.758 5.953 8 10.616 3.065-4.634 8-6.05 8-10.616 0-2.319-1.882-4.2-4.2-4.2z" />
+                        </svg>
+                    </a>
+                    <img src="./assets/images/mikkel-bech-yjAFnkLtKY0-unsplash.jpg" alt="">
+                    <span class="dress-product-item__name d-i-block">Don / Qırmızı düz saya</span>
+                    <div>
+                        <span class="dress-product-item__pricing--actual">
+                            <span class="">
+                                799
+                            </span>
+                            <span class="azn">AZN</span>
+                        </span>
+                        <span class="dress-product-item__pricing--old diagonal-red-line">
+                            <span>999</span>
+                            <span class="azn">AZN</span>
+                        </span>
+                    </div>
+                    <div class="dress-product-item__sizes">
+                        <span>Ölçülər</span>
+                        <div class="d-flex mt-10">
+                            <span class="dress-product-item__sizes__item">32</span>
+                            <span class="dress-product-item__sizes__item">34</span>
+                            <span class="dress-product-item__sizes__item">36</span>
+                            <span class="dress-product-item__sizes__item">38</span>
+                            <span class="dress-product-item__sizes__item">40</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Similar Dress products section ends here -->
+
+    <!-- Similar Dress products section starts here -->
+    <section class="similar-dress-products-mobile d-none">
+        <div class="custom-container">
+            <h3>Bənzər mallar</h3>
+            <div class="similar-dress-products-mobile__carousel">
+                <div class="dress-product-item">
+                    <a class="like d-flex align-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                            <path fill="black" fill-opacity="0"
+                                d="M11.8 1c-1.682 0-3.129 1.368-3.799 2.797C7.33 2.368 5.883 1 4.201 1a4.202 4.202 0 00-4.2 4.2c0 4.716 4.758 5.953 8 10.616 3.065-4.634 8-6.05 8-10.616 0-2.319-1.882-4.2-4.2-4.2z" />
+                        </svg>
+                    </a>
+                    <img src="./assets/images/mikkel-bech-yjAFnkLtKY0-unsplash.jpg" alt="">
+                    <span class="dress-product-item__name d-i-block">Don / Qırmızı düz saya</span>
+                    <div>
+                        <span class="dress-product-item__pricing--actual">
+                            <span class="">
+                                799
+                            </span>
+                            <span class="azn">AZN</span>
+                        </span>
+                        <span class="dress-product-item__pricing--old diagonal-red-line">
+                            <span>999</span>
+                            <span class="azn">AZN</span>
+                        </span>
+                    </div>
+                    <div class="dress-product-item__sizes">
+                        <span>Ölçülər</span>
+                        <div class="d-flex mt-10">
+                            <span class="dress-product-item__sizes__item">32</span>
+                            <span class="dress-product-item__sizes__item">34</span>
+                            <span class="dress-product-item__sizes__item">36</span>
+                            <span class="dress-product-item__sizes__item">38</span>
+                            <span class="dress-product-item__sizes__item">40</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dress-product-item">
+                    <a class="like d-flex align-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                            <path fill="black" fill-opacity="0"
+                                d="M11.8 1c-1.682 0-3.129 1.368-3.799 2.797C7.33 2.368 5.883 1 4.201 1a4.202 4.202 0 00-4.2 4.2c0 4.716 4.758 5.953 8 10.616 3.065-4.634 8-6.05 8-10.616 0-2.319-1.882-4.2-4.2-4.2z" />
+                        </svg>
+                    </a>
+                    <img src="./assets/images/mikkel-bech-yjAFnkLtKY0-unsplash.jpg" alt="">
+                    <span class="dress-product-item__name d-i-block">Don / Qırmızı düz saya</span>
+                    <div>
+                        <span class="dress-product-item__pricing--actual">
+                            <span class="">
+                                799
+                            </span>
+                            <span class="azn">AZN</span>
+                        </span>
+                        <span class="dress-product-item__pricing--old diagonal-red-line">
+                            <span>999</span>
+                            <span class="azn">AZN</span>
+                        </span>
+                    </div>
+                    <div class="dress-product-item__sizes">
+                        <span>Ölçülər</span>
+                        <div class="d-flex mt-10">
+                            <span class="dress-product-item__sizes__item">32</span>
+                            <span class="dress-product-item__sizes__item">34</span>
+                            <span class="dress-product-item__sizes__item">36</span>
+                            <span class="dress-product-item__sizes__item">38</span>
+                            <span class="dress-product-item__sizes__item">40</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dress-product-item">
+                    <a class="like d-flex align-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                            <path fill="black" fill-opacity="0"
+                                d="M11.8 1c-1.682 0-3.129 1.368-3.799 2.797C7.33 2.368 5.883 1 4.201 1a4.202 4.202 0 00-4.2 4.2c0 4.716 4.758 5.953 8 10.616 3.065-4.634 8-6.05 8-10.616 0-2.319-1.882-4.2-4.2-4.2z" />
+                        </svg>
+                    </a>
+                    <img src="./assets/images/mikkel-bech-yjAFnkLtKY0-unsplash.jpg" alt="">
+                    <span class="dress-product-item__name d-i-block">Don / Qırmızı düz saya</span>
+                    <div>
+                        <span class="dress-product-item__pricing--actual">
+                            <span class="">
+                                799
+                            </span>
+                            <span class="azn">AZN</span>
+                        </span>
+                        <span class="dress-product-item__pricing--old diagonal-red-line">
+                            <span>999</span>
+                            <span class="azn">AZN</span>
+                        </span>
+                    </div>
+                    <div class="dress-product-item__sizes">
+                        <span>Ölçülər</span>
+                        <div class="d-flex mt-10">
+                            <span class="dress-product-item__sizes__item">32</span>
+                            <span class="dress-product-item__sizes__item">34</span>
+                            <span class="dress-product-item__sizes__item">36</span>
+                            <span class="dress-product-item__sizes__item">38</span>
+                            <span class="dress-product-item__sizes__item">40</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dress-product-item">
+                    <a class="like d-flex align-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                            <path fill="black" fill-opacity="0"
+                                d="M11.8 1c-1.682 0-3.129 1.368-3.799 2.797C7.33 2.368 5.883 1 4.201 1a4.202 4.202 0 00-4.2 4.2c0 4.716 4.758 5.953 8 10.616 3.065-4.634 8-6.05 8-10.616 0-2.319-1.882-4.2-4.2-4.2z" />
+                        </svg>
+                    </a>
+                    <img src="./assets/images/mikkel-bech-yjAFnkLtKY0-unsplash.jpg" alt="">
+                    <span class="dress-product-item__name d-i-block">Don / Qırmızı düz saya</span>
+                    <div>
+                        <span class="dress-product-item__pricing--actual">
+                            <span class="">
+                                799
+                            </span>
+                            <span class="azn">AZN</span>
+                        </span>
+                        <span class="dress-product-item__pricing--old diagonal-red-line">
+                            <span>999</span>
+                            <span class="azn">AZN</span>
+                        </span>
+                    </div>
+                    <div class="dress-product-item__sizes">
+                        <span>Ölçülər</span>
+                        <div class="d-flex mt-10">
+                            <span class="dress-product-item__sizes__item">32</span>
+                            <span class="dress-product-item__sizes__item">34</span>
+                            <span class="dress-product-item__sizes__item">36</span>
+                            <span class="dress-product-item__sizes__item">38</span>
+                            <span class="dress-product-item__sizes__item">40</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dress-product-item">
+                    <a class="like d-flex align-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                            <path fill="black" fill-opacity="0"
+                                d="M11.8 1c-1.682 0-3.129 1.368-3.799 2.797C7.33 2.368 5.883 1 4.201 1a4.202 4.202 0 00-4.2 4.2c0 4.716 4.758 5.953 8 10.616 3.065-4.634 8-6.05 8-10.616 0-2.319-1.882-4.2-4.2-4.2z" />
+                        </svg>
+                    </a>
+                    <img src="./assets/images/mikkel-bech-yjAFnkLtKY0-unsplash.jpg" alt="">
+                    <span class="dress-product-item__name d-i-block">Don / Qırmızı düz saya</span>
+                    <div>
+                        <span class="dress-product-item__pricing--actual">
+                            <span class="">
+                                799
+                            </span>
+                            <span class="azn">AZN</span>
+                        </span>
+                        <span class="dress-product-item__pricing--old diagonal-red-line">
+                            <span>999</span>
+                            <span class="azn">AZN</span>
+                        </span>
+                    </div>
+                    <div class="dress-product-item__sizes">
+                        <span>Ölçülər</span>
+                        <div class="d-flex mt-10">
+                            <span class="dress-product-item__sizes__item">32</span>
+                            <span class="dress-product-item__sizes__item">34</span>
+                            <span class="dress-product-item__sizes__item">36</span>
+                            <span class="dress-product-item__sizes__item">38</span>
+                            <span class="dress-product-item__sizes__item">40</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dress-product-item">
+                    <a class="like d-flex align-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                            <path fill="black" fill-opacity="0"
+                                d="M11.8 1c-1.682 0-3.129 1.368-3.799 2.797C7.33 2.368 5.883 1 4.201 1a4.202 4.202 0 00-4.2 4.2c0 4.716 4.758 5.953 8 10.616 3.065-4.634 8-6.05 8-10.616 0-2.319-1.882-4.2-4.2-4.2z" />
+                        </svg>
+                    </a>
+                    <img src="./assets/images/mikkel-bech-yjAFnkLtKY0-unsplash.jpg" alt="">
+                    <span class="dress-product-item__name d-i-block">Don / Qırmızı düz saya</span>
+                    <div>
+                        <span class="dress-product-item__pricing--actual">
+                            <span class="">
+                                799
+                            </span>
+                            <span class="azn">AZN</span>
+                        </span>
+                        <span class="dress-product-item__pricing--old diagonal-red-line">
+                            <span>999</span>
+                            <span class="azn">AZN</span>
+                        </span>
+                    </div>
+                    <div class="dress-product-item__sizes">
+                        <span>Ölçülər</span>
+                        <div class="d-flex mt-10">
+                            <span class="dress-product-item__sizes__item">32</span>
+                            <span class="dress-product-item__sizes__item">34</span>
+                            <span class="dress-product-item__sizes__item">36</span>
+                            <span class="dress-product-item__sizes__item">38</span>
+                            <span class="dress-product-item__sizes__item">40</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Similar Dress products section ends here -->
+
+    <!-- Viewed products section starts here-->
+    <section class="viewed-products">
+        <div class="custom-container">
+            <div class="d-flex justify-between mb-20" style="align-items: flex-end">
+                <h3>Baxdıqlarınız</h3>
+                <a href="" class="blue-link">Hamısına bax</a>
+            </div>
+            <div class="d-flex">
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <a href="#item">
+                        <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                            <img src="./assets/images/television.jpg" alt="television image"
+                                class="product-item__image-wrapper__image">
+                        </div>
+                        <div class="product-item__name">
+                            <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                        </div>
+                        <div class="product-item__features">
+                            <span>SMART TV,</span>
+                            <span>8K UHD</span>
+                        </div>
+                        <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                            <div class="product-item__pricing-and-basket__prices">
+                                <span class="product-item__pricing-and-basket__prices--discounted">
+                                    <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                        799
+                                    </span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices--old-price">
+                                    <span>999</span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                    AZN</span>
+                            </div>
+                            <span class="product-item__pricing-and-basket__basket">
+                                <img src="./assets/icons/basket.svg" alt="">
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <a href="#item">
+                        <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                            <img src="./assets/images/television.jpg" alt="television image"
+                                class="product-item__image-wrapper__image">
+                        </div>
+                        <div class="product-item__name">
+                            <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                        </div>
+                        <div class="product-item__features">
+                            <span>SMART TV,</span>
+                            <span>8K UHD</span>
+                        </div>
+                        <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                            <div class="product-item__pricing-and-basket__prices">
+                                <span class="product-item__pricing-and-basket__prices--discounted">
+                                    <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                        799
+                                    </span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices--old-price">
+                                    <span>999</span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                    AZN</span>
+                            </div>
+                            <span class="product-item__pricing-and-basket__basket">
+                                <img src="./assets/icons/basket.svg" alt="">
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <a href="#item">
+                        <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                            <img src="./assets/images/television.jpg" alt="television image"
+                                class="product-item__image-wrapper__image">
+                        </div>
+                        <div class="product-item__name">
+                            <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                        </div>
+                        <div class="product-item__features">
+                            <span>SMART TV,</span>
+                            <span>8K UHD</span>
+                        </div>
+                        <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                            <div class="product-item__pricing-and-basket__prices">
+                                <span class="product-item__pricing-and-basket__prices--discounted">
+                                    <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                        799
+                                    </span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices--old-price">
+                                    <span>999</span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                    AZN</span>
+                            </div>
+                            <span class="product-item__pricing-and-basket__basket">
+                                <img src="./assets/icons/basket.svg" alt="">
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <a href="#item">
+                        <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                            <img src="./assets/images/television.jpg" alt="television image"
+                                class="product-item__image-wrapper__image">
+                        </div>
+                        <div class="product-item__name">
+                            <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                        </div>
+                        <div class="product-item__features">
+                            <span>SMART TV,</span>
+                            <span>8K UHD</span>
+                        </div>
+                        <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                            <div class="product-item__pricing-and-basket__prices">
+                                <span class="product-item__pricing-and-basket__prices--discounted">
+                                    <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                        799
+                                    </span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices--old-price">
+                                    <span>999</span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                    AZN</span>
+                            </div>
+                            <span class="product-item__pricing-and-basket__basket">
+                                <img src="./assets/icons/basket.svg" alt="">
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <a href="#item">
+                        <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                            <img src="./assets/images/television.jpg" alt="television image"
+                                class="product-item__image-wrapper__image">
+                        </div>
+                        <div class="product-item__name">
+                            <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                        </div>
+                        <div class="product-item__features">
+                            <span>SMART TV,</span>
+                            <span>8K UHD</span>
+                        </div>
+                        <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                            <div class="product-item__pricing-and-basket__prices">
+                                <span class="product-item__pricing-and-basket__prices--discounted">
+                                    <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                        799
+                                    </span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices--old-price">
+                                    <span>999</span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                    AZN</span>
+                            </div>
+                            <span class="product-item__pricing-and-basket__basket">
+                                <img src="./assets/icons/basket.svg" alt="">
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Viewed products section ends here-->
+
+    <!-- Viewed products section mobile(carousel) starts here-->
+    <section class="viewed-products--mobile d-none">
+        <div class="custom-container">
+            <div class="d-flex justify-between mb-20" style="align-items: flex-end">
+                <h3>Baxdıqlarınız</h3>
+            </div>
+            <div class="viewed-products--mobile__carousel">
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <a href="#item">
+                        <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                            <img src="./assets/images/television.jpg" alt="television image"
+                                class="product-item__image-wrapper__image">
+                        </div>
+                        <div class="product-item__name">
+                            <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                        </div>
+                        <div class="product-item__features">
+                            <span>SMART TV,</span>
+                            <span>8K UHD</span>
+                        </div>
+                        <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                            <div class="product-item__pricing-and-basket__prices">
+                                <span class="product-item__pricing-and-basket__prices--discounted">
+                                    <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                        799
+                                    </span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices--old-price">
+                                    <span>999</span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                    AZN</span>
+                            </div>
+                            <span class="product-item__pricing-and-basket__basket">
+                                <img src="./assets/icons/basket.svg" alt="">
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <a href="#item">
+                        <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                            <img src="./assets/images/television.jpg" alt="television image"
+                                class="product-item__image-wrapper__image">
+                        </div>
+                        <div class="product-item__name">
+                            <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                        </div>
+                        <div class="product-item__features">
+                            <span>SMART TV,</span>
+                            <span>8K UHD</span>
+                        </div>
+                        <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                            <div class="product-item__pricing-and-basket__prices">
+                                <span class="product-item__pricing-and-basket__prices--discounted">
+                                    <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                        799
+                                    </span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices--old-price">
+                                    <span>999</span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                    AZN</span>
+                            </div>
+                            <span class="product-item__pricing-and-basket__basket">
+                                <img src="./assets/icons/basket.svg" alt="">
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <a href="#item">
+                        <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                            <img src="./assets/images/television.jpg" alt="television image"
+                                class="product-item__image-wrapper__image">
+                        </div>
+                        <div class="product-item__name">
+                            <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                        </div>
+                        <div class="product-item__features">
+                            <span>SMART TV,</span>
+                            <span>8K UHD</span>
+                        </div>
+                        <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                            <div class="product-item__pricing-and-basket__prices">
+                                <span class="product-item__pricing-and-basket__prices--discounted">
+                                    <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                        799
+                                    </span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices--old-price">
+                                    <span>999</span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                    AZN</span>
+                            </div>
+                            <span class="product-item__pricing-and-basket__basket">
+                                <img src="./assets/icons/basket.svg" alt="">
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <a href="#item">
+                        <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                            <img src="./assets/images/television.jpg" alt="television image"
+                                class="product-item__image-wrapper__image">
+                        </div>
+                        <div class="product-item__name">
+                            <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                        </div>
+                        <div class="product-item__features">
+                            <span>SMART TV,</span>
+                            <span>8K UHD</span>
+                        </div>
+                        <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                            <div class="product-item__pricing-and-basket__prices">
+                                <span class="product-item__pricing-and-basket__prices--discounted">
+                                    <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                        799
+                                    </span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices--old-price">
+                                    <span>999</span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                    AZN</span>
+                            </div>
+                            <span class="product-item__pricing-and-basket__basket">
+                                <img src="./assets/icons/basket.svg" alt="">
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <a href="#item">
+                        <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                            <img src="./assets/images/television.jpg" alt="television image"
+                                class="product-item__image-wrapper__image">
+                        </div>
+                        <div class="product-item__name">
+                            <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                        </div>
+                        <div class="product-item__features">
+                            <span>SMART TV,</span>
+                            <span>8K UHD</span>
+                        </div>
+                        <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                            <div class="product-item__pricing-and-basket__prices">
+                                <span class="product-item__pricing-and-basket__prices--discounted">
+                                    <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                        799
+                                    </span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices--old-price">
+                                    <span>999</span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                    AZN</span>
+                            </div>
+                            <span class="product-item__pricing-and-basket__basket">
+                                <img src="./assets/icons/basket.svg" alt="">
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <a href="#item">
+                        <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                            <img src="./assets/images/television.jpg" alt="television image"
+                                class="product-item__image-wrapper__image">
+                        </div>
+                        <div class="product-item__name">
+                            <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                        </div>
+                        <div class="product-item__features">
+                            <span>SMART TV,</span>
+                            <span>8K UHD</span>
+                        </div>
+                        <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                            <div class="product-item__pricing-and-basket__prices">
+                                <span class="product-item__pricing-and-basket__prices--discounted">
+                                    <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                        799
+                                    </span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices--old-price">
+                                    <span>999</span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                    AZN</span>
+                            </div>
+                            <span class="product-item__pricing-and-basket__basket">
+                                <img src="./assets/icons/basket.svg" alt="">
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="weekly-discounts__inner__product-items__item product-item">
+                    <a href="#item">
+                        <div class="weekly-discounts__inner__product-items__item__image product-item__image-wrapper">
+                            <img src="./assets/images/television.jpg" alt="television image"
+                                class="product-item__image-wrapper__image">
+                        </div>
+                        <div class="product-item__name">
+                            <p>Televizor Samsung 55" LED Smart TV 4K UHD (UE55…</p>
+                        </div>
+                        <div class="product-item__features">
+                            <span>SMART TV,</span>
+                            <span>8K UHD</span>
+                        </div>
+                        <div class="product-item__pricing-and-basket d-flex justify-between align-center">
+                            <div class="product-item__pricing-and-basket__prices">
+                                <span class="product-item__pricing-and-basket__prices--discounted">
+                                    <span class="product-item__pricing-and-basket__prices--discounted--bigger">
+                                        799
+                                    </span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices--old-price">
+                                    <span>999</span>
+                                    <span class="azn">AZN</span>
+                                </span>
+                                <span class="product-item__pricing-and-basket__prices__monthly d-i-block">12 ay 66.6
+                                    AZN</span>
+                            </div>
+                            <span class="product-item__pricing-and-basket__basket">
+                                <img src="./assets/icons/basket.svg" alt="">
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Viewed products section mobile(carousel) ends here-->
+
+    <!-- Footer starts here -->
     <footer class="footer">
         <div class="custom-container">
             <ul class="footer__navigation-list d-flex">
+                <!-- Footer navigation list starts here -->
                 <li class="footer__navigation-list__item">
                     <ul class="footer__navigation-list__item--first">
                         <li class="mb-20">
                             <span>
-                                <img src="./assets/icons/N21Logo.svg" class="" alt="">
+                                <span class="footer__navigation-list__item--first__logo-wrapper">
+                                    <img src="./assets/icons/N21Logo.svg" class="" alt="">
+                                </span>
                                 <span class="d-block mt-10">
                                     Online internet mağaza
-                                    <span
-                                        class="d-none footer__navigation-list__item--first--hidden-contact-info">Telefon:
-                                        <a href="tel:*1021">*1021</a></span>
+                                    <span class="d-none footer__navigation-list__item--first--hidden-contact-info">
+                                        Telefon:<a style="font-family: SFProText-Bold; font-size: 21px; color: #ffffff;"
+                                            href="tel:*1021">*1021</a></span>
                                 </span>
                             </span>
                         </li>
@@ -416,8 +1360,9 @@
                     </ul>
                 </li>
                 <li class="footer__navigation-list__item">
+                    <!-- Footer social navigation list starts here -->
                     <ul class="footer__navigation-list__item--fourth">
-                        <li>Sosial media</li>
+                        <li class="footer__navigation-list__item--fourth__list-item--social-links">Sosial media</li>
                         <ul class="footer__navigation-list__item--fourth__social-links-list d-flex justify-between">
                             <li class="footer__navigation-list__item--fourth__social-links-list__item">
                                 <a href="#"
@@ -456,7 +1401,9 @@
                                 </a>
                             </li>
                         </ul>
-                        <li>Dəstək</li>
+                        <li class="footer__navigation-list__item--fourth__list-item--support">Dəstək</li>
+
+                        <!-- Footer support buttons (whatsapp telegram) starts here -->
                         <ul class="footer__navigation-list__item--fourth__support-links d-flex justify-between">
                             <li class="footer__navigation-list__item--fourth__support-links__item">
                                 <a href="#"
@@ -471,13 +1418,30 @@
                                 </a>
                             </li>
                         </ul>
-                        <li>Mobil tətbiqetmələr</li>
+                        <!-- Footer support buttons ends here -->
+
+                        <li class="footer__navigation-list__item--fourth__list-item--mobile-apps">Mobil tətbiqetmələr
+                        </li>
+
+                        <!-- Footer mobile app buttons starts here -->
                         <ul class="footer__navigation-list__item--fourth__apps d-flex justify-between">
-                            <li></li>
-                            <li></li>
+                            <li>
+                                <a href="/appstore">
+                                    <img src="./assets/icons/app-store-badge.svg" alt="app store badge">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/appstore">
+                                    <img src="./assets/icons/google-play-badge.svg" alt="google play store badge">
+                                </a>
+                            </li>
                         </ul>
+                        <!-- Footer mobile apps buttons ends here -->
+
                     </ul>
+                    <!-- Footer social navigation list ends here -->
                 </li>
+                <!-- Footer navigation list ends here -->
             </ul>
         </div>
         <div class="footer__lower-part">
@@ -491,6 +1455,28 @@
             </div>
         </div>
     </footer>
+    <!-- Footer ends here -->
+    <span class="scroll-to-top">
+        <img src="./assets/icons/category-arrow.svg" alt="arrow up icon">
+    </span>
+    <script src="./assets/flickity/flickity.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script>
+        const dressProductMainCarousel = new Flickity('.dress-product__image-carousel', {
+            imagesLoaded: true,
+            lazyLoad: false,
+            wrapAround: true,
+            contain: true
+        });
+        const similarDressProductsCarousel = new Flickity('.similar-dress-products-mobile__carousel', {
+            prevNextButtons: false,
+            pageDots: false,
+            imagesLoaded: true,
+            lazyLoad: false,
+            wrapAround: true,
+            dots: false
+        });
+    </script>
 </body>
 
 </html>
