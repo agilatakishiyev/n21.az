@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="./assets/flickity/flickity.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>n21.az - compare page</title>
 </head>
 
 <body>
 
+    <!-- Header starts here -->
     <header class="header">
         <div class="custom-container">
             <div class="d-flex justify-between">
@@ -37,9 +41,32 @@
                         <a class="header__upper-navigation__list-item__link" href="#">Sual-cavab</a>
                     </li>
                 </ul>
-                <div class="header__upper-navigation--right">
+                <div class="header__upper-navigation--right d-flex">
                     <a href="#">Aylıq ödəniş</a>
-                    <a href="#">Azerbaycan</a>
+                    <div class="header__upper-navigation--right--lang-wrapper">
+                        <div class="custom-select-wrapper">
+                            <div class="custom-select">
+                                <div class="custom-select__trigger">
+                                    <span>
+                                        <img width="15" height="10" src="./assets/icons/azerbaijan-flag-small.png"
+                                            alt="">
+                                        Azərbaycan
+                                    </span>
+                                    <img src="./assets/icons/category-arrow.svg" alt="">
+                                </div>
+                                <div class="custom-options">
+                                    <span class="custom-option selected" data-value="aze">
+                                        <img width="15" height="10" src="./assets/icons/azerbaijan-flag-small.png"
+                                            alt="azerbaijani flag">
+                                        Azərbaycan</span>
+                                    <span class="custom-option" data-value="rus">
+                                        <img width="15" height="10" src="./assets/icons/russia-flag-small.png"
+                                            alt="russia flag">
+                                        Rusiya</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="d-flex justify-between header__center-part">
@@ -55,6 +82,30 @@
                     <input type="text" placeholder="Axtardığınız kəliməni buraya yazın…"
                         class="header__center-part__input-wrapper__input">
                     <img src="./assets/icons/search.svg" alt="" class="header__center-part__input-wrapper__search-icon">
+                    <div class="header__center-part__input-wrapper__search-results">
+                        <a href="#"
+                            class="header__center-part__input-wrapper__search-results__item d-flex align-center">
+                            <img width="30" height="30" src="./assets/images/washing-machine.png" alt="washing machine">
+                            <p>Paltaryuyan maşın BOSCH WAJ20180ME</p>
+                        </a>
+                        <a href="#"
+                            class="header__center-part__input-wrapper__search-results__item d-flex align-center">
+                            <img width="30" height="30" src="./assets/images/washing-machine.png" alt="washing machine">
+                            <p>Paltaryuyan maşın BOSCH WAJ20180ME</p>
+                        </a>
+                        <a href="#"
+                            class="header__center-part__input-wrapper__search-results__item d-flex align-center">
+                            <img width="30" height="30" src="./assets/images/washing-machine.png" alt="washing machine">
+                            <p>Paltaryuyan maşın BOSCH WAJ20180ME</p>
+                        </a>
+                        <div class="d-flex align-center justify-center mt-20">
+                            <div class="mr-10 header__center-part__input-wrapper__search-results--count__wrapper">
+                                <span class="header__center-part__input-wrapper__search-results--count">102</span>
+                                <span>mehsul tapildi</span>
+                            </div>
+                            <a href="#all-results" class="blue-link">Bütün nəticələr bax</a>
+                        </div>
+                    </div>
                 </div>
                 <ul class="header__center-part__customer-navigation d-flex align-center">
                     <li class="header__center-part__customer-navigation__list-item">
@@ -68,18 +119,18 @@
                         </a>
                     </li>
                     <span style="display:inline-block; 
-                    width: 1px;
-                    height: 24px;
-                    background-color: rgba(255, 255, 255, 0.15);" class="mobile-hidden-vr"></span>
+                        width: 1px;
+                        height: 24px;
+                        background-color: rgba(255, 255, 255, 0.15);" class="mobile-hidden-vr"></span>
                     <li class="header__center-part__customer-navigation__list-item --bar-chart">
                         <a href="#" class="header__center-part__customer-navigation__list-item__icon-holder">
                             <img width="16" height="16" src="./assets/icons/bar-chart.svg" alt="bar chart icon">
                         </a>
                     </li>
                     <span style="display:inline-block; 
-                    width: 1px;
-                    height: 24px;
-                    background-color: rgba(255, 255, 255, 0.15);" class="mobile-hidden-vr"></span>
+                        width: 1px;
+                        height: 24px;
+                        background-color: rgba(255, 255, 255, 0.15);" class="mobile-hidden-vr"></span>
                     <li class="header__center-part__customer-navigation__list-item">
                         <a href="#" class="header__center-part__customer-navigation__list-item__icon-holder">
                             <div class="header__center-part__customer-navigation__list-item__icon-holder--positioned">
@@ -90,9 +141,9 @@
                         </a>
                     </li>
                     <span style="display:inline-block; 
-                    width: 1px;
-                    height: 24px;
-                    background-color: rgba(255, 255, 255, 0.15);" class="mobile-hidden-vr"></span>
+                        width: 1px;
+                        height: 24px;
+                        background-color: rgba(255, 255, 255, 0.15);" class="mobile-hidden-vr"></span>
                     <li class="header__center-part__customer-navigation__list-item --login">
                         <a href="/login.html"
                             class="header__center-part__customer-navigation__list-item__icon-holder d-flex justify-between align-center">
@@ -101,9 +152,9 @@
                         </a>
                     </li>
                     <span style="display:inline-block; 
-                    width: 1px;
-                    height: 24px;
-                    background-color: rgba(255, 255, 255, 0.15);" class="mobile-hidden-vr"></span>
+                        width: 1px;
+                        height: 24px;
+                        background-color: rgba(255, 255, 255, 0.15);" class="mobile-hidden-vr"></span>
                     <li class="header__center-part__customer-navigation__list-item">
                         <a href="/basket.html"
                             class="header__center-part__customer-navigation__list-item__icon-holder--last d-flex justify-between align-center">
@@ -139,10 +190,34 @@
                             </g>
                         </svg>
                     </span>
+                    <div class="header__mobile-search__input-wrapper__search-results">
+                        <a href="#"
+                            class="header__center-part__input-wrapper__search-results__item d-flex align-center">
+                            <img width="30" height="30" src="./assets/images/washing-machine.png" alt="washing machine">
+                            <p>Paltaryuyan maşın BOSCH WAJ20180ME</p>
+                        </a>
+                        <a href="#"
+                            class="header__center-part__input-wrapper__search-results__item d-flex align-center">
+                            <img width="30" height="30" src="./assets/images/washing-machine.png" alt="washing machine">
+                            <p>Paltaryuyan maşın BOSCH WAJ20180ME</p>
+                        </a>
+                        <a href="#"
+                            class="header__center-part__input-wrapper__search-results__item d-flex align-center">
+                            <img width="30" height="30" src="./assets/images/washing-machine.png" alt="washing machine">
+                            <p>Paltaryuyan maşın BOSCH WAJ20180ME</p>
+                        </a>
+                        <div class="d-flex align-center justify-center mt-20">
+                            <div class="mr-10 header__center-part__input-wrapper__search-results--count__wrapper">
+                                <span class="header__center-part__input-wrapper__search-results--count">102</span>
+                                <span>mehsul tapildi</span>
+                            </div>
+                            <a href="#all-results" class="blue-link">Bütün nəticələr bax</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="d-flex header__bottom-part justify-between align-center">
-                <ul class="d-flex header__bottom-part__navigation-list" style="overflow-x: scroll;">
+                <ul class="d-flex header__bottom-part__navigation-list">
                     <li class="header__bottom-part__navigation-list__item">
                         <a href="#">
                             Kampaniyalar
@@ -209,6 +284,35 @@
                     <span class="header__mobile-navigation__categories-list__item--left-image"></span>
                     <span>Televizor audio</span>
                     <img src="./assets/icons/slider-arrows.svg" alt="">
+                    <div class="header__mobile-navigation__categories-list__item__sub-categories-wrapper">
+                        <!-- dont change href of the a tag below -->
+                        <a href="back-to-categories"
+                            class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__back-link">
+                            <img width="20" height="20" src="./assets/images/2.jpg" alt="">
+                            <span>Kataloqa geri qayıt</span>
+                        </a>
+                        <span class="hr width-with-padding height-2"></span>
+                        <p class="d-flex justify-between align-center">Noutbuklar, komputerlər <img
+                                src="./assets/icons/category-arrow.svg" alt=""></p>
+                        <ul class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__list">
+                            <li
+                                class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__list__item">
+                                <a href="#notebooks">Noutbuklar</a>
+                            </li>
+                            <li
+                                class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__list__item">
+                                <a href="#computers">Komputerlər</a>
+                            </li>
+                            <li
+                                class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__list__item">
+                                <a href="#monitors">Monitorlar</a>
+                            </li>
+                            <li
+                                class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__list__item">
+                                <a href="#monoblocks">Monobloklar</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="header__mobile-navigation__categories-list__item d-flex align-center">
                     <span class="header__mobile-navigation__categories-list__item--left-image"></span>
@@ -297,9 +401,10 @@
                     </li>
                     <span class="hr width-with-padding without-margin height-2"></span>
                     <li class="d-flex align-center">
-                        Telefon: <a href="tel:*1031" style="width: 50%;">*1031</a>
+                        Telefon: <a href="tel:*1031" style="width: 50%; font-weight: bold; font-size: 21px;">*1031</a>
                         <a href="#"
-                            style="background-color: #57bb63; width: 60%; padding: 10px; margin-right: 16px; display: flex; color: white;">
+                            style="background-color: #57bb63; width: 60%; padding: 10px; margin-right: 16px; color: white;"
+                            class="d-flex justify-center">
                             <img class="mr-10" src="./assets/icons/whatsapp.svg" alt="">
                             Whatsapp dəstək
                         </a>
@@ -310,20 +415,330 @@
         </div>
         <!-- Responsive menu ends -->
     </header>
+    <!-- Header ends here -->
 
+    <!-- Compare page main section starts here -->
+    <main class="compare">
+        <div class="compare__header custom-container">
+            <div class="compare__header--left d-flex">
+                <h1>Paltaryuyan maşınların müqayisəsi</h1>
+                <button class="button dark" style="padding: 10px; margin-left: 30px;">Hamısını sil <img
+                        src="./assets/icons/close.svg" alt=""></button>
+            </div>
+            <div class="compare__header--right"></div>
+        </div>
+        <div class="compare__footer custom-container d-flex">
+            <div class="compare__footer__parameters">
+                <div class="compare__footer__parameters__buttons">
+                    <button class="button dark br-18 d-block">
+                        Bütün parametlər
+                    </button>
+                    <button class="button gray br-18 d-block">
+                        Yalnız fərqləri göstər
+                    </button>
+                </div>
+                <span class="hr"></span>
+                <ul class="compare__footer__list">
+                    <span>Əsas göstəricilər</span>
+                    <li>Sudan və tozdan qorunma</li>
+                    <li>Nüvələrin sayı</li>
+                    <li>Ölçülər (mm), Hündürlüyü / Eni / Dərinliyi</li>
+                    <li>Simsiz şarj imkanı</li>
+                    <li>SİM-kart sayı</li>
+                    <li>Prosessor tezliyi</li>
+                    <li>Prosessor tipi</li>
+                </ul>
+                <span class="hr"></span>
+                <ul class="compare__footer__list">
+                    <span>Kamera</span>
+                    <li>Sudan və tozdan qorunma</li>
+                    <li>Nüvələrin sayı</li>
+                    <li>Ölçülər (mm), Hündürlüyü / Eni / Dərinliyi</li>
+                    <li>Simsiz şarj imkanı</li>
+                </ul>
+                <span class="hr"></span>
+                <ul class="compare__footer__list">
+                    <span>Kamera</span>
+                    <li>Sudan və tozdan qorunma</li>
+                    <li>Nüvələrin sayı</li>
+                    <li>Ölçülər (mm), Hündürlüyü / Eni / Dərinliyi</li>
+                    <li>Simsiz şarj imkanı</li>
+                    <li>SİM-kart sayı</li>
+                </ul>
+            </div>
+            <div class="compare__footer__item">
+                <div class="compare__footer__item__header">
+                    <span class="compare__footer__item__header__image">
+                        <img src="./assets/images/washing-machine.png" alt="washing machine">
+                    </span>
+                    <span class="compare__footer__item__header__details">
+                        <span class="compare__footer__item__header__details__name">
+                            Televizor LG 49UN74006LA.AMCB
+                        </span>
+                        <span class="d-block">
+                            <span class="compare__footer__item__header__details__actual-price">
+                                1000 <span>AZN</span>
+                            </span>
+                            <span class="compare__footer__item__header__details__old-price diagonal-red-line">
+                                1400 <span>AZN</span>
+                            </span>
+                        </span>
+                    </span>
+                </div>
+                <div class="compare__footer__item__buttons mt-10 d-flex align-center">
+                    <button class="button primary d-flex justify-center" style="padding:10px;">
+                        <img class="mr-10" src="./assets/icons/add-to-basket.svg" alt="">
+                        Səbətə at
+                    </button>
+                    <button class="button compare__footer__item__buttons__heart">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                            <path fill="#cfd9e0"
+                                d="M11.8 1c-1.682 0-3.129 1.368-3.799 2.797C7.33 2.368 5.883 1 4.201 1a4.202 4.202 0 00-4.2 4.2c0 4.716 4.758 5.953 8 10.616 3.065-4.634 8-6.05 8-10.616 0-2.319-1.882-4.2-4.2-4.2z" />
+                        </svg>
+                    </button>
+                </div>
+                <span class="compare__footer__item--delete">
+                    <img src="./assets/icons/close.svg" alt="close icon">
+                </span>
+                <span class="hr"></span>
+                <ul class="compare__footer__list">
+                    <span>Əsas göstəricilər</span>
+                    <li>Sudan və tozdan qorunma</li>
+                    <li>Nüvələrin sayı</li>
+                    <li>Ölçülər (mm), Hündürlüyü / Eni / Dərinliyi</li>
+                    <li>Simsiz şarj imkanı</li>
+                    <li>SİM-kart sayı</li>
+                    <li>Prosessor tezliyi</li>
+                    <li>Prosessor tipi</li>
+                </ul>
+                <span class="hr"></span>
+                <ul class="compare__footer__list">
+                    <span>Kamera</span>
+                    <li>Sudan və tozdan qorunma</li>
+                    <li>Nüvələrin sayı</li>
+                    <li>Ölçülər (mm), Hündürlüyü / Eni / Dərinliyi</li>
+                    <li>Simsiz şarj imkanı</li>
+                </ul>
+                <span class="hr"></span>
+                <ul class="compare__footer__list">
+                    <span>Kamera</span>
+                    <li>Sudan və tozdan qorunma</li>
+                    <li>Nüvələrin sayı</li>
+                    <li>Ölçülər (mm), Hündürlüyü / Eni / Dərinliyi</li>
+                    <li>Simsiz şarj imkanı</li>
+                    <li>SİM-kart sayı</li>
+                </ul>
+            </div>
+            <div class="compare__footer__item">
+                <div class="compare__footer__item__header">
+                    <span class="compare__footer__item__header__image">
+                        <img src="./assets/images/washing-machine.png" alt="washing machine">
+                    </span>
+                    <span class="compare__footer__item__header__details">
+                        <span class="compare__footer__item__header__details__name">
+                            Televizor LG 49UN74006LA.AMCB
+                        </span>
+                        <span class="d-block">
+                            <span class="compare__footer__item__header__details__actual-price">
+                                1000 <span>AZN</span>
+                            </span>
+                            <span class="compare__footer__item__header__details__old-price diagonal-red-line">
+                                1400 <span>AZN</span>
+                            </span>
+                        </span>
+                    </span>
+                </div>
+                <div class="compare__footer__item__buttons mt-10 d-flex align-center">
+                    <button class="button primary d-flex justify-center" style="padding:10px;">
+                        <img class="mr-10" src="./assets/icons/add-to-basket.svg" alt="">
+                        Səbətə at
+                    </button>
+                    <button class="button compare__footer__item__buttons__heart">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                            <path fill="#cfd9e0"
+                                d="M11.8 1c-1.682 0-3.129 1.368-3.799 2.797C7.33 2.368 5.883 1 4.201 1a4.202 4.202 0 00-4.2 4.2c0 4.716 4.758 5.953 8 10.616 3.065-4.634 8-6.05 8-10.616 0-2.319-1.882-4.2-4.2-4.2z" />
+                        </svg>
+                    </button>
+                </div>
+                <span class="compare__footer__item--delete">
+                    <img src="./assets/icons/close.svg" alt="close icon">
+                </span>
+                <span class="hr"></span>
+                <ul class="compare__footer__list">
+                    <span>Əsas göstəricilər</span>
+                    <li>Sudan və tozdan qorunma</li>
+                    <li>Nüvələrin sayı</li>
+                    <li>Ölçülər (mm), Hündürlüyü / Eni / Dərinliyi</li>
+                    <li>Simsiz şarj imkanı</li>
+                    <li>SİM-kart sayı</li>
+                    <li>Prosessor tezliyi</li>
+                    <li>Prosessor tipi</li>
+                </ul>
+                <span class="hr"></span>
+                <ul class="compare__footer__list">
+                    <span>Kamera</span>
+                    <li>Sudan və tozdan qorunma</li>
+                    <li>Nüvələrin sayı</li>
+                    <li>Ölçülər (mm), Hündürlüyü / Eni / Dərinliyi</li>
+                    <li>Simsiz şarj imkanı</li>
+                </ul>
+                <span class="hr"></span>
+                <ul class="compare__footer__list">
+                    <span>Kamera</span>
+                    <li>Sudan və tozdan qorunma</li>
+                    <li>Nüvələrin sayı</li>
+                    <li>Ölçülər (mm), Hündürlüyü / Eni / Dərinliyi</li>
+                    <li>Simsiz şarj imkanı</li>
+                    <li>SİM-kart sayı</li>
+                </ul>
+            </div>
+            <div class="compare__footer__item">
+                <div class="compare__footer__item__header">
+                    <span class="compare__footer__item__header__image">
+                        <img src="./assets/images/washing-machine.png" alt="washing machine">
+                    </span>
+                    <span class="compare__footer__item__header__details">
+                        <span class="compare__footer__item__header__details__name">
+                            Televizor LG 49UN74006LA.AMCB asdasasd
+                        </span>
+                        <span class="d-block">
+                            <span class="compare__footer__item__header__details__actual-price">
+                                1000 <span>AZN</span>
+                            </span>
+                            <span class="compare__footer__item__header__details__old-price diagonal-red-line">
+                                1400 <span>AZN</span>
+                            </span>
+                        </span>
+                    </span>
+                </div>
+                <div class="compare__footer__item__buttons mt-10 d-flex align-center">
+                    <button class="button primary d-flex justify-center" style="padding:10px;">
+                        <img class="mr-10" src="./assets/icons/add-to-basket.svg" alt="">
+                        Səbətə at
+                    </button>
+                    <button class="button compare__footer__item__buttons__heart">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                            <path fill="#cfd9e0"
+                                d="M11.8 1c-1.682 0-3.129 1.368-3.799 2.797C7.33 2.368 5.883 1 4.201 1a4.202 4.202 0 00-4.2 4.2c0 4.716 4.758 5.953 8 10.616 3.065-4.634 8-6.05 8-10.616 0-2.319-1.882-4.2-4.2-4.2z" />
+                        </svg>
+                    </button>
+                </div>
+                <span class="compare__footer__item--delete">
+                    <img src="./assets/icons/close.svg" alt="close icon">
+                </span>
+                <span class="hr"></span>
+                <ul class="compare__footer__list">
+                    <span>Əsas göstəricilər</span>
+                    <li>Sudan və tozdan qorunma</li>
+                    <li>Nüvələrin sayı</li>
+                    <li>Ölçülər (mm), Hündürlüyü / Eni / Dərinliyi</li>
+                    <li>Simsiz şarj imkanı</li>
+                    <li>SİM-kart sayı</li>
+                    <li>Prosessor tezliyi</li>
+                    <li>Prosessor tipi</li>
+                </ul>
+                <span class="hr"></span>
+                <ul class="compare__footer__list">
+                    <span>Kamera</span>
+                    <li>Sudan və tozdan qorunma</li>
+                    <li>Nüvələrin sayı</li>
+                    <li>Ölçülər (mm), Hündürlüyü / Eni / Dərinliyi</li>
+                    <li>Simsiz şarj imkanı</li>
+                </ul>
+                <span class="hr"></span>
+                <ul class="compare__footer__list">
+                    <span>Kamera</span>
+                    <li>Sudan və tozdan qorunma</li>
+                    <li>Nüvələrin sayı</li>
+                    <li>Ölçülər (mm), Hündürlüyü / Eni / Dərinliyi</li>
+                    <li>Simsiz şarj imkanı</li>
+                    <li>SİM-kart sayı</li>
+                </ul>
+            </div>
+            <div class="compare__footer__item">
+                <div class="compare__footer__item__header">
+                    <span class="compare__footer__item__header__image">
+                        <img src="./assets/images/washing-machine.png" alt="washing machine">
+                    </span>
+                    <span class="compare__footer__item__header__details">
+                        <span class="compare__footer__item__header__details__name">
+                            Televizor
+                        </span>
+                        <span class="d-block">
+                            <span class="compare__footer__item__header__details__actual-price">
+                                1000 <span>AZN</span>
+                            </span>
+                            <span class="compare__footer__item__header__details__old-price diagonal-red-line">
+                                1400 <span>AZN</span>
+                            </span>
+                        </span>
+                    </span>
+                </div>
+                <div class="compare__footer__item__buttons mt-10 d-flex align-center">
+                    <button class="button primary d-flex justify-center" style="padding:10px;">
+                        <img class="mr-10" src="./assets/icons/add-to-basket.svg" alt="">
+                        Səbətə at
+                    </button>
+                    <button class="button compare__footer__item__buttons__heart">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                            <path fill="#cfd9e0"
+                                d="M11.8 1c-1.682 0-3.129 1.368-3.799 2.797C7.33 2.368 5.883 1 4.201 1a4.202 4.202 0 00-4.2 4.2c0 4.716 4.758 5.953 8 10.616 3.065-4.634 8-6.05 8-10.616 0-2.319-1.882-4.2-4.2-4.2z" />
+                        </svg>
+                    </button>
+                </div>
+                <span class="compare__footer__item--delete">
+                    <img src="./assets/icons/close.svg" alt="close icon">
+                </span>
+                <span class="hr"></span>
+                <ul class="compare__footer__list">
+                    <span>Əsas göstəricilər</span>
+                    <li>Sudan və tozdan qorunma</li>
+                    <li>Nüvələrin sayı</li>
+                    <li>Ölçülər (mm), Hündürlüyü / Eni / Dərinliyi</li>
+                    <li>Simsiz şarj imkanı</li>
+                    <li>SİM-kart sayı</li>
+                    <li>Prosessor tezliyi</li>
+                    <li>Prosessor tipi</li>
+                </ul>
+                <span class="hr"></span>
+                <ul class="compare__footer__list">
+                    <span>Kamera</span>
+                    <li>Sudan və tozdan qorunma</li>
+                    <li>Nüvələrin sayı</li>
+                    <li>Ölçülər (mm), Hündürlüyü / Eni / Dərinliyi</li>
+                    <li>Simsiz şarj imkanı</li>
+                </ul>
+                <span class="hr"></span>
+                <ul class="compare__footer__list">
+                    <span>Kamera</span>
+                    <li>Sudan və tozdan qorunma</li>
+                    <li>Nüvələrin sayı</li>
+                    <li>Ölçülər (mm), Hündürlüyü / Eni / Dərinliyi</li>
+                    <li>Simsiz şarj imkanı</li>
+                    <li>SİM-kart sayı</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <!-- Compare page main section ends here -->
+
+    <!-- Footer starts here -->
     <footer class="footer">
         <div class="custom-container">
             <ul class="footer__navigation-list d-flex">
+                <!-- Footer navigation list starts here -->
                 <li class="footer__navigation-list__item">
                     <ul class="footer__navigation-list__item--first">
                         <li class="mb-20">
                             <span>
-                                <img src="./assets/icons/N21Logo.svg" class="" alt="">
+                                <span class="footer__navigation-list__item--first__logo-wrapper">
+                                    <img src="./assets/icons/N21Logo.svg" class="" alt="">
+                                </span>
                                 <span class="d-block mt-10">
                                     Online internet mağaza
-                                    <span
-                                        class="d-none footer__navigation-list__item--first--hidden-contact-info">Telefon:
-                                        <a href="tel:*1021">*1021</a></span>
+                                    <span class="d-none footer__navigation-list__item--first--hidden-contact-info">
+                                        Telefon:<a style="font-family: SFProText-Bold; font-size: 21px; color: #ffffff;"
+                                            href="tel:*1021">*1021</a></span>
                                 </span>
                             </span>
                         </li>
@@ -402,8 +817,9 @@
                     </ul>
                 </li>
                 <li class="footer__navigation-list__item">
+                    <!-- Footer social navigation list starts here -->
                     <ul class="footer__navigation-list__item--fourth">
-                        <li>Sosial media</li>
+                        <li class="footer__navigation-list__item--fourth__list-item--social-links">Sosial media</li>
                         <ul class="footer__navigation-list__item--fourth__social-links-list d-flex justify-between">
                             <li class="footer__navigation-list__item--fourth__social-links-list__item">
                                 <a href="#"
@@ -442,7 +858,9 @@
                                 </a>
                             </li>
                         </ul>
-                        <li>Dəstək</li>
+                        <li class="footer__navigation-list__item--fourth__list-item--support">Dəstək</li>
+
+                        <!-- Footer support buttons (whatsapp telegram) starts here -->
                         <ul class="footer__navigation-list__item--fourth__support-links d-flex justify-between">
                             <li class="footer__navigation-list__item--fourth__support-links__item">
                                 <a href="#"
@@ -457,17 +875,34 @@
                                 </a>
                             </li>
                         </ul>
-                        <li>Mobil tətbiqetmələr</li>
+                        <!-- Footer support buttons ends here -->
+
+                        <li class="footer__navigation-list__item--fourth__list-item--mobile-apps">Mobil tətbiqetmələr
+                        </li>
+
+                        <!-- Footer mobile app buttons starts here -->
                         <ul class="footer__navigation-list__item--fourth__apps d-flex justify-between">
-                            <li></li>
-                            <li></li>
+                            <li>
+                                <a href="/appstore">
+                                    <img src="./assets/icons/app-store-badge.svg" alt="app store badge">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/appstore">
+                                    <img src="./assets/icons/google-play-badge.svg" alt="google play store badge">
+                                </a>
+                            </li>
                         </ul>
+                        <!-- Footer mobile apps buttons ends here -->
+
                     </ul>
+                    <!-- Footer social navigation list ends here -->
                 </li>
+                <!-- Footer navigation list ends here -->
             </ul>
         </div>
         <div class="footer__lower-part">
-            <div class="container d-flex">
+            <div class="custom-container d-flex">
                 <p>© 2020 <span>"N21” MMC.</span> Bütün hüquqlar qorunur. </p>
                 <span class="vr"></span>
                 <div>
@@ -477,7 +912,18 @@
             </div>
         </div>
     </footer>
+    <!-- Footer ends here -->
+
+    <div class="shadow-wrapper"></div>
+
+    <span class="scroll-to-top">
+        <img src="./assets/icons/category-arrow.svg" alt="arrow up icon">
+    </span>
+    <script src="./assets/flickity/flickity.min.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script>
+    </script>
+
 </body>
 
 </html>

@@ -54,18 +54,6 @@
                 }
 
                 &__td-pricing {
-                    &--line-trough {
-                        position: relative;
-                        &:after {
-                            content: "";
-                            position: absolute;
-                            border-top: 1px solid $color-primary;
-                            width: 100%;
-                            transform: rotate(166deg);
-                            transform-origin: 0% 0%;
-                        }
-                    }
-
                     &--actual-price {
                         color: $color-primary;
                     }
@@ -95,7 +83,7 @@
 
                 &__pricing-mobile {
                     @include respond(phone) {
-                        display: none !important;
+                        display: flex !important;
                     }
 
                     & .total-price {

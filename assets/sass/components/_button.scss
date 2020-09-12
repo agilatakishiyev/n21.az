@@ -33,6 +33,7 @@
     }
 
     &.gray {
+        padding: 10px;
         background-color: $color-gray-4;
         color: $color-black;
     }
@@ -45,6 +46,15 @@
         color: #555555;
         border: solid 2px #d9d9d9;
         background-color: $color-white;
+    }
+
+    &.dark {
+        padding: 10px 0;
+        background-color: #0b1f35;
+    }
+
+    &.br-18 {
+        border-radius: $border-radius-base * 9;
     }
 
     &.show-more {

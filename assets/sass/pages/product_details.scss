@@ -154,16 +154,10 @@
 
         &__pricing {
             margin-bottom: 20px;
-            &--line-trough {
-                position: relative;
-                &:after {
-                    content: "";
-                    position: absolute;
-                    border-top: 1px solid $color-primary;
-                    width: 100%;
+
+            & .diagonal-red-line {
+                &::after {
                     top: 12px;
-                    right: 0;
-                    transform: rotate(166deg);
                 }
             }
         }
