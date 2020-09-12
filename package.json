@@ -11,7 +11,15 @@
         "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' assets/css/style.css -o assets/css/style.prefix.css",
         "compress:css": "node-sass assets/css/style.prefix.css assets/css/style.compressed.css --output-style compressed",
         "minify-svgs": "svgo -f ./assets/icons -o ./assets/icons",
-        "build": "npm-run-all minify-svgs compile:sass prefix:css compress:css"
+        "copy-html-files": "cp -R ./*.html ./dist",
+        "copy-assets-css": "mkdir ./dist/assets/ && mkdir ./dist/assets/css && cp -R ./assets/css/*.css ./dist/assets/css",
+        "copy-assets-bootstrap": "mkdir ./dist/assets/bootstrap/ && mkdir ./dist/assets/bootstrap/css && cp ./assets/bootstrap/css/bootstrap-grid.css ./dist/assets/bootstrap/css",
+        "copy-assets-js": "mkdir ./dist/assets/js && cp ./assets/js/main.js ./dist/assets/js",
+        "copy-assets-icons": "mkdir ./dist/assets/icons && cp ./assets/icons/* ./dist/assets/icons",
+        "copy-fonts": "mkdir ./dist/assets/fonts && cp ./assets/fonts/* ./dist/assets/fonts",
+        "copy-flickity": "mkdir ./dist/assets/flickity && cp ./assets/flickity/* ./dist/assets/flickity",
+        "copy-assets-images": "mkdir ./dist/assets/images && cp ./assets/images/* ./dist/assets/images",
+        "build": "mkdir ./dist && npm-run-all minify-svgs compile:sass prefix:css compress:css copy-html-files copy-assets-css copy-assets-bootstrap copy-assets-js copy-assets-icons copy-fonts copy-flickity copy-assets-images"
     },
     "author": "agil atakishiyev",
     "devDependencies": {
