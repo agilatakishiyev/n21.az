@@ -19,6 +19,8 @@
 @import "components/accordion";
 @import "components/modal";
 @import "components/diagonal_red_line";
+@import "components/checkbox";
+@import "components/slider_range_custom";
 
 @import "pages/index";
 @import "pages/checkout";
@@ -30,5 +32,5 @@
 @import "pages/campaigns_details";
 @import "pages/dress_product";
 @import "pages/product_details";
-@import "pages/product_with_filter";
+@import "pages/products_with_filter";
 @import "pages/liked_viewed_products_not_logged_in.scss";

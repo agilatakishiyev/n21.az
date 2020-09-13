@@ -53,6 +53,11 @@
         background-color: #0b1f35;
     }
 
+    &.blue-light {
+        padding: 10px 15px;
+        background-color: #012538;
+    }
+
     &.br-18 {
         border-radius: $border-radius-base * 9;
     }

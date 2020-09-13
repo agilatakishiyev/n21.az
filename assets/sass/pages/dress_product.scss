@@ -179,18 +179,15 @@
         border-radius: 50%;
 
         & > svg > path {
-            fill: black;
-            fill-opacity: 0;
-            z-index: 50;
+            fill: rgba(0, 0, 0, 0.21);
         }
         &.liked {
             & > svg > path {
                 fill: $color-primary;
-                fill-opacity: 1;
             }
         }
     }
-    & > img {
+    & img {
         width: 100%;
         height: 320px;
         object-fit: cover;
@@ -219,5 +216,9 @@
         &__item {
             margin-right: 15px;
         }
+    }
+
+    @include respond(phone) {
+        margin-bottom: 20px;
     }
 }

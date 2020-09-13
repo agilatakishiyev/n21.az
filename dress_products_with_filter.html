@@ -4,8 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>n21.az - products with filter</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $(".desktop-slider-range").slider({
+                range: true,
+                min: 0,
+                max: 1000,
+                values: [75, 300],
+                slide: function (event, ui) {
+                    $('.min-amount').val(ui.values[0]);
+                    $('.max-amount').val(ui.values[1]);
+                }
+            });
+
+            $(".mobile-slider-range").slider({
+                range: true,
+                min: 0,
+                max: 1000,
+                values: [75, 300],
+                slide: function (event, ui) {
+                    $('.min-amount').val(ui.values[0]);
+                    $('.max-amount').val(ui.values[1]);
+                }
+            });
+            $('.min-amount').val($(".desktop-slider-range").slider("values", 0));
+            $('.max-amount').val($(".desktop-slider-range").slider("values", 1));
+            $('.submit-new-prices').click(function () {
+                $("#slider-range").slider("values", 0, $('.min-amount').val())
+                $("#slider-range").slider("values", 1, $('.max-amount').val())
+            });
+            $('.clear-min-amount').click(function () {
+                $('.min-amount').val('');
+            });
+            $('.clear-max-amount').click(function () {
+                $('.max-amount').val('');
+            });
+        });
+    </script>
+    <title>n21.az - dress product with filter</title>
 </head>
 
 <body>
@@ -416,13 +456,451 @@
     <!-- Header ends here -->
 
     <main class="products_with_filter">
-        <div class="container">
+        <div class="custom-container">
+            <h1>Donlar</h1>
             <div class="row">
                 <div class="col-xl-2">
+                    <div class="products_with_filter__filter-part">
+                        <span style="font-size: 14px;">1287 məhsul təqdim olunur</span>
+                        <span class="hr"></span>
+                        <div class="products_with_filter__accordion accordion">
+                            <!-- Single accordion item in orders page starts-->
+                            <div class="products_with_filter__accordion__item accordion-item">
+                                <div class="products_with_filter__accordion__item__header accordion-item-header">
+                                    Qiymət aralığı
+                                    <img width="11" height="7" src="./assets/icons/down-chevron-gray.svg" alt="">
+                                </div>
+                                <div class="products_with_filter__accordion__item__body accordion-item-body">
+                                    <div class="slider-range desktop-slider-range"></div>
+                                    <div
+                                        class="products_with_filter__filter-part__price-inputs d-flex justify-between align-center">
+                                        <div>
+                                            <input type="text" class="min-amount">
+                                            <img class="clear-min-amount" width="8" height="8"
+                                                src="./assets/icons/close.svg" alt="">
+                                            <label for="">Minimum</label>
+                                        </div>
+                                        <div style="text-align: right;">
+                                            <input type="text" class="max-amount">
+                                            <img class="clear-max-amount" width="8" height="8"
+                                                src="./assets/icons/close.svg" alt="">
+                                            <label for="">Maksimum</label>
+                                        </div>
+                                        <button class="button gray submit-new-prices">OK</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Single accordion item in orders page end-->
 
+                            <span class="hr"></span>
+
+                            <!-- Single accordion item in orders page starts-->
+                            <div class="products_with_filter__accordion__item accordion-item">
+                                <div class="products_with_filter__accordion__item__header accordion-item-header">
+                                    İstehsalçı
+                                    <img width="11" height="7" src="./assets/icons/down-chevron-gray.svg" alt="">
+                                </div>
+                                <div class="products_with_filter__accordion__item__body accordion-item-body">
+                                    <p class="checkbox-wrapper">
+                                        <input type="checkbox" id="c1" name="cb">
+                                        <label for="c1">LG</label>
+                                    </p>
+                                    <p class="checkbox-wrapper">
+                                        <input type="checkbox" id="c2" name="cb">
+                                        <label for="c2">Samsung</label>
+                                    </p>
+                                    <p class="checkbox-wrapper">
+                                        <input type="checkbox" id="c3" checked name="cb">
+                                        <label for="c3">Panasonic</label>
+                                    </p>
+                                    <p class="checkbox-wrapper">
+                                        <input type="checkbox" id="c4" name="cb">
+                                        <label for="c4">Xiaomi</label>
+                                        <span>11</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Single accordion item in orders page end-->
+
+                            <span class="hr"></span>
+
+                            <!-- Single accordion item in orders page starts-->
+                            <div class="products_with_filter__accordion__item accordion-item">
+                                <div class="products_with_filter__accordion__item__header accordion-item-header">
+                                    Diaqonal
+                                    <img width="11" height="7" src="./assets/icons/down-chevron-gray.svg" alt="">
+                                </div>
+                                <div class="products_with_filter__accordion__item__body accordion-item-body">
+                                    <p class="checkbox-wrapper">
+                                        <input type="checkbox" checked id="c11" name="cb">
+                                        <label for="c11">LG</label>
+                                    </p>
+                                    <p class="checkbox-wrapper">
+                                        <input type="checkbox" id="c12" name="cb">
+                                        <label for="c12">Samsung</label>
+                                    </p>
+                                    <p class="checkbox-wrapper">
+                                        <input type="checkbox" id="c13" name="cb">
+                                        <label for="c13">Panasonic</label>
+                                    </p>
+                                    <p class="checkbox-wrapper">
+                                        <input type="checkbox" id="c14" name="cb">
+                                        <label for="c14">Xiaomi</label>
+                                        <span>11</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Single accordion item in orders page end-->
+
+                        </div>
+                    </div>
+
+                    <div class="products_with_filter__filter-part--mobile d-none">
+                        <div class="row">
+                            <div class="col-6">
+                                <button class="button gray products_with_filter__filter-part--mobile__sort-button">
+                                    Sıralama
+                                    <img width="11" height="7" src="./assets/icons/down-chevron-gray.svg" alt="">
+                                    <div class="products_with_filter__filter-part--mobile__dropdown">
+                                        <div class="selected">Artan</div>
+                                        <div>Azalan</div>
+                                        <div>Yeni gelen</div>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="col-6">
+                                <button class="button gray open-filter-mobile">
+                                    Filtrlər
+                                    <span class="badge">2</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="products_with_filter__filter-part--mobile__wrapper mobile-filter d-none">
+                            <div
+                                class="products_with_filter__filter-part--mobile__wrapper__header d-flex justify-center align-center">
+                                <span style="color: #ffffff;">Filtr</span>
+                                <img class="close-mobile-filter" src="./assets/icons/close.svg" alt="close icon">
+                            </div>
+                            <div class="custom-container">
+                                <ul>
+                                    <li>
+                                        <button style="width: max-content; margin-bottom: 8px;"
+                                            class="button blue-light br-18 d-flex align-center">
+                                            Qiymət aralığı: 200 - 1000 AZN
+                                            <span class="vr d-i-block" style="margin-right: 10px;"></span>
+                                            <img style="margin-left: 10px;" src="./assets/icons/close.svg"
+                                                alt="close icon">
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button style="width: max-content; margin-bottom: 8px;"
+                                            class="button blue-light br-18 d-flex align-center">
+                                            İstehsalçı: Samsung
+                                            <span class="vr d-i-block" style="margin-right: 10px;"></span>
+                                            <img style="margin-left: 10px;" src="./assets/icons/close.svg"
+                                                alt="close icon">
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button style="width: max-content; margin-bottom: 8px;"
+                                            class="button blue-light br-18 d-flex align-center">
+                                            Kateqoriya: Noutbuklar
+                                            <span class="vr d-i-block" style="margin-right: 10px;"></span>
+                                            <img style="margin-left: 10px;" src="./assets/icons/close.svg"
+                                                alt="close icon">
+                                        </button>
+                                    </li>
+                                    <li style="color: #3e77aa; cursor: pointer; margin-top: 16px; margin-bottom: 32px;">
+                                        Filterləri təmizlə
+                                    </li>
+                                </ul>
+                                <div>
+                                    Qiymət aralığı
+                                </div>
+                                <div>
+                                    <div class="mobile-slider-range slider-range"></div>
+                                    <div
+                                        class="products_with_filter__filter-part__price-inputs d-flex justify-between align-center">
+                                        <div>
+                                            <input type="text" class="min-amount">
+                                            <img class="clear-min-amount" width="8" height="8"
+                                                src="./assets/icons/close.svg" alt="">
+                                            <label for="">Minimum</label>
+                                        </div>
+                                        <div style="text-align: right;">
+                                            <input type="text" class="max-amount">
+                                            <img class="clear-max-amount" width="8" height="8"
+                                                src="./assets/icons/close.svg" alt="">
+                                            <label for="">Maksimum</label>
+                                        </div>
+                                        <button class="button gray submit-new-prices">OK</button>
+                                    </div>
+                                </div>
+
+                                <!-- Mobile menu Categories section starts, copy paste for filters-->
+                                <ul class="header__mobile-navigation__categories-list"
+                                    style="padding-left: 0; padding-right: 0;">
+                                    <li class="header__mobile-navigation__categories-list__item d-flex align-center">
+                                        <span
+                                            class="header__mobile-navigation__categories-list__item--left-image"></span>
+                                        <span>Televizor audio</span>
+                                        <img src="./assets/icons/slider-arrows.svg" alt="">
+                                        <div
+                                            class="header__mobile-navigation__categories-list__item__sub-categories-wrapper">
+                                            <!-- dont change href of the a tag below -->
+                                            <a href="back-to-categories"
+                                                class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__back-link">
+                                                <img width="20" height="20" src="./assets/images/2.jpg" alt="">
+                                                <span>Kataloqa geri qayıt</span>
+                                            </a>
+                                            <span class="hr width-with-padding height-2"></span>
+                                            <p class="d-flex justify-between align-center">Noutbuklar, komputerlər <img
+                                                    src="./assets/icons/category-arrow.svg" alt=""></p>
+                                            <ul
+                                                class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__list">
+                                                <li
+                                                    class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__list__item">
+                                                    <a href="#notebooks">Noutbuklar</a>
+                                                </li>
+                                                <li
+                                                    class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__list__item">
+                                                    <a href="#computers">Komputerlər</a>
+                                                </li>
+                                                <li
+                                                    class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__list__item">
+                                                    <a href="#monitors">Monitorlar</a>
+                                                </li>
+                                                <li
+                                                    class="header__mobile-navigation__categories-list__item__sub-categories-wrapper__list__item">
+                                                    <a href="#monoblocks">Monobloklar</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="header__mobile-navigation__categories-list__item d-flex align-center">
+                                        <span
+                                            class="header__mobile-navigation__categories-list__item--left-image"></span>
+                                        <span>Televizor audio</span>
+                                        <img src="./assets/icons/slider-arrows.svg" alt="">
+                                    </li>
+                                    <li class="header__mobile-navigation__categories-list__item d-flex align-center">
+                                        <span
+                                            class="header__mobile-navigation__categories-list__item--left-image"></span>
+                                        <span>Televizor audio</span>
+                                        <img src="./assets/icons/slider-arrows.svg" alt="">
+                                    </li>
+                                    <li class="header__mobile-navigation__categories-list__item d-flex align-center">
+                                        <span
+                                            class="header__mobile-navigation__categories-list__item--left-image"></span>
+                                        <span>Televizor audio</span>
+                                        <img src="./assets/icons/slider-arrows.svg" alt="">
+                                    </li>
+                                    <li class="header__mobile-navigation__categories-list__item d-flex align-center">
+                                        <span
+                                            class="header__mobile-navigation__categories-list__item--left-image"></span>
+                                        <span>Televizor audio</span>
+                                        <img src="./assets/icons/slider-arrows.svg" alt="">
+                                    </li>
+                                    <li class="header__mobile-navigation__categories-list__item d-flex align-center">
+                                        <span
+                                            class="header__mobile-navigation__categories-list__item--left-image"></span>
+                                        <span>Televizor audio</span>
+                                        <img src="./assets/icons/slider-arrows.svg" alt="">
+                                    </li>
+                                </ul>
+                                <!-- Mobile menu Categories section ends, copy paste for filters-->
+
+                                <div
+                                    class="products_with_filter__filter-part--mobile__wrapper__footer d-flex justify-center align-center">
+                                    426 nəticəyə bax
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-xl-10">
+                    <ul class="products_with_filter__sort d-flex">
+                        <span>Sıralama:</span>
+                        <li class="active">Çox baxılanlar</li>
+                        <li class="">Ucuzdan bahaya</li>
+                        <li class="">Bahadan ucuza</li>
+                        <li class="">Yeni gələnlər</li>
+                    </ul>
+                    <ul class="products_with_filter__filter-items d-flex align-center">
+                        <li>
+                            <button class="button blue-light br-18 d-flex align-center">
+                                İstehsalçı: Samsung
+                                <span class="vr d-i-block" style="margin-left:10px;"></span>
+                                <img style="margin-left: 10px;" src="./assets/icons/close.svg" alt="close icon">
+                            </button>
+                        </li>
+                        <li>
+                            <button class="button blue-light br-18 d-flex align-center">
+                                İstehsalçı: Samsung
+                                <span class="vr d-i-block" style="margin-left:10px;"></span>
+                                <img style="margin-left: 10px;" src="./assets/icons/close.svg" alt="close icon">
+                            </button>
+                        </li>
+                        <li style="color: #3e77aa; cursor: pointer;">Filterləri təmizlə</li>
+                    </ul>
+                    <div class="row">
+                        <div class="col-xl-3 col-6">
+                            <div class="dress-product-item" style="width: 100%;">
+                                <span class="like d-flex align-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                        <path
+                                            d="M11.8 1c-1.682 0-3.129 1.368-3.799 2.797C7.33 2.368 5.883 1 4.201 1a4.202 4.202 0 00-4.2 4.2c0 4.716 4.758 5.953 8 10.616 3.065-4.634 8-6.05 8-10.616 0-2.319-1.882-4.2-4.2-4.2z" />
+                                    </svg>
+                                </span>
+                                <a href="item" style="color: black;">
+                                    <img src="./assets/images/mikkel-bech-yjAFnkLtKY0-unsplash.jpg" alt="">
+                                    <span class="dress-product-item__name d-i-block">Don / Qırmızı düz saya</span>
+                                    <div>
+                                        <span class="dress-product-item__pricing--actual">
+                                            <span class="">
+                                                799
+                                            </span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                        <span class="dress-product-item__pricing--old diagonal-red-line">
+                                            <span>999</span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                    </div>
+                                    <div class="dress-product-item__sizes">
+                                        <span>Ölçülər</span>
+                                        <div class="d-flex mt-10">
+                                            <span class="dress-product-item__sizes__item">32</span>
+                                            <span class="dress-product-item__sizes__item">34</span>
+                                            <span class="dress-product-item__sizes__item">36</span>
+                                            <span class="dress-product-item__sizes__item">38</span>
+                                            <span class="dress-product-item__sizes__item">40</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-6">
+                            <div class="dress-product-item" style="width: 100%;">
+                                <span class="like d-flex align-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                        <path
+                                            d="M11.8 1c-1.682 0-3.129 1.368-3.799 2.797C7.33 2.368 5.883 1 4.201 1a4.202 4.202 0 00-4.2 4.2c0 4.716 4.758 5.953 8 10.616 3.065-4.634 8-6.05 8-10.616 0-2.319-1.882-4.2-4.2-4.2z" />
+                                    </svg>
+                                </span>
+                                <a href="item" style="color: black;">
+                                    <img src="./assets/images/mikkel-bech-yjAFnkLtKY0-unsplash.jpg" alt="">
+                                    <span class="dress-product-item__name d-i-block">Don / Qırmızı düz saya</span>
+                                    <div>
+                                        <span class="dress-product-item__pricing--actual">
+                                            <span class="">
+                                                799
+                                            </span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                        <span class="dress-product-item__pricing--old diagonal-red-line">
+                                            <span>999</span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                    </div>
+                                    <div class="dress-product-item__sizes">
+                                        <span>Ölçülər</span>
+                                        <div class="d-flex mt-10">
+                                            <span class="dress-product-item__sizes__item">32</span>
+                                            <span class="dress-product-item__sizes__item">34</span>
+                                            <span class="dress-product-item__sizes__item">36</span>
+                                            <span class="dress-product-item__sizes__item">38</span>
+                                            <span class="dress-product-item__sizes__item">40</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-6">
+                            <div class="dress-product-item" style="width: 100%;">
+                                <span class="like d-flex align-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                        <path
+                                            d="M11.8 1c-1.682 0-3.129 1.368-3.799 2.797C7.33 2.368 5.883 1 4.201 1a4.202 4.202 0 00-4.2 4.2c0 4.716 4.758 5.953 8 10.616 3.065-4.634 8-6.05 8-10.616 0-2.319-1.882-4.2-4.2-4.2z" />
+                                    </svg>
+                                </span>
+                                <a href="item" style="color: black;">
+                                    <img src="./assets/images/mikkel-bech-yjAFnkLtKY0-unsplash.jpg" alt="">
+                                    <span class="dress-product-item__name d-i-block">Don / Qırmızı düz saya</span>
+                                    <div>
+                                        <span class="dress-product-item__pricing--actual">
+                                            <span class="">
+                                                799
+                                            </span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                        <span class="dress-product-item__pricing--old diagonal-red-line">
+                                            <span>999</span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                    </div>
+                                    <div class="dress-product-item__sizes">
+                                        <span>Ölçülər</span>
+                                        <div class="d-flex mt-10">
+                                            <span class="dress-product-item__sizes__item">32</span>
+                                            <span class="dress-product-item__sizes__item">34</span>
+                                            <span class="dress-product-item__sizes__item">36</span>
+                                            <span class="dress-product-item__sizes__item">38</span>
+                                            <span class="dress-product-item__sizes__item">40</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-6">
+                            <div class="dress-product-item" style="width: 100%;">
+                                <span class="like d-flex align-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                        <path
+                                            d="M11.8 1c-1.682 0-3.129 1.368-3.799 2.797C7.33 2.368 5.883 1 4.201 1a4.202 4.202 0 00-4.2 4.2c0 4.716 4.758 5.953 8 10.616 3.065-4.634 8-6.05 8-10.616 0-2.319-1.882-4.2-4.2-4.2z" />
+                                    </svg>
+                                </span>
+                                <a href="item" style="color: black;">
+                                    <img src="./assets/images/mikkel-bech-yjAFnkLtKY0-unsplash.jpg" alt="">
+                                    <span class="dress-product-item__name d-i-block">Don / Qırmızı düz saya</span>
+                                    <div>
+                                        <span class="dress-product-item__pricing--actual">
+                                            <span class="">
+                                                799
+                                            </span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                        <span class="dress-product-item__pricing--old diagonal-red-line">
+                                            <span>999</span>
+                                            <span class="azn">AZN</span>
+                                        </span>
+                                    </div>
+                                    <div class="dress-product-item__sizes">
+                                        <span>Ölçülər</span>
+                                        <div class="d-flex mt-10">
+                                            <span class="dress-product-item__sizes__item">32</span>
+                                            <span class="dress-product-item__sizes__item">34</span>
+                                            <span class="dress-product-item__sizes__item">36</span>
+                                            <span class="dress-product-item__sizes__item">38</span>
+                                            <span class="dress-product-item__sizes__item">40</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <span class="hr"></span>
 
+                    </div>
+                    <button class="button show-more">
+                        Daha çox göstər
+                    </button>
+                    <ul class="pagination mb-30">
+                        <li class="pagination__item active">1</li>
+                        <li class="pagination__item">2</li>
+                        <li class="pagination__item">3</li>
+                        <li class="pagination__item">4</li>
+                        <li class="pagination__item">5</li>
+                    </ul>
                 </div>
             </div>
         </div>
