@@ -1214,11 +1214,15 @@ main {
                 width: 75%;
             }
         }
+        a {
+            text-align: center;
+        }
     }
     &__name {
         margin: 10px 0 auto;
-        & > p {
+        & > a {
             font-size: $font-size-14;
+            color: $color-black;
         }
     }
     &__features {

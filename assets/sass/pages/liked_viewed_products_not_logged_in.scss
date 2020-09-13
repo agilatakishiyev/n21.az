@@ -1,29 +1,35 @@
 @import "../variables";
 @import "../mixins";
 
-.products-not-logged-in {
+.products-not-logged-in,
+.searched-products {
     .product-item {
         width: 20%;
 
         @include respond(phone) {
             width: 100%;
+            display: flex;
             flex-direction: row;
             justify-content: flex-start;
         }
 
         &__name {
+            a:link {
+                color: $color-black !important;
+            }
             @include respond(phone) {
                 margin-bottom: 15px;
             }
         }
 
         &__image-wrapper {
-            @include respond(phone) {
-                width: 50%;
-            }
+            text-align: center;
             img {
                 width: 90%;
                 height: 75%;
+            }
+            @include respond(phone) {
+                width: 50%;
             }
         }
 
@@ -75,5 +81,12 @@
                 }
             }
         }
+    }
+}
+
+.searched-products .product-item {
+    width: 25%;
+    @include respond(phone) {
+        width: 100%;
     }
 }

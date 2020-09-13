@@ -172,4 +172,20 @@
             }
         }
     }
+
+    &__categories-list {
+        a {
+            display: inline-block;
+            color: #0066cc;
+            margin-top: 15px;
+        }
+        & > li > a {
+            font-size: $font-size-14;
+        }
+
+        &__sub > li > a {
+            font-size: 12px;
+            margin-left: 10px;
+        }
+    }
 }
