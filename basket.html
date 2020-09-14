@@ -76,7 +76,8 @@
                     </a>
                 </div>
                 <div class="header__center-part__catalog-button">
-                    <button class="button primary button--sm d-flex align-center">
+                    <button class="button primary button--sm d-flex align-center"
+                        style="padding-top: 12px;padding-bottom: 12px;">
                         <img src="./assets/icons/menu.svg" alt="menu icon" style="margin-right: 10px;">
                         Kataloq
                         <img src="./assets/icons/category-arrow.svg" alt="arrow icon"
@@ -1246,10 +1247,34 @@
                         </div>
                     </section>
                 </div>
-                <div class="header__center-part__input-wrapper">
+                <div class="header__center-part__input-wrapper with-catalog">
                     <input type="text" placeholder="Axtardığınız kəliməni buraya yazın…"
                         class="header__center-part__input-wrapper__input">
                     <img src="./assets/icons/search.svg" alt="" class="header__center-part__input-wrapper__search-icon">
+                    <div class="header__center-part__input-wrapper__search-results">
+                        <a href="#"
+                            class="header__center-part__input-wrapper__search-results__item d-flex align-center">
+                            <img width="30" height="30" src="./assets/images/washing-machine.png" alt="washing machine">
+                            <p>Paltaryuyan maşın BOSCH WAJ20180ME</p>
+                        </a>
+                        <a href="#"
+                            class="header__center-part__input-wrapper__search-results__item d-flex align-center">
+                            <img width="30" height="30" src="./assets/images/washing-machine.png" alt="washing machine">
+                            <p>Paltaryuyan maşın BOSCH WAJ20180ME</p>
+                        </a>
+                        <a href="#"
+                            class="header__center-part__input-wrapper__search-results__item d-flex align-center">
+                            <img width="30" height="30" src="./assets/images/washing-machine.png" alt="washing machine">
+                            <p>Paltaryuyan maşın BOSCH WAJ20180ME</p>
+                        </a>
+                        <div class="d-flex align-center justify-center mt-20">
+                            <div class="mr-10 header__center-part__input-wrapper__search-results--count__wrapper">
+                                <span class="header__center-part__input-wrapper__search-results--count">102</span>
+                                <span>mehsul tapildi</span>
+                            </div>
+                            <a href="#all-results" class="blue-link">Bütün nəticələr bax</a>
+                        </div>
+                    </div>
                 </div>
                 <ul class="header__center-part__customer-navigation d-flex align-center">
                     <li class="header__center-part__customer-navigation__list-item">
@@ -1334,6 +1359,30 @@
                             </g>
                         </svg>
                     </span>
+                    <div class="header__mobile-search__input-wrapper__search-results">
+                        <a href="#"
+                            class="header__center-part__input-wrapper__search-results__item d-flex align-center">
+                            <img width="30" height="30" src="./assets/images/washing-machine.png" alt="washing machine">
+                            <p>Paltaryuyan maşın BOSCH WAJ20180ME</p>
+                        </a>
+                        <a href="#"
+                            class="header__center-part__input-wrapper__search-results__item d-flex align-center">
+                            <img width="30" height="30" src="./assets/images/washing-machine.png" alt="washing machine">
+                            <p>Paltaryuyan maşın BOSCH WAJ20180ME</p>
+                        </a>
+                        <a href="#"
+                            class="header__center-part__input-wrapper__search-results__item d-flex align-center">
+                            <img width="30" height="30" src="./assets/images/washing-machine.png" alt="washing machine">
+                            <p>Paltaryuyan maşın BOSCH WAJ20180ME</p>
+                        </a>
+                        <div class="d-flex align-center justify-center mt-20">
+                            <div class="mr-10 header__center-part__input-wrapper__search-results--count__wrapper">
+                                <span class="header__center-part__input-wrapper__search-results--count">102</span>
+                                <span>mehsul tapildi</span>
+                            </div>
+                            <a href="#all-results" class="blue-link">Bütün nəticələr bax</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="d-flex header__bottom-part justify-between align-center">
@@ -1507,9 +1556,9 @@
     </header>
 
     <main class="basket mb-30">
-        <div class="custom-container">
-            <div class="d-flex justify-between row">
-                <div class="col-9">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 col-12">
                     <div class="basket--left">
                         <h1 class="basket__header">Səbət</h1>
                         <table class="basket--left__table">
@@ -1745,7 +1794,7 @@
                         </table>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-xl-3 col-12">
                     <div class="basket--right">
                         <h2>Səbətdəki mallar</h2>
                         <p class="mt-20">Malların qiyməti: <span class="sum-of-product-prices">0</span><span
@@ -1756,7 +1805,8 @@
                         <h3>Yekun məbləğ: <span class="after-discount-price">0</span> <span class="azn">AZN</span></h3>
                     </div>
                     <div class="d-flex justify-between align-baseline mt-20">
-                        <button type="submit" class="button button--md primary col-6 mr-10">
+                        <button type="submit" class="button button--md primary col-6 mr-10"
+                            style="padding-left: 17px; padding-right: 17px;">
                             Sifarişi rəsmiləşdir</button>
                         <button type="submit" class="button button--sm secondary col-5">Bir kliklə al</button>
                     </div>

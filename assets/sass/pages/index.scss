@@ -139,7 +139,7 @@
             display: none;
             left: -77%;
             top: 55px;
-            width: 870%;
+            width: 785%;
             height: max-content;
             z-index: 55555;
             background-color: $color-white;
@@ -1193,9 +1193,6 @@ main {
     justify-content: space-between;
     flex-direction: column;
     position: relative;
-    & > a {
-        color: $color-black;
-    }
     &__remove-icon {
         position: absolute;
         top: 20px;
@@ -1218,6 +1215,25 @@ main {
             text-align: center;
         }
     }
+
+    &__badge {
+        color: $color-white;
+        padding: 5px 10px;
+
+        &--new {
+            background-color: #614ba6;
+        }
+        &--premium {
+            background-color: #0e2a47;
+        }
+        &--has-discount {
+            background-color: $color-primary-lighter;
+        }
+        &--has-gift {
+            background-color: #3377ff;
+        }
+    }
+
     &__name {
         margin: 10px 0 auto;
         & > a {
@@ -1263,10 +1279,22 @@ main {
         }
         &__basket {
             cursor: pointer;
-            & > img {
-                width: 20px;
-                height: 20px;
+            padding: 8px;
+            border-radius: 50%;
+            transition: background-color 0.1s ease-in-out;
+            &.--in-basket {
+                background-color: $color-primary-lighter;
+                & > svg > path {
+                    fill: $color-white;
+                }
             }
         }
+    }
+}
+
+.mobile-show-more {
+    display: none;
+    @include respond(phone) {
+        display: block;
     }
 }

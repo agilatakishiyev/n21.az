@@ -297,6 +297,14 @@
         }
     });
 
+    // ADD TO BASKET ICON CLICKS
+    document.querySelectorAll('.product-item__pricing-and-basket__basket').forEach(function (addToBasketIcon) {
+        addToBasketIcon.onclick = function () {
+            this.classList.toggle('--in-basket');
+        }
+    });
+
+
     const likedProductRemoveIcons = document.querySelectorAll('.liked-product-item__remove-icon');
     const viewedProductRemoveIcons = document.querySelectorAll('.viewed-product-item__remove-icon');
     viewedProductRemoveIcons.forEach(function (removeIcon) { 

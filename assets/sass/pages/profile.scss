@@ -65,13 +65,13 @@
         padding: 20px 0 20px 0;
         position: relative;
         & > div {
-            opacity: 0;
+            display: none;
             width: 0;
             height: 0;
             &.active {
                 width: 100%;
                 height: max-content;
-                opacity: 1;
+                display: block;
             }
         }
 
@@ -83,6 +83,9 @@
                     width: 25%;
                     @include respond(phone) {
                         width: 50%;
+                    }
+                    @media only screen and (max-width: 400px) {
+                        width: 100%;
                     }
                 }
             }
