@@ -3004,6 +3004,14 @@
                     if (matchedTabContent) {
                         matchedTabContent.classList.add('active');
                         tab.classList.add('active');
+                        console.log(matchedTabContent.scrollTop);
+                        matchedTabContent.scrollIntoView();
+                        // window.scrollTo({
+                        //     x: matchedTabContent.scrollTop
+                        // });
+                        // if (window.innerWidth <= 1320) {
+                        //     window.scrollTo(matchedTabContent);
+                        // }
                     }
                 }
             });

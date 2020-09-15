@@ -100,6 +100,10 @@
                     li {
                         margin-right: 30px;
                         cursor: pointer;
+                        min-width: max-content;
+                    }
+                    @include respond(phone) {
+                        overflow-x: scroll;
                     }
                 }
             }
@@ -245,9 +249,21 @@
                     & div[class^="col-xl"] {
                         &.padding-right-10 {
                             padding-right: 10px;
+                            @include respond(phone) {
+                                padding-right: 15px;
+                            }
                         }
                         &.padding-left-10 {
                             padding-left: 10px;
+                            @include respond(phone) {
+                                padding-left: 15px;
+                            }
+                        }
+                        &:last-child {
+                            @include respond(phone) {
+                                padding: 15px !important;
+                                text-align: center;
+                            }
                         }
                     }
                 }
