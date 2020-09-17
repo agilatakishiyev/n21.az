@@ -1,5 +1,6 @@
 (function ( ) {
     const mobileNavigation = document.querySelector('.header__mobile-navigation');
+    const allCategoriesButton = document.querySelector('.all-categories-button-wrapper__button');
     const mobileCategoriesList = document.querySelectorAll('.header__mobile-navigation__categories-list__item');
     const mobileBackToCatalogueLinks = document.querySelectorAll('a[href="back-to-categories"]');
     const scrollToTopButton = document.querySelector('.scroll-to-top');
@@ -38,9 +39,19 @@
         }
     }
 
-    menuIcon.onclick = function () {
+    function openMobileNavigation () {
         mobileNavigation.classList.add('open');
     }
+
+    menuIcon.onclick = openMobileNavigation;
+
+    if(allCategoriesButton) {
+        allCategoriesButton.onclick = function (e) {
+            e.preventDefault();
+            openMobileNavigation();
+        };
+    }
+
     closeIcon.onclick = function () {
         mobileNavigation.classList.remove('open');
         document.querySelector('.header__mobile-navigation__categories-list__item__sub-categories-wrapper.open')?.classList.remove('open');
